@@ -1,0 +1,38 @@
+﻿ @model WebApplication1.Models.FieldItems
+
+@{
+var mask = "";
+if(@Model.Mask !=null)
+  {mask = "data-mask=" + @Model.Mask;}
+}
+
+@{
+    var name = "input_textbox_" + Model.FieldItemId;
+    var CRM = !String.IsNullOrEmpty(Model.CrmMapping) ? "_" + Model.CrmMapping : "";
+    var nameID = name + CRM;
+}
+
+
+    <div class="form-group @ViewBag.Row" id="item_@Model.FieldItemId">
+        <label id="label_@Model.FieldItemId" class="@ViewBag.labelWidth control-label" for="@nameID">
+            @if (Model.Mandatory)
+            {
+                <span title="Mandatory">*</span>
+            }
+            @Model.Title
+        </label>
+       
+        <div class="@ViewBag.inputWidth">
+           
+            <input type="text" @(Model.Mandatory ? "Required" : "")
+                   @mask
+                   aria-required="@(Model.Mandatory ? "true" : "false")"
+                   aria-labelledby="label_@Model.FieldItemId"
+                   class="form-control" name="@nameID" id="@nameID" maxlength="@Model.MaxLenght" value="@Model.DefaultValue" />
+            @{ var title = System.Net.WebUtility.UrlEncode(@Model.Title); }
+            <input type="hidden" value="@title" name="label_@(Model.FieldItemId)_textbox" />
+            @if (!string.IsNullOrEmpty(Model.Tooltip))
+            { <span class="help-block">@Model.Tooltip</span>
+            }
+        </div>
+    </div>

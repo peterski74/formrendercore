@@ -1,0 +1,36 @@
+﻿@* @model ngFormey.Web.Models.FieldItem *@
+
+@if (ViewBag.captcha=="True")
+{
+    <script type="text/javascript">
+        var recaptch
+        var verifyCallback = function (response) {
+            $('#g-Recaptcha-Response').val(response);
+        };
+        var onloadCallback = function () {
+            grecaptcha.render('recaptcha', {'sitekey': '@ViewBag.captchaCode', 'callback': verifyCallback,'theme': 'light' });
+        };
+    </script>
+    @*<div class="form-group" id="item_@Model.FieldItemId">
+        <div class="col-md-@ViewBag.inputAlign col-md-offset-@ViewBag.offset">
+            <div id="recaptcha"></div>
+            <input type="hidden" id="g-Recaptcha-Response" value="empty" />
+        </div>
+    </div>*@
+    <div class="form-group" id="item_@Model.FieldItemId">
+        <div class="col-md-@ViewBag.inputAlign @ViewBag.offset">
+            <div id="recaptcha"></div>
+            <input type="hidden" id="g-Recaptcha-Response" value="empty" />
+        </div>
+    </div>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+            async defer>
+    </script>
+}
+
+    <div class="form-group" id="item_@Model.FieldItemId">
+        @*<div class="col-md-@ViewBag.inputAlign col-md-offset-@ViewBag.offset">*@
+        <div class="col-md-@ViewBag.inputAlign @ViewBag.offset">
+            <button type="button" value="Submit" class="btn btn-primary" name="@Model.Title" aria-label="@Model.Title">@Model.Title</button>
+        </div>
+    </div>

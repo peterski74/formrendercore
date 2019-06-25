@@ -1,0 +1,66 @@
+﻿@* @model ngFormey.Web.Models.PayPalAccount *@
+
+@*<label data-sub-channel="sub-label-@Model.TodoItemId" class="label editable">@Model.Label</label>
+<span class="required @Model.IsRequired.OutputIfTrue("visible","hidden")">*</span>
+<div class="input">
+<input   id="SubmitFields[@Model.DomId].TextBox" name="SubmitFields[@Model.DomId].TextBox" type="text" value="@Html.GetTempFormValue(Model)" title="@Model.Hint" maxlength="@Model.MaxCharacters" class="title watermarked"  />
+
+@if (!Model.Errors.IsNullOrEmpty())
+{
+  <span class="field-validation-error">@Model.Errors</span>
+}
+</div>
+<a href="javascript:void(0);" title="@Model.HelpText" class="help-icon-1 help-icon @Model.HelpText.OutputIfIs("", "hide") w-tip">
+  <img src="@Html.SpacerImage()" alt="help" />
+</a>*@
+
+
+
+
+<div class="form-group" >
+    <label id="label_@Model.PayPalId" class="@ViewBag.labelWidth control-label">
+        Products
+    </label>
+    <div class="@ViewBag.inputWidth">
+        <p>
+            @foreach (var element in Model.CartItemElements)
+            {
+                
+                @*<div class="radio">
+                    <label>*@
+                        <input type="radio"
+                       
+                               name="productRadios_@Model.PayPalId"
+                               id="@element.CartItemElementId"
+                               value="@element.CartItemElementId" />
+                        @element.Item_Name @element.Amount<br />
+                    @*</label>
+                </div>*@
+            }
+        </p>
+    </div>
+   
+</div>
+
+<!--
+<div class="form-group">
+    <label class="col-lg-2 control-label">Radios</label>
+    <div class="col-lg-10">
+        <div class="radio">
+            <label>
+                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+                Option one is this
+            </label>
+        </div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                Option two can be something else
+            </label>
+        </div>
+    </div>
+</div>
+    -->
+
+
+

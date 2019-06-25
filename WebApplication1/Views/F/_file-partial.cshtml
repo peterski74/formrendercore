@@ -1,0 +1,26 @@
+﻿ @model WebApplication1.Models.FieldItems
+
+<div class="form-group @ViewBag.Row" id="item_@Model.FieldItemId">
+    <label id="label_@Model.FieldItemId" class="@ViewBag.labelWidth control-label" for="input_@Model.FieldItemId">
+        @if (Model.Mandatory)
+        {
+            <span title="Mandatory">*</span>
+        }
+        @Model.Title
+
+    </label>
+    <div class="@ViewBag.inputWidth">
+        <input type="file" @(Model.Mandatory ? "Required" : "")
+               aria-required="@(Model.Mandatory ? "true" : "false")"
+               aria-labelledby="label_@Model.FieldItemId"
+               name="input_file_@Model.FieldItemId" id="input_file_@Model.FieldItemId"
+               onchange="fileSelected('@Model.FieldItemId',  '@Model.Title');" /><button type="button" id="clear_@Model.FieldItemId" style="display:none">X</button>
+        <input type="hidden" value="@Model.Title" name="label_@(Model.FieldItemId)_file" />
+        @if (!string.IsNullOrEmpty(Model.Tooltip))
+        { <span class="help-block">@Model.Tooltip</span>
+        }
+        <div id="fileName_@Model.FieldItemId"></div>
+        <div id="fileSize_@Model.FieldItemId"></div>
+        <div id="fileType_@Model.FieldItemId"></div>
+    </div>
+</div>

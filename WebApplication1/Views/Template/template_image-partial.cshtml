@@ -1,0 +1,8 @@
+﻿ @model WebApplication1.Models.FieldItems
+
+<div class="form-group" id="item_@Model.FieldItemId" style="text-align:@Html.Raw(Model.Properties)">
+    <img src="@Html.Raw(Model.Content)" style="height: auto;max-height:100%;max-width:100%;width:@Html.Raw(Model.FieldSize)%"
+         alt="@Html.Raw(Model.Title)" title="@Html.Raw(Model.Title)" />
+</div>
+
+

@@ -1,0 +1,74 @@
+﻿@model WebApplication1.Models.PayPalAccounts
+@{
+    ViewBag.Title = "Redirect to paypal";    
+    
+    //if(Model.Embed)
+    //{
+    //    Layout = "~/Views/Shared/_EmbedLayout.cshtml";
+    //}
+    
+}
+
+
+
+
+<form id="merchant" class="" method="post" target="_top" action="https://www.sandbox.paypal.com/cgi-bin/webscr" novalidate>
+    
+
+    <div class="info">
+        <h2 id="merchantMessage">
+            Thanks! In order to complete your purchase, please click on the checkout button below.
+        </h2>
+        <div id='merchantMessageText' class='hide'>Your order is being processed. Please wait a moment while we redirect you to our payment page.</div>
+    </div>
+
+        <input id="merchantButton" type="submit" class="btTxt submit" value="Proceed to Checkout" />
+
+
+        <!--General Variables-->
+        @*<input type="hidden" name="charset" value="UTF-8">
+        <input type="hidden" name="upload" value="1" />*@ 
+
+        <input type="hidden" name="cmd" value="_xclick" />
+        <input type="hidden" name="business" value="@Model.Business" />
+        <input type="hidden" name="currency_code" value="@Model.CurrencyCode" />
+        <input type="hidden" name="return" value="http://localhost/order/complete" />
+        <input type="hidden" name="cancel_return" value="http://localhost/order/cancel" />
+        <input type="hidden" name="notify_url" value="http://localhost/order/ipn" />
+
+        <input type="hidden" name="item_name" value="@ViewBag.ItemName" />
+    <input type="hidden" name="item_number" value="@ViewBag.OrderId" />
+        <input type="hidden" name="amount" value="@ViewBag.Amount" />
+
+        <!-- Do not prompt customers to include a note with their payment. -->
+        @*<input type="hidden" name="no_note" value="1" />*@
+
+        @*<input type="hidden" name="no_shipping" value="2" />*@
+
+        <!-- Cart Variables-->
+        @*<input type="hidden" name="cmd" value="_cart" />*@ 
+
+
+    </form>
+    <script>
+        
+        var init = function () {
+            console.log($('#merchant').length);
+            var redirectingToPaymentPage = false;
+
+            if ($('#merchant').length) {
+                redirectingToPaymentPage = true;
+                var $merchantButton = $('#merchantButton');
+                if ($merchantButton.length) {
+                    $merchantButton.html($('#merchantMessageText').html());
+                    $merchantButton.hide();
+                }
+                $('#merchant').trigger('submit');
+            }
+            return redirectingToPaymentPage;
+        };
+        //init();
+
+    </script>
+
+

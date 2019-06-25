@@ -1,0 +1,42 @@
+﻿ @model WebApplication1.Models.FieldItems 
+
+@if (ViewBag.captcha=="True")
+{
+    <script type="text/javascript">
+        var recaptch
+        var verifyCallback = function (response) {
+            $('#g-Recaptcha-Response').val(response);
+        };
+        var onloadCallback = function () {
+            grecaptcha.render('recaptcha', {'sitekey': '@ViewBag.captchaCode', 'callback': verifyCallback,'theme': 'light' });
+        };
+    </script>
+    <div class="form-group" id="item_@Model.FieldItemId">
+        <div class="col-md-@ViewBag.inputAlign @ViewBag.offset">
+            <div id="recaptcha"></div>
+            <input type="hidden" id="g-Recaptcha-Response" value="empty" />
+        </div>
+    </div>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+            async defer>
+    </script>
+}
+
+    <div class="form-group row" id="item_@Model.FieldItemId">
+        <div class="col-md-@ViewBag.inputAlign @ViewBag.offset">
+            <button type="submit" value="Submit" class="btn btn-primary" name="@Model.Title" aria-label="@Model.Title">@Model.Title</button>
+            @if (ViewBag.Save == "True")
+            {
+                if (ViewBag.isSaved)
+                {
+                    <button type="submit" value="UpdateFF" class="btn btn-primary" name="UpdateFF" aria-label="Save">Save</button>
+                    <span class="help-block"><small> Attachemnts are not saved, save valid for 7 days</small></span>
+                }
+                else
+                {
+                    <button type="submit" value="SaveFF" class="btn btn-primary" name="SaveFF" aria-label="Save">Save</button>
+                    <span class="help-block"><small> Saving: Uploads not saved, stored 7 days only</small></span>
+                }
+            }
+        </div>
+    </div>

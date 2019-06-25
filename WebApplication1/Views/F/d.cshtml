@@ -1,0 +1,401 @@
+﻿@model WebApplication1.Models.FormLists
+
+
+@if (@ViewBag.Status == "ARCHIVED")
+{
+    <div class="container-fluid">
+        <div class="row">
+            <h2>This form has been archived and is no longer accessible.</h2>   
+        </div>
+    </div>
+
+}
+else
+{
+
+    if (@System.Configuration.ConfigurationManager.AppSettings["isLiveServer"] == "false")
+    { //local dev
+        <script src='@ViewBag.formURL/scripts/jquery-1.10.2.min.js' type='text/javascript'></script>
+        <script>var isLive = false;</script>
+    }
+    else
+    {
+        <script src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js' type='text/javascript'></script>
+        <script type="text/javascript">
+        // Fallbacks
+        window.jQuery || document.write(unescape("%3Cscript src='/scripts/jquery-1.10.2.min.js' type='text/javascript'%3E%3C/script%3E"));
+        var isLive = true;
+        </script>
+    }
+
+    if (@ViewBag.freeTier == true)
+    {
+        <div style="visibility:visible;" id="ADTop" class="ADTop " onclick="sendSite('top')">
+            <div id="ADTopLabel" class="ADTopLabel" >
+                <span class="Ads_smallMusa">(Formey-Logo) </span>
+                Create <span class="wixAds_smallLogo">Forms</span> like this, FREE!
+            </div>
+            <div id="ADTopContent" class="ADTopContent">
+                Surveys, Registrations<br>
+                No coding needed<br>
+                <a href="https://www.formey.com/?utm_source=freeaccount&utm_medium=website&utm_campaign=bannerads&utm_content=top">
+                    <span class="Ads_emphasis Ads_spacer">Start free now &gt;&gt;</span>
+                </a>
+            </div>
+        </div>
+
+        <script>
+            function sendSite(position){
+                document.location.href = "https://www.formey.com/?utm_source=freeaccount&utm_medium=website&utm_campaign=bannerads&utm_content="+position;
+            }
+        </script>
+
+        <div onclick="sendSite('bottom')" style="" id="target" class="AdsdesktopWADBottom hidden-xs">
+            <div class="AdsdesktopWADBottomContent " >
+                <div class="adFootBox">
+                    <div class="Ads_siteBanner"  >
+                        <div class="Ads_wrapper">
+                            <div class="Ads_bigMusa">(Formey Logo)</div>
+                            <div class="Ads_txt Ads_shd" style="color:#fff">This form was created using </div>
+                            <div class="Ads_txt Ads_shd">
+                                <a href="https://www.formey.com/?utm_source=freeaccount&utm_medium=website&utm_campaign=bannerads&utm_content=bottom" style="color:#fff"> FORMEY.com. </a>
+                            </div>
+                            <div class="Ads_txt Ads_shd" style="color:#fff">
+                                Create your own for FREE
+                                <span class="Ads_emphasis"> &gt;&gt;</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    }
+
+<script type="text/javascript" src="//cloudfront.loggly.com/js/loggly.tracker-2.1.min.js"></script>
+<script>
+  var _LTracker = _LTracker || [];
+  _LTracker.push({
+      'logglyKey': 'f215dd7b-ac62-46c4-8071-e9110a89893e',
+    'sendConsoleErrors' : true,
+    'tag' : 'loggly-jslogger'
+  });
+</script>
+
+       
+
+if (@ViewBag.Theme != "nostyle")
+{
+   // @Styles.Render(@ViewBag.Theme as String ?? "@ViewBag.formURL/Content/bootstrap.min.css")
+    <link rel="stylesheet" href="/css/formey.min.css" />
+}
+
+
+if (ViewBag.BackgroundImage == "nobg")
+{
+    <!-- nobg -->
+    <style>
+        @@media (min-width: 481px) {
+            .body {
+                background-color: transparent !important;
+            }
+        }
+    </style>
+}
+
+if (ViewBag.BackgroundImage != "nobg" && ViewBag.BackgroundImage != "" && ViewBag.BackgroundImage != null)
+{
+    <!-- image -->
+    <style>
+        @@media (min-width: 481px) {
+            html{
+                @string.Format("background: url(/imgs/bg/{0}.jpg) no-repeat center center fixed;background-size: cover;", @ViewBag.BackgroundImage);
+            }
+        .body, body {
+                background-color: transparent!important;
+            }
+
+        }
+    </style>
+}
+
+
+if (ViewBag.BackgroundImage != null && ViewBag.BackgroundImage != "")
+{
+    <!-- mobile -->
+    <style>
+        @@media (max-width: 480px) {
+            body {
+                background-color: inherit;
+            }
+        }
+    </style>
+}
+
+if (Model.IsTransparent == "True")
+{
+    var wellColor = "245,245,245";
+
+    if (Model.Theme == "standard") { wellColor = "245,245,245"; }
+    if (Model.Theme == "amelia") { wellColor = "13,116,124"; }
+    if (Model.Theme == "cerulean") { wellColor = "245,245,245"; }
+    if (Model.Theme == "cosmo") { wellColor = "245,245,245"; }
+    if (Model.Theme == "cyborg") { wellColor = "21,21,21"; }
+    if (Model.Theme == "darkly") { wellColor = "48,48,48"; }
+    if (Model.Theme == "flatly") { wellColor = "236,240,241"; }
+    if (Model.Theme == "journal") { wellColor = "245,245,245"; }
+    if (Model.Theme == "lumen") { wellColor = "250,250,250"; }
+    if (Model.Theme == "paper") { wellColor = "249,249,249"; }
+    if (Model.Theme == "readable") { wellColor = "247,247,247"; }
+    if (Model.Theme == "sandstone") { wellColor = "248,245,240"; }
+    if (Model.Theme == "simplex") { wellColor = "244,244,244"; }
+    if (Model.Theme == "slate") { wellColor = "28,30,34"; }
+    if (Model.Theme == "spacelab") { wellColor = "245,245,245"; }
+    if (Model.Theme == "superhero") { wellColor = "78,93,108"; }
+    if (Model.Theme == "united") { wellColor = "245,245,245"; }
+    if (Model.Theme == "yeti") { wellColor = "250,250,250"; }
+
+
+    decimal tranVal = Convert.ToDecimal(Model.TransparentValue) / 10;
+    <style>
+        .well{
+            @string.Format("background-color:rgba({1}, {0})!important;", tranVal, wellColor);
+        }
+    </style>
+
+}
+
+    @*else {
+            <style>body { background-color:#fff;}</style>
+        }*@
+
+
+    <div class="@ViewBag.ThemeTitle ">
+        <div class="body">
+            <div class="cContainer body-content">
+
+                <style>
+                    @@media (min-width: 480px) {
+                        @string.Format(".formWidth{{ margin:auto;width:{0}px}}", @Model.FormWidth);
+
+                    }
+                </style>
+
+                <div class="col-lg-6 bodyAlign">
+                    <div class="well bs-component formWidth">
+
+                        @using (Html.BeginForm(null, null, FormMethod.Post,
+                            new { enctype = "multipart/form-data", role = "form", @class = @ViewBag.LabelAlign, id = "formId", @action = @ViewBag.submitURL }
+                            ))
+                        {
+                            @:<fieldset>
+ <!-- @Html.AntiForgeryToken()-->
+                                @Html.HiddenFor(m => m.FormListId)
+                                @Html.ValidationSummary()if (ViewBag.quotaExceeded)
+                                {
+                                    // @MvcHtmlString.Create(ViewBag.outHtml);
+                                }
+                                else
+                                {
+                                    @Html.Raw(System.Net.WebUtility.HtmlDecode(Html.ValidationMessage("CustomError").ToString()))
+
+                                    foreach (var field in Model.FieldItems.OrderBy(x => x.ItemOrder))
+                                    {
+                                        if (field.ElementType == "paypal")
+                                        {
+                                            // @Html.Partial(string.Format("_{0}-partial", field.ElementType));
+
+                                            foreach (var product in Model.PayPalAccounts)
+                                            {
+                                                @Html.Partial("_paypal-partial", product);
+                                            }
+                                        }
+                                        else
+                                        {
+
+                                            @Html.Partial(string.Format("_{0}-partial", field.ElementType), field);
+                                        }
+                                    }
+                                }
+
+
+
+                                <input id="Id" name="Id" type="hidden" value="@ViewBag.id" />
+                                <input id="logid" name="logid" type="hidden" value="@ViewBag.logid" />
+                                <input id="FormName" name="FormName" type="hidden" value="@ViewBag.Message" />
+                                <input id="FormId" name="FormId" type="hidden" value="@ViewBag.FormId" />
+                                <input id="SavedSubmissionId" name="SavedSubmissionId" type="hidden" value="@ViewBag.SavedSubmissionId" />
+                                <input id="Country" name="Country" type="hidden" />
+                                <input id="City" name="City" type="hidden" />
+                                <input id="IPAddress" name="IPAddress" type="hidden" />
+                            @: </fieldset>
+
+
+
+
+                        }
+                    </div>
+                </div>
+
+
+
+
+                @if (@System.Configuration.ConfigurationManager.AppSettings["isLiveServer"] == "false")
+                {
+                    <!-- <script src='@ViewBag.formURL/scripts/jquery-1.10.2.min.js' type='text/javascript'></script>-->
+                    <script src='@ViewBag.formURL/Scripts/moment.min.js' type='text/javascript'></script>
+                    <script src="@ViewBag.formURL/Scripts/bootstrap-datetimepicker.min.js"></script>
+                    <link rel="stylesheet" href="@ViewBag.formURL/content/css/remodal.css">
+                    <link rel="stylesheet" href="@ViewBag.formURL/content/css/remodal-default-theme.css">
+                    <script src="@ViewBag.formURL/Scripts/remodal.js"></script>
+                }
+                else
+                {
+                    <!-- <script src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js' type='text/javascript'></script>
+         <script type="text/javascript">
+             // Fallbacks
+             window.jQuery || document.write(unescape("%3Cscript src='/scripts/jquery-1.10.2.min.js' type='text/javascript'%3E%3C/script%3E"));
+         </script>-->
+                    <script src='//cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js' type='text/javascript'></script>
+                    <script src='//cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/js/bootstrap-datetimepicker.min.js' type='text/javascript'></script>
+                    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/remodal/1.0.3/remodal.min.css">
+                    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/remodal/1.0.3/remodal-default-theme.min.css">
+                    <script src="//cdnjs.cloudflare.com/ajax/libs/remodal/1.0.3/remodal.min.js"></script>
+                }
+
+                <script>
+    var fURL = "@ViewBag.formURL";
+    $(document).ready(function () {
+        @{
+            var outScript = ViewBag.script;
+        }
+
+
+    });
+
+    var mu = @ViewBag.maxUpload;
+                </script>
+
+
+                <script src="/Scripts/formey.js" type="text/javascript"></script>
+
+                @*<script src="@ViewBag.formURL Scripts/formey.js" type="text/javascript"></script>*@
+
+                <script type="text/javascript">
+                    var instance = "";
+                    $(document).ready(function () {
+                        instance = $('form').parsley();
+                        $('form').garlic(); //REINSTATE THIS ON PROD
+                    });
+
+                    //get country name
+
+                    //  http://api.hostip.info/get_json.php?ip=209.197.30.169
+
+                    //$.get( "http://www.geoplugin.net/javascript.gp")
+                    //  .done(function( data ) {
+                    //      console.log( "Data Loaded: " + data );
+                    //  });
+
+
+                    //$.ajax({
+                    //    type: "GET",
+                    //    dataType: 'jsonp',
+                    //    url: 'http://www.geoplugin.net/javascript.gp',
+                    //    crossDomain : true
+                    //})
+                    //    .done(function( data ) {
+                    //        console.log("done");
+                    //    })
+                    //    .fail( function(xhr, textStatus, errorThrown) {
+                    //        alert(xhr.responseText);
+                    //        alert(textStatus);
+                    //    });
+
+                    //$.getJSON('http://www.geoplugin.net/json.gp?callback=?', function(data) {
+                    //$.each(data, function(i) {
+                    //    console.log(data[i]);
+                    //});
+                    //   console.log(data);
+                    //});
+
+                    //<input id="Country" name="Country" type="hidden" />
+                    //            <input id="City" name="City" type="hidden" />
+                    //            <input id="IPAddress" name="IPAddress" type="hidden" />
+
+
+                    // NEED TO PAY $10 for below service
+                    //$.get("http://ipinfo.io", function(response) {
+                    //    $("#IPAddress").val(response.ip);
+                    //    $("#City").val(response.city);
+                    //    $("#Country").val(response.country);
+
+                    //}, "jsonp");
+
+
+                </script>
+
+                @if (@System.Configuration.ConfigurationManager.AppSettings["isLiveServer"] == "false")
+                {
+                    <!-- DEV LINKS START -->
+                    <script src='@ViewBag.formURL/scripts/modernizr-2.6.2.js' type='text/javascript'></script>
+                }
+                else
+                {
+                    <!-- LIVE LINKS START -->
+                    <script src='//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js' type='text/javascript'></script>
+                    <script type="text/javascript">
+                        // Fallbacks
+                        window.Modernizr || document.write(unescape("%3Cscript src='/scripts/modernizr-2.6.2.js' type='text/javascript'%3E%3C/script%3E"));
+                    </script>
+                }
+
+
+
+                @if (@System.Configuration.ConfigurationManager.AppSettings["isLiveServer"] == "false")
+                {
+                    <!-- DEV LINKS START -->
+                    <script src='@ViewBag.formURL/scripts/respond.min.js' type='text/javascript'></script>
+                    <script src='@ViewBag.formURL/scripts/parsley.js' type='text/javascript'></script>
+                    <script src='@ViewBag.formURL/scripts/garlic.min.js' type='text/javascript'></script>
+                    <script src='@ViewBag.formURL/scripts/jasny-bootstrap.min.js' type='text/javascript'></script>
+                    <script src="@ViewBag.formURL/scripts/iframeResizer.contentWindow.min.js"></script>
+                }
+                else
+                {
+                    <script src='//cdnjs.cloudflare.com/ajax/libs/respond.js/1.2.0/respond.min.js' type='text/javascript'></script>
+                    <script src='//cdnjs.cloudflare.com/ajax/libs/parsley.js/2.1.2/parsley.min.js' type='text/javascript'></script>
+                    <script src='//cdnjs.cloudflare.com/ajax/libs/garlic.js/1.2.2/garlic.min.js' type='text/javascript'></script>
+                    <script src='//cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.1/js/jasny-bootstrap.min.js' type='text/javascript'></script>
+                    <script src='//cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.2.0/iframeResizer.contentWindow.min.js' type='text/javascript'></script>
+                }
+
+                @if (ViewBag.hasFileUpload)
+                {
+                    <!-- err modal content -->
+                    <div class="remodal" data-remodal-id="modalErr">
+                        <button type="button" data-remodal-action="close" class="remodal-close"></button>
+                        <span id="error-msg-modal">
+                        </span>
+                        <br /><br />
+                        <button type="button" data-remodal-action="cancel" class="remodal-cancel">OK</button>
+                    </div>
+
+                    <!-- progress modal content -->
+                    <div class="remodal" data-remodal-id="modalProgress">
+                        Submitting & Uploading Files
+                        <br /><br />
+                        <span id="progress-msg-modal">
+                            <img src="@ViewBag.formURL/Content/images/getdata.gif" width="128" height="15" />
+                        </span>
+                    </div>
+                }
+                @if (Model.ValidateLanguage != null)
+                {
+                    <script src='@string.Format("/scripts/parsley/{0}.js",  Model.ValidateLanguage)'></script>
+                }
+            </div>
+        </div>
+    </div>
+
+} @*// close STATUS*@

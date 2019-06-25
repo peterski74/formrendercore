@@ -1,0 +1,74 @@
+﻿ @model WebApplication1.Models.FormLists
+
+
+<style>
+    body {
+      /*background-image: url(/content/images/bg-login_opt.jpg);*/
+      font-family: 'Signika', sans-serif;
+      /*font-size: 100%;*/
+    }
+    h1 {
+      font-size: 2em;
+      font-weight: 600;
+      color: rgb(255, 255, 255);
+      text-align: center;
+      margin: 2em 0em 0em 0em;
+    }
+    .btn-olive {
+      background-color: #3d9970 !important;
+      color:white
+    }
+</style>
+<div class="form-page-container confirmation-page-container prepend-top span-26" style="margin:0 auto;width:330px">
+    
+    <div class="inner-container">
+        <h2>@Html.Raw(TempData["msg"])</h2>
+        <br />
+        @if (TempData["isSaved"] == "true")
+        {
+
+
+            @*@using (Html.BeginForm("SendForm", "F", FormMethod.Post, new { enctype = "multipart/form-data" , role="form", @class=@ViewBag.LabelAlign}
+                ))
+                {*@
+        <form action="/F/SendForm"
+              class="form-horizontal css-form" enctype="multipart/form-data" method="post" role="form">
+
+            <div class="panel panel-default">
+                <div class="panel-heading" style="color:#3d9970;background-color:white;font-weight:bold">
+                <i class="fa fa-envelope-o"></i> SEND EMAIL</div>
+                <div class="panel-body" style="margin-bottom:0px;background-color:#e7e7e7">
+                    <div class="form-group">
+                        <label class="control-label col-md-5" for="defaultValue">
+                            Your Email*
+                        </label>
+                        <div class="col-md-7">
+                            <input type="email" class="form-control" name="email" required />
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer" style="background-color:#c6e3d6">
+                    <div class="form-group">
+                        <div class="col-lg-12">
+                            <button id="submit" type="submit" class="btn btn-olive btn-block">Send Link to Form</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <input id="SavedSubmissionId" name="SavedSubmissionId" type="hidden" value="@TempData["SavedSubmissionId"]" />
+        </form>
+        <span>Or use following link to access your saved form: <br /><br /><a href="@TempData["SavedUrl"]">@TempData["SavedUrl"]</a></span>
+        <br /><br />
+        <span>Please note saved form will be available for 7 days after which it will be removed. Attachements/uploads are not saved.</span>
+        }
+
+        @if (TempData["notFound"] != "true") 
+        { 
+            @*<br />
+            <a href="javascript:history.go(-1);" class="btn">Go back</a>*@
+        }
+    </div>
+</div>
+
+
+

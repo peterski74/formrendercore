@@ -1,0 +1,29 @@
+﻿@* @model ngFormey.Web.Models.FieldItem *@
+@{
+    var name = "input_textbox_" + Model.FieldItemId;
+    var CRM = !String.IsNullOrEmpty(Model.CRM_Mapping) != null ? "_" + Model.CRM_Mapping : "";
+    var nameID = name + CRM;
+}
+    <div class="form-group" id="item_@Model.FieldItemId">
+        <label id="label_@Model.FieldItemId" class="control-label @ViewBag.labelWidth " for="@nameID">
+            @if (Model.Mandatory)
+            {
+                <span title="Mandatory">*</span>
+            }
+            @Model.Title
+        </label>
+        <div class="@ViewBag.inputWidth">
+            
+            <textarea @(Model.Mandatory ? "Required" : "")
+                   aria-required="@(Model.Mandatory ? "true" : "false")"
+                   aria-labelledby="label_@Model.FieldItemId"
+                   class="form-control" name="@nameID" 
+                   id="@nameID" rows="@Model.Rows" style="height:inherit"
+                   maxlength="@Model.MaxLenght"  >@Model.DefaultValue</textarea>
+            @{ var title = System.Net.WebUtility.UrlEncode(@Model.Title); }
+            <input type="hidden" value="@title" name="label_@(Model.FieldItemId)_textbox" />
+            @if (!string.IsNullOrEmpty(Model.Tooltip))
+            { <span class="help-block">@Model.Tooltip</span>
+            }
+        </div>
+    </div>

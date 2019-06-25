@@ -1,0 +1,57 @@
+﻿@model WebApplication1.Models.FormTemplateFields
+
+<div class="form-group" id="item_@Model.FieldItemId">
+    <label id="label_@Model.FieldItemId" class="@ViewBag.labelWidth control-label">
+        @if (Model.Mandatory)
+        {
+            <span title="Mandatory">*</span>
+        }
+        @Model.Title
+
+    </label>
+    <div class="@ViewBag.inputWidth">
+
+    @foreach (var element in Model.FormTemplateFieldElements.OrderBy(x => x.Order))
+    {
+    <div>
+        <label for="input_checkbox_@(Model.FieldItemId + "_" + @element.FieldItemElementId)"
+               class="checkbox-inline" style="font-weight: normal; margin: 0px;">
+            @if (element.IsDefault)
+            { //confirm if is checked
+                <input type="checkbox"
+                       @(Model.Mandatory ? "required" : "")
+                       name="input_checkbox_@Model.FieldItemId"
+                       id="input_checkbox_@(Model.FieldItemId + "_" + @element.FieldItemElementId)"
+                       value="@element.Value" checked="checked"
+                       data-parsley-errors-container="#errorBlock_@(Model.FieldItemId)"
+                       data-parsley-error-message="Select at least one"
+                     />
+            }
+            else
+            {
+                <input type="checkbox"
+                       @(Model.Mandatory ? "required" : "")
+                       name="input_checkbox_@Model.FieldItemId"
+                       id="input_checkbox_@(Model.FieldItemId + "_" + @element.FieldItemElementId)"
+                       value="@element.Value"
+                       data-parsley-errors-container="#errorBlock_@(Model.FieldItemId)"
+                       data-parsley-error-message="Select at least one"
+                     />
+            }
+            @element.Title<br />
+        </label>
+    </div>
+    }
+        @{ var title = System.Net.WebUtility.UrlEncode(@Model.Title); }
+        <input type="hidden" value="@title" name="label_@(Model.FieldItemId)_checkbox" />
+        @if (!string.IsNullOrEmpty(Model.Tooltip))
+        {
+            <span class="help-block">@Model.Tooltip</span>
+        }
+
+        @if (Model.Mandatory)
+        {
+            <span id="errorBlock_@(Model.FieldItemId)"></span>
+        }
+    </div>
+</div>

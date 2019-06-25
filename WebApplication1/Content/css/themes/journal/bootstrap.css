@@ -1,0 +1,4574 @@
+.journal {
+  /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+  @import url("https://fonts.googleapis.com/css?family=News+Cycle:400,700");
+}
+.journal html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+.journal .body {
+  margin: 0;
+}
+.journal article,
+.journal aside,
+.journal details,
+.journal figcaption,
+.journal figure,
+.journal footer,
+.journal header,
+.journal hgroup,
+.journal main,
+.journal nav,
+.journal section,
+.journal summary {
+  display: block;
+}
+.journal audio,
+.journal canvas,
+.journal progress,
+.journal video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+.journal audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+.journal [hidden],
+.journal template {
+  display: none;
+}
+.journal a {
+  background: transparent;
+}
+.journal a:active,
+.journal a:hover {
+  outline: 0;
+}
+.journal abbr[title] {
+  border-bottom: 1px dotted;
+}
+.journal b,
+.journal strong {
+  font-weight: bold;
+}
+.journal dfn {
+  font-style: italic;
+}
+.journal h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+.journal mark {
+  background: #ff0;
+  color: #000;
+}
+.journal small {
+  font-size: 80%;
+}
+.journal sub,
+.journal sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.journal sup {
+  top: -0.5em;
+}
+.journal sub {
+  bottom: -0.25em;
+}
+.journal img {
+  border: 0;
+}
+.journal svg:not(:root) {
+  overflow: hidden;
+}
+.journal figure {
+  margin: 1em 40px;
+}
+.journal hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+.journal pre {
+  overflow: auto;
+}
+.journal code,
+.journal kbd,
+.journal pre,
+.journal samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+.journal button,
+.journal input,
+.journal optgroup,
+.journal select,
+.journal textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+.journal button {
+  overflow: visible;
+}
+.journal button,
+.journal select {
+  text-transform: none;
+}
+.journal button,
+.journal html input[type="button"],
+.journal input[type="reset"],
+.journal input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+.journal button[disabled],
+.journal html input[disabled] {
+  cursor: default;
+}
+.journal button::-moz-focus-inner,
+.journal input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+.journal input {
+  line-height: normal;
+}
+.journal input[type="checkbox"],
+.journal input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+.journal input[type="number"]::-webkit-inner-spin-button,
+.journal input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+.journal input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.journal input[type="search"]::-webkit-search-cancel-button,
+.journal input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+.journal fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+.journal legend {
+  border: 0;
+  padding: 0;
+}
+.journal textarea {
+  overflow: auto;
+}
+.journal optgroup {
+  font-weight: bold;
+}
+.journal table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.journal td,
+.journal th {
+  padding: 0;
+}
+@media print {
+  .journal * {
+    text-shadow: none !important;
+    color: #000 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+  .journal a,
+  .journal a:visited {
+    text-decoration: underline;
+  }
+  .journal a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  .journal abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  .journal a[href^="javascript:"]:after,
+  .journal a[href^="#"]:after {
+    content: "";
+  }
+  .journal pre,
+  .journal blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  .journal thead {
+    display: table-header-group;
+  }
+  .journal tr,
+  .journal img {
+    page-break-inside: avoid;
+  }
+  .journal img {
+    max-width: 100% !important;
+  }
+  .journal p,
+  .journal h2,
+  .journal h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  .journal h2,
+  .journal h3 {
+    page-break-after: avoid;
+  }
+  .journal select {
+    background: #fff !important;
+  }
+  .journal .navbar {
+    display: none;
+  }
+  .journal .table td,
+  .journal .table th {
+    background-color: #fff !important;
+  }
+  .journal .btn > .caret,
+  .journal .dropup > .btn > .caret {
+    border-top-color: #000 !important;
+  }
+  .journal .label {
+    border: 1px solid #000;
+  }
+  .journal .table {
+    border-collapse: collapse !important;
+  }
+  .journal .table-bordered th,
+  .journal .table-bordered td {
+    border: 1px solid #ddd !important;
+  }
+}
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('../fonts/glyphicons-halflings-regular.eot');
+  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+.journal .glyphicon {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.journal .glyphicon-asterisk:before {
+  content: "\2a";
+}
+.journal .glyphicon-plus:before {
+  content: "\2b";
+}
+.journal .glyphicon-euro:before {
+  content: "\20ac";
+}
+.journal .glyphicon-minus:before {
+  content: "\2212";
+}
+.journal .glyphicon-cloud:before {
+  content: "\2601";
+}
+.journal .glyphicon-envelope:before {
+  content: "\2709";
+}
+.journal .glyphicon-pencil:before {
+  content: "\270f";
+}
+.journal .glyphicon-glass:before {
+  content: "\e001";
+}
+.journal .glyphicon-music:before {
+  content: "\e002";
+}
+.journal .glyphicon-search:before {
+  content: "\e003";
+}
+.journal .glyphicon-heart:before {
+  content: "\e005";
+}
+.journal .glyphicon-star:before {
+  content: "\e006";
+}
+.journal .glyphicon-star-empty:before {
+  content: "\e007";
+}
+.journal .glyphicon-user:before {
+  content: "\e008";
+}
+.journal .glyphicon-film:before {
+  content: "\e009";
+}
+.journal .glyphicon-th-large:before {
+  content: "\e010";
+}
+.journal .glyphicon-th:before {
+  content: "\e011";
+}
+.journal .glyphicon-th-list:before {
+  content: "\e012";
+}
+.journal .glyphicon-ok:before {
+  content: "\e013";
+}
+.journal .glyphicon-remove:before {
+  content: "\e014";
+}
+.journal .glyphicon-zoom-in:before {
+  content: "\e015";
+}
+.journal .glyphicon-zoom-out:before {
+  content: "\e016";
+}
+.journal .glyphicon-off:before {
+  content: "\e017";
+}
+.journal .glyphicon-signal:before {
+  content: "\e018";
+}
+.journal .glyphicon-cog:before {
+  content: "\e019";
+}
+.journal .glyphicon-trash:before {
+  content: "\e020";
+}
+.journal .glyphicon-home:before {
+  content: "\e021";
+}
+.journal .glyphicon-file:before {
+  content: "\e022";
+}
+.journal .glyphicon-time:before {
+  content: "\e023";
+}
+.journal .glyphicon-road:before {
+  content: "\e024";
+}
+.journal .glyphicon-download-alt:before {
+  content: "\e025";
+}
+.journal .glyphicon-download:before {
+  content: "\e026";
+}
+.journal .glyphicon-upload:before {
+  content: "\e027";
+}
+.journal .glyphicon-inbox:before {
+  content: "\e028";
+}
+.journal .glyphicon-play-circle:before {
+  content: "\e029";
+}
+.journal .glyphicon-repeat:before {
+  content: "\e030";
+}
+.journal .glyphicon-refresh:before {
+  content: "\e031";
+}
+.journal .glyphicon-list-alt:before {
+  content: "\e032";
+}
+.journal .glyphicon-lock:before {
+  content: "\e033";
+}
+.journal .glyphicon-flag:before {
+  content: "\e034";
+}
+.journal .glyphicon-headphones:before {
+  content: "\e035";
+}
+.journal .glyphicon-volume-off:before {
+  content: "\e036";
+}
+.journal .glyphicon-volume-down:before {
+  content: "\e037";
+}
+.journal .glyphicon-volume-up:before {
+  content: "\e038";
+}
+.journal .glyphicon-qrcode:before {
+  content: "\e039";
+}
+.journal .glyphicon-barcode:before {
+  content: "\e040";
+}
+.journal .glyphicon-tag:before {
+  content: "\e041";
+}
+.journal .glyphicon-tags:before {
+  content: "\e042";
+}
+.journal .glyphicon-book:before {
+  content: "\e043";
+}
+.journal .glyphicon-bookmark:before {
+  content: "\e044";
+}
+.journal .glyphicon-print:before {
+  content: "\e045";
+}
+.journal .glyphicon-camera:before {
+  content: "\e046";
+}
+.journal .glyphicon-font:before {
+  content: "\e047";
+}
+.journal .glyphicon-bold:before {
+  content: "\e048";
+}
+.journal .glyphicon-italic:before {
+  content: "\e049";
+}
+.journal .glyphicon-text-height:before {
+  content: "\e050";
+}
+.journal .glyphicon-text-width:before {
+  content: "\e051";
+}
+.journal .glyphicon-align-left:before {
+  content: "\e052";
+}
+.journal .glyphicon-align-center:before {
+  content: "\e053";
+}
+.journal .glyphicon-align-right:before {
+  content: "\e054";
+}
+.journal .glyphicon-align-justify:before {
+  content: "\e055";
+}
+.journal .glyphicon-list:before {
+  content: "\e056";
+}
+.journal .glyphicon-indent-left:before {
+  content: "\e057";
+}
+.journal .glyphicon-indent-right:before {
+  content: "\e058";
+}
+.journal .glyphicon-facetime-video:before {
+  content: "\e059";
+}
+.journal .glyphicon-picture:before {
+  content: "\e060";
+}
+.journal .glyphicon-map-marker:before {
+  content: "\e062";
+}
+.journal .glyphicon-adjust:before {
+  content: "\e063";
+}
+.journal .glyphicon-tint:before {
+  content: "\e064";
+}
+.journal .glyphicon-edit:before {
+  content: "\e065";
+}
+.journal .glyphicon-share:before {
+  content: "\e066";
+}
+.journal .glyphicon-check:before {
+  content: "\e067";
+}
+.journal .glyphicon-move:before {
+  content: "\e068";
+}
+.journal .glyphicon-step-backward:before {
+  content: "\e069";
+}
+.journal .glyphicon-fast-backward:before {
+  content: "\e070";
+}
+.journal .glyphicon-backward:before {
+  content: "\e071";
+}
+.journal .glyphicon-play:before {
+  content: "\e072";
+}
+.journal .glyphicon-pause:before {
+  content: "\e073";
+}
+.journal .glyphicon-stop:before {
+  content: "\e074";
+}
+.journal .glyphicon-forward:before {
+  content: "\e075";
+}
+.journal .glyphicon-fast-forward:before {
+  content: "\e076";
+}
+.journal .glyphicon-step-forward:before {
+  content: "\e077";
+}
+.journal .glyphicon-eject:before {
+  content: "\e078";
+}
+.journal .glyphicon-chevron-left:before {
+  content: "\e079";
+}
+.journal .glyphicon-chevron-right:before {
+  content: "\e080";
+}
+.journal .glyphicon-plus-sign:before {
+  content: "\e081";
+}
+.journal .glyphicon-minus-sign:before {
+  content: "\e082";
+}
+.journal .glyphicon-remove-sign:before {
+  content: "\e083";
+}
+.journal .glyphicon-ok-sign:before {
+  content: "\e084";
+}
+.journal .glyphicon-question-sign:before {
+  content: "\e085";
+}
+.journal .glyphicon-info-sign:before {
+  content: "\e086";
+}
+.journal .glyphicon-screenshot:before {
+  content: "\e087";
+}
+.journal .glyphicon-remove-circle:before {
+  content: "\e088";
+}
+.journal .glyphicon-ok-circle:before {
+  content: "\e089";
+}
+.journal .glyphicon-ban-circle:before {
+  content: "\e090";
+}
+.journal .glyphicon-arrow-left:before {
+  content: "\e091";
+}
+.journal .glyphicon-arrow-right:before {
+  content: "\e092";
+}
+.journal .glyphicon-arrow-up:before {
+  content: "\e093";
+}
+.journal .glyphicon-arrow-down:before {
+  content: "\e094";
+}
+.journal .glyphicon-share-alt:before {
+  content: "\e095";
+}
+.journal .glyphicon-resize-full:before {
+  content: "\e096";
+}
+.journal .glyphicon-resize-small:before {
+  content: "\e097";
+}
+.journal .glyphicon-exclamation-sign:before {
+  content: "\e101";
+}
+.journal .glyphicon-gift:before {
+  content: "\e102";
+}
+.journal .glyphicon-leaf:before {
+  content: "\e103";
+}
+.journal .glyphicon-fire:before {
+  content: "\e104";
+}
+.journal .glyphicon-eye-open:before {
+  content: "\e105";
+}
+.journal .glyphicon-eye-close:before {
+  content: "\e106";
+}
+.journal .glyphicon-warning-sign:before {
+  content: "\e107";
+}
+.journal .glyphicon-plane:before {
+  content: "\e108";
+}
+.journal .glyphicon-calendar:before {
+  content: "\e109";
+}
+.journal .glyphicon-random:before {
+  content: "\e110";
+}
+.journal .glyphicon-comment:before {
+  content: "\e111";
+}
+.journal .glyphicon-magnet:before {
+  content: "\e112";
+}
+.journal .glyphicon-chevron-up:before {
+  content: "\e113";
+}
+.journal .glyphicon-chevron-down:before {
+  content: "\e114";
+}
+.journal .glyphicon-retweet:before {
+  content: "\e115";
+}
+.journal .glyphicon-shopping-cart:before {
+  content: "\e116";
+}
+.journal .glyphicon-folder-close:before {
+  content: "\e117";
+}
+.journal .glyphicon-folder-open:before {
+  content: "\e118";
+}
+.journal .glyphicon-resize-vertical:before {
+  content: "\e119";
+}
+.journal .glyphicon-resize-horizontal:before {
+  content: "\e120";
+}
+.journal .glyphicon-hdd:before {
+  content: "\e121";
+}
+.journal .glyphicon-bullhorn:before {
+  content: "\e122";
+}
+.journal .glyphicon-bell:before {
+  content: "\e123";
+}
+.journal .glyphicon-certificate:before {
+  content: "\e124";
+}
+.journal .glyphicon-thumbs-up:before {
+  content: "\e125";
+}
+.journal .glyphicon-thumbs-down:before {
+  content: "\e126";
+}
+.journal .glyphicon-hand-right:before {
+  content: "\e127";
+}
+.journal .glyphicon-hand-left:before {
+  content: "\e128";
+}
+.journal .glyphicon-hand-up:before {
+  content: "\e129";
+}
+.journal .glyphicon-hand-down:before {
+  content: "\e130";
+}
+.journal .glyphicon-circle-arrow-right:before {
+  content: "\e131";
+}
+.journal .glyphicon-circle-arrow-left:before {
+  content: "\e132";
+}
+.journal .glyphicon-circle-arrow-up:before {
+  content: "\e133";
+}
+.journal .glyphicon-circle-arrow-down:before {
+  content: "\e134";
+}
+.journal .glyphicon-globe:before {
+  content: "\e135";
+}
+.journal .glyphicon-wrench:before {
+  content: "\e136";
+}
+.journal .glyphicon-tasks:before {
+  content: "\e137";
+}
+.journal .glyphicon-filter:before {
+  content: "\e138";
+}
+.journal .glyphicon-briefcase:before {
+  content: "\e139";
+}
+.journal .glyphicon-fullscreen:before {
+  content: "\e140";
+}
+.journal .glyphicon-dashboard:before {
+  content: "\e141";
+}
+.journal .glyphicon-paperclip:before {
+  content: "\e142";
+}
+.journal .glyphicon-heart-empty:before {
+  content: "\e143";
+}
+.journal .glyphicon-link:before {
+  content: "\e144";
+}
+.journal .glyphicon-phone:before {
+  content: "\e145";
+}
+.journal .glyphicon-pushpin:before {
+  content: "\e146";
+}
+.journal .glyphicon-usd:before {
+  content: "\e148";
+}
+.journal .glyphicon-gbp:before {
+  content: "\e149";
+}
+.journal .glyphicon-sort:before {
+  content: "\e150";
+}
+.journal .glyphicon-sort-by-alphabet:before {
+  content: "\e151";
+}
+.journal .glyphicon-sort-by-alphabet-alt:before {
+  content: "\e152";
+}
+.journal .glyphicon-sort-by-order:before {
+  content: "\e153";
+}
+.journal .glyphicon-sort-by-order-alt:before {
+  content: "\e154";
+}
+.journal .glyphicon-sort-by-attributes:before {
+  content: "\e155";
+}
+.journal .glyphicon-sort-by-attributes-alt:before {
+  content: "\e156";
+}
+.journal .glyphicon-unchecked:before {
+  content: "\e157";
+}
+.journal .glyphicon-expand:before {
+  content: "\e158";
+}
+.journal .glyphicon-collapse-down:before {
+  content: "\e159";
+}
+.journal .glyphicon-collapse-up:before {
+  content: "\e160";
+}
+.journal .glyphicon-log-in:before {
+  content: "\e161";
+}
+.journal .glyphicon-flash:before {
+  content: "\e162";
+}
+.journal .glyphicon-log-out:before {
+  content: "\e163";
+}
+.journal .glyphicon-new-window:before {
+  content: "\e164";
+}
+.journal .glyphicon-record:before {
+  content: "\e165";
+}
+.journal .glyphicon-save:before {
+  content: "\e166";
+}
+.journal .glyphicon-open:before {
+  content: "\e167";
+}
+.journal .glyphicon-saved:before {
+  content: "\e168";
+}
+.journal .glyphicon-import:before {
+  content: "\e169";
+}
+.journal .glyphicon-export:before {
+  content: "\e170";
+}
+.journal .glyphicon-send:before {
+  content: "\e171";
+}
+.journal .glyphicon-floppy-disk:before {
+  content: "\e172";
+}
+.journal .glyphicon-floppy-saved:before {
+  content: "\e173";
+}
+.journal .glyphicon-floppy-remove:before {
+  content: "\e174";
+}
+.journal .glyphicon-floppy-save:before {
+  content: "\e175";
+}
+.journal .glyphicon-floppy-open:before {
+  content: "\e176";
+}
+.journal .glyphicon-credit-card:before {
+  content: "\e177";
+}
+.journal .glyphicon-transfer:before {
+  content: "\e178";
+}
+.journal .glyphicon-cutlery:before {
+  content: "\e179";
+}
+.journal .glyphicon-header:before {
+  content: "\e180";
+}
+.journal .glyphicon-compressed:before {
+  content: "\e181";
+}
+.journal .glyphicon-earphone:before {
+  content: "\e182";
+}
+.journal .glyphicon-phone-alt:before {
+  content: "\e183";
+}
+.journal .glyphicon-tower:before {
+  content: "\e184";
+}
+.journal .glyphicon-stats:before {
+  content: "\e185";
+}
+.journal .glyphicon-sd-video:before {
+  content: "\e186";
+}
+.journal .glyphicon-hd-video:before {
+  content: "\e187";
+}
+.journal .glyphicon-subtitles:before {
+  content: "\e188";
+}
+.journal .glyphicon-sound-stereo:before {
+  content: "\e189";
+}
+.journal .glyphicon-sound-dolby:before {
+  content: "\e190";
+}
+.journal .glyphicon-sound-5-1:before {
+  content: "\e191";
+}
+.journal .glyphicon-sound-6-1:before {
+  content: "\e192";
+}
+.journal .glyphicon-sound-7-1:before {
+  content: "\e193";
+}
+.journal .glyphicon-copyright-mark:before {
+  content: "\e194";
+}
+.journal .glyphicon-registration-mark:before {
+  content: "\e195";
+}
+.journal .glyphicon-cloud-download:before {
+  content: "\e197";
+}
+.journal .glyphicon-cloud-upload:before {
+  content: "\e198";
+}
+.journal .glyphicon-tree-conifer:before {
+  content: "\e199";
+}
+.journal .glyphicon-tree-deciduous:before {
+  content: "\e200";
+}
+.journal * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.journal *:before,
+.journal *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.journal html {
+  font-size: 10px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.journal .body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 15px;
+  line-height: 1.42857143;
+  color: #777777;
+  background-color: #ffffff;
+}
+.journal input,
+.journal button,
+.journal select,
+.journal textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+.journal a {
+  color: #eb6864;
+  text-decoration: none;
+}
+.journal a:hover,
+.journal a:focus {
+  color: #e22620;
+  text-decoration: underline;
+}
+.journal a:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.journal figure {
+  margin: 0;
+}
+.journal img {
+  vertical-align: middle;
+}
+.journal .img-responsive {
+  display: block;
+  width: 100% \9;
+  max-width: 100%;
+  height: auto;
+}
+.journal .img-rounded {
+  border-radius: 6px;
+}
+.journal .img-thumbnail {
+  padding: 4px;
+  line-height: 1.42857143;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  display: inline-block;
+  width: 100% \9;
+  max-width: 100%;
+  height: auto;
+}
+.journal .img-circle {
+  border-radius: 50%;
+}
+.journal hr {
+  margin-top: 21px;
+  margin-bottom: 21px;
+  border: 0;
+  border-top: 1px solid #eeeeee;
+}
+.journal .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.journal .sr-only-focusable:active,
+.journal .sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+}
+.journal h1,
+.journal h2,
+.journal h3,
+.journal h4,
+.journal h5,
+.journal h6,
+.journal .h1,
+.journal .h2,
+.journal .h3,
+.journal .h4,
+.journal .h5,
+.journal .h6 {
+  font-family: "News Cycle", "Arial Narrow Bold", sans-serif;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #000000;
+}
+.journal h1 small,
+.journal h2 small,
+.journal h3 small,
+.journal h4 small,
+.journal h5 small,
+.journal h6 small,
+.journal .h1 small,
+.journal .h2 small,
+.journal .h3 small,
+.journal .h4 small,
+.journal .h5 small,
+.journal .h6 small,
+.journal h1 .small,
+.journal h2 .small,
+.journal h3 .small,
+.journal h4 .small,
+.journal h5 .small,
+.journal h6 .small,
+.journal .h1 .small,
+.journal .h2 .small,
+.journal .h3 .small,
+.journal .h4 .small,
+.journal .h5 .small,
+.journal .h6 .small {
+  font-weight: normal;
+  line-height: 1;
+  color: #999999;
+}
+.journal h1,
+.journal .h1,
+.journal h2,
+.journal .h2,
+.journal h3,
+.journal .h3 {
+  margin-top: 21px;
+  margin-bottom: 10.5px;
+}
+.journal h1 small,
+.journal .h1 small,
+.journal h2 small,
+.journal .h2 small,
+.journal h3 small,
+.journal .h3 small,
+.journal h1 .small,
+.journal .h1 .small,
+.journal h2 .small,
+.journal .h2 .small,
+.journal h3 .small,
+.journal .h3 .small {
+  font-size: 65%;
+}
+.journal h4,
+.journal .h4,
+.journal h5,
+.journal .h5,
+.journal h6,
+.journal .h6 {
+  margin-top: 10.5px;
+  margin-bottom: 10.5px;
+}
+.journal h4 small,
+.journal .h4 small,
+.journal h5 small,
+.journal .h5 small,
+.journal h6 small,
+.journal .h6 small,
+.journal h4 .small,
+.journal .h4 .small,
+.journal h5 .small,
+.journal .h5 .small,
+.journal h6 .small,
+.journal .h6 .small {
+  font-size: 75%;
+}
+.journal h1,
+.journal .h1 {
+  font-size: 39px;
+}
+.journal h2,
+.journal .h2 {
+  font-size: 32px;
+}
+.journal h3,
+.journal .h3 {
+  font-size: 26px;
+}
+.journal h4,
+.journal .h4 {
+  font-size: 19px;
+}
+.journal h5,
+.journal .h5 {
+  font-size: 15px;
+}
+.journal h6,
+.journal .h6 {
+  font-size: 13px;
+}
+.journal p {
+  margin: 0 0 10.5px;
+}
+.journal .lead {
+  margin-bottom: 21px;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.4;
+}
+@media (min-width: 768px) {
+  .journal .lead {
+    font-size: 22.5px;
+  }
+}
+.journal small,
+.journal .small {
+  font-size: 86%;
+}
+.journal cite {
+  font-style: normal;
+}
+.journal mark,
+.journal .mark {
+  background-color: #fcf8e3;
+  padding: .2em;
+}
+.journal .text-left {
+  text-align: left;
+}
+.journal .text-right {
+  text-align: right;
+}
+.journal .text-center {
+  text-align: center;
+}
+.journal .text-justify {
+  text-align: justify;
+}
+.journal .text-nowrap {
+  white-space: nowrap;
+}
+.journal .text-lowercase {
+  text-transform: lowercase;
+}
+.journal .text-uppercase {
+  text-transform: uppercase;
+}
+.journal .text-capitalize {
+  text-transform: capitalize;
+}
+.journal .text-muted {
+  color: #999999;
+}
+.journal .text-primary {
+  color: #eb6864;
+}
+a.journal .text-primary:hover {
+  color: #e53c37;
+}
+.journal .text-success {
+  color: #468847;
+}
+a.journal .text-success:hover {
+  color: #356635;
+}
+.journal .text-info {
+  color: #3a87ad;
+}
+a.journal .text-info:hover {
+  color: #2d6987;
+}
+.journal .text-warning {
+  color: #c09853;
+}
+a.journal .text-warning:hover {
+  color: #a47e3c;
+}
+.journal .text-danger {
+  color: #b94a48;
+}
+a.journal .text-danger:hover {
+  color: #953b39;
+}
+.journal .bg-primary {
+  color: #fff;
+  background-color: #eb6864;
+}
+a.journal .bg-primary:hover {
+  background-color: #e53c37;
+}
+.journal .bg-success {
+  background-color: #dff0d8;
+}
+a.journal .bg-success:hover {
+  background-color: #c1e2b3;
+}
+.journal .bg-info {
+  background-color: #d9edf7;
+}
+a.journal .bg-info:hover {
+  background-color: #afd9ee;
+}
+.journal .bg-warning {
+  background-color: #fcf8e3;
+}
+a.journal .bg-warning:hover {
+  background-color: #f7ecb5;
+}
+.journal .bg-danger {
+  background-color: #f2dede;
+}
+a.journal .bg-danger:hover {
+  background-color: #e4b9b9;
+}
+.journal .page-header {
+  padding-bottom: 9.5px;
+  margin: 42px 0 21px;
+  border-bottom: 1px solid #eeeeee;
+}
+.journal ul,
+.journal ol {
+  margin-top: 0;
+  margin-bottom: 10.5px;
+}
+.journal ul ul,
+.journal ol ul,
+.journal ul ol,
+.journal ol ol {
+  margin-bottom: 0;
+}
+.journal .list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+.journal .list-inline {
+  padding-left: 0;
+  list-style: none;
+  margin-left: -5px;
+}
+.journal .list-inline > li {
+  display: inline-block;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.journal dl {
+  margin-top: 0;
+  margin-bottom: 21px;
+}
+.journal dt,
+.journal dd {
+  line-height: 1.42857143;
+}
+.journal dt {
+  font-weight: bold;
+}
+.journal dd {
+  margin-left: 0;
+}
+@media (min-width: 768px) {
+  .journal .dl-horizontal dt {
+    float: left;
+    width: 160px;
+    clear: left;
+    text-align: right;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .journal .dl-horizontal dd {
+    margin-left: 180px;
+  }
+}
+.journal abbr[title],
+.journal abbr[data-original-title] {
+  cursor: help;
+  border-bottom: 1px dotted #999999;
+}
+.journal .initialism {
+  font-size: 90%;
+  text-transform: uppercase;
+}
+.journal blockquote {
+  padding: 10.5px 21px;
+  margin: 0 0 21px;
+  font-size: 18.75px;
+  border-left: 5px solid #eeeeee;
+}
+.journal blockquote p:last-child,
+.journal blockquote ul:last-child,
+.journal blockquote ol:last-child {
+  margin-bottom: 0;
+}
+.journal blockquote footer,
+.journal blockquote small,
+.journal blockquote .small {
+  display: block;
+  font-size: 80%;
+  line-height: 1.42857143;
+  color: #999999;
+}
+.journal blockquote footer:before,
+.journal blockquote small:before,
+.journal blockquote .small:before {
+  content: '\2014 \00A0';
+}
+.journal .blockquote-reverse,
+.journal blockquote.pull-right {
+  padding-right: 15px;
+  padding-left: 0;
+  border-right: 5px solid #eeeeee;
+  border-left: 0;
+  text-align: right;
+}
+.journal .blockquote-reverse footer:before,
+.journal blockquote.pull-right footer:before,
+.journal .blockquote-reverse small:before,
+.journal blockquote.pull-right small:before,
+.journal .blockquote-reverse .small:before,
+.journal blockquote.pull-right .small:before {
+  content: '';
+}
+.journal .blockquote-reverse footer:after,
+.journal blockquote.pull-right footer:after,
+.journal .blockquote-reverse small:after,
+.journal blockquote.pull-right small:after,
+.journal .blockquote-reverse .small:after,
+.journal blockquote.pull-right .small:after {
+  content: '\00A0 \2014';
+}
+.journal blockquote:before,
+.journal blockquote:after {
+  content: "";
+}
+.journal address {
+  margin-bottom: 21px;
+  font-style: normal;
+  line-height: 1.42857143;
+}
+.journal code,
+.journal kbd,
+.journal pre,
+.journal samp {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+.journal code {
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #c7254e;
+  background-color: #f9f2f4;
+  border-radius: 4px;
+}
+.journal kbd {
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #ffffff;
+  background-color: #333333;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+.journal kbd kbd {
+  padding: 0;
+  font-size: 100%;
+  box-shadow: none;
+}
+.journal pre {
+  display: block;
+  padding: 10px;
+  margin: 0 0 10.5px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  word-break: break-all;
+  word-wrap: break-word;
+  color: #333333;
+  background-color: #f5f5f5;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+}
+.journal pre code {
+  padding: 0;
+  font-size: inherit;
+  color: inherit;
+  white-space: pre-wrap;
+  background-color: transparent;
+  border-radius: 0;
+}
+.journal .pre-scrollable {
+  max-height: 340px;
+  overflow-y: scroll;
+}
+.journal .container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .journal .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .journal .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .journal .container {
+    width: 1170px;
+  }
+}
+.journal .container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.journal .row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.journal .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.journal .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+  float: left;
+}
+.journal .col-xs-12 {
+  width: 100%;
+}
+.journal .col-xs-11 {
+  width: 91.66666667%;
+}
+.journal .col-xs-10 {
+  width: 83.33333333%;
+}
+.journal .col-xs-9 {
+  width: 75%;
+}
+.journal .col-xs-8 {
+  width: 66.66666667%;
+}
+.journal .col-xs-7 {
+  width: 58.33333333%;
+}
+.journal .col-xs-6 {
+  width: 50%;
+}
+.journal .col-xs-5 {
+  width: 41.66666667%;
+}
+.journal .col-xs-4 {
+  width: 33.33333333%;
+}
+.journal .col-xs-3 {
+  width: 25%;
+}
+.journal .col-xs-2 {
+  width: 16.66666667%;
+}
+.journal .col-xs-1 {
+  width: 8.33333333%;
+}
+.journal .col-xs-pull-12 {
+  right: 100%;
+}
+.journal .col-xs-pull-11 {
+  right: 91.66666667%;
+}
+.journal .col-xs-pull-10 {
+  right: 83.33333333%;
+}
+.journal .col-xs-pull-9 {
+  right: 75%;
+}
+.journal .col-xs-pull-8 {
+  right: 66.66666667%;
+}
+.journal .col-xs-pull-7 {
+  right: 58.33333333%;
+}
+.journal .col-xs-pull-6 {
+  right: 50%;
+}
+.journal .col-xs-pull-5 {
+  right: 41.66666667%;
+}
+.journal .col-xs-pull-4 {
+  right: 33.33333333%;
+}
+.journal .col-xs-pull-3 {
+  right: 25%;
+}
+.journal .col-xs-pull-2 {
+  right: 16.66666667%;
+}
+.journal .col-xs-pull-1 {
+  right: 8.33333333%;
+}
+.journal .col-xs-pull-0 {
+  right: auto;
+}
+.journal .col-xs-push-12 {
+  left: 100%;
+}
+.journal .col-xs-push-11 {
+  left: 91.66666667%;
+}
+.journal .col-xs-push-10 {
+  left: 83.33333333%;
+}
+.journal .col-xs-push-9 {
+  left: 75%;
+}
+.journal .col-xs-push-8 {
+  left: 66.66666667%;
+}
+.journal .col-xs-push-7 {
+  left: 58.33333333%;
+}
+.journal .col-xs-push-6 {
+  left: 50%;
+}
+.journal .col-xs-push-5 {
+  left: 41.66666667%;
+}
+.journal .col-xs-push-4 {
+  left: 33.33333333%;
+}
+.journal .col-xs-push-3 {
+  left: 25%;
+}
+.journal .col-xs-push-2 {
+  left: 16.66666667%;
+}
+.journal .col-xs-push-1 {
+  left: 8.33333333%;
+}
+.journal .col-xs-push-0 {
+  left: auto;
+}
+.journal .col-xs-offset-12 {
+  margin-left: 100%;
+}
+.journal .col-xs-offset-11 {
+  margin-left: 91.66666667%;
+}
+.journal .col-xs-offset-10 {
+  margin-left: 83.33333333%;
+}
+.journal .col-xs-offset-9 {
+  margin-left: 75%;
+}
+.journal .col-xs-offset-8 {
+  margin-left: 66.66666667%;
+}
+.journal .col-xs-offset-7 {
+  margin-left: 58.33333333%;
+}
+.journal .col-xs-offset-6 {
+  margin-left: 50%;
+}
+.journal .col-xs-offset-5 {
+  margin-left: 41.66666667%;
+}
+.journal .col-xs-offset-4 {
+  margin-left: 33.33333333%;
+}
+.journal .col-xs-offset-3 {
+  margin-left: 25%;
+}
+.journal .col-xs-offset-2 {
+  margin-left: 16.66666667%;
+}
+.journal .col-xs-offset-1 {
+  margin-left: 8.33333333%;
+}
+.journal .col-xs-offset-0 {
+  margin-left: 0%;
+}
+@media (min-width: 768px) {
+  .journal .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+    float: left;
+  }
+  .journal .col-sm-12 {
+    width: 100%;
+  }
+  .journal .col-sm-11 {
+    width: 91.66666667%;
+  }
+  .journal .col-sm-10 {
+    width: 83.33333333%;
+  }
+  .journal .col-sm-9 {
+    width: 75%;
+  }
+  .journal .col-sm-8 {
+    width: 66.66666667%;
+  }
+  .journal .col-sm-7 {
+    width: 58.33333333%;
+  }
+  .journal .col-sm-6 {
+    width: 50%;
+  }
+  .journal .col-sm-5 {
+    width: 41.66666667%;
+  }
+  .journal .col-sm-4 {
+    width: 33.33333333%;
+  }
+  .journal .col-sm-3 {
+    width: 25%;
+  }
+  .journal .col-sm-2 {
+    width: 16.66666667%;
+  }
+  .journal .col-sm-1 {
+    width: 8.33333333%;
+  }
+  .journal .col-sm-pull-12 {
+    right: 100%;
+  }
+  .journal .col-sm-pull-11 {
+    right: 91.66666667%;
+  }
+  .journal .col-sm-pull-10 {
+    right: 83.33333333%;
+  }
+  .journal .col-sm-pull-9 {
+    right: 75%;
+  }
+  .journal .col-sm-pull-8 {
+    right: 66.66666667%;
+  }
+  .journal .col-sm-pull-7 {
+    right: 58.33333333%;
+  }
+  .journal .col-sm-pull-6 {
+    right: 50%;
+  }
+  .journal .col-sm-pull-5 {
+    right: 41.66666667%;
+  }
+  .journal .col-sm-pull-4 {
+    right: 33.33333333%;
+  }
+  .journal .col-sm-pull-3 {
+    right: 25%;
+  }
+  .journal .col-sm-pull-2 {
+    right: 16.66666667%;
+  }
+  .journal .col-sm-pull-1 {
+    right: 8.33333333%;
+  }
+  .journal .col-sm-pull-0 {
+    right: auto;
+  }
+  .journal .col-sm-push-12 {
+    left: 100%;
+  }
+  .journal .col-sm-push-11 {
+    left: 91.66666667%;
+  }
+  .journal .col-sm-push-10 {
+    left: 83.33333333%;
+  }
+  .journal .col-sm-push-9 {
+    left: 75%;
+  }
+  .journal .col-sm-push-8 {
+    left: 66.66666667%;
+  }
+  .journal .col-sm-push-7 {
+    left: 58.33333333%;
+  }
+  .journal .col-sm-push-6 {
+    left: 50%;
+  }
+  .journal .col-sm-push-5 {
+    left: 41.66666667%;
+  }
+  .journal .col-sm-push-4 {
+    left: 33.33333333%;
+  }
+  .journal .col-sm-push-3 {
+    left: 25%;
+  }
+  .journal .col-sm-push-2 {
+    left: 16.66666667%;
+  }
+  .journal .col-sm-push-1 {
+    left: 8.33333333%;
+  }
+  .journal .col-sm-push-0 {
+    left: auto;
+  }
+  .journal .col-sm-offset-12 {
+    margin-left: 100%;
+  }
+  .journal .col-sm-offset-11 {
+    margin-left: 91.66666667%;
+  }
+  .journal .col-sm-offset-10 {
+    margin-left: 83.33333333%;
+  }
+  .journal .col-sm-offset-9 {
+    margin-left: 75%;
+  }
+  .journal .col-sm-offset-8 {
+    margin-left: 66.66666667%;
+  }
+  .journal .col-sm-offset-7 {
+    margin-left: 58.33333333%;
+  }
+  .journal .col-sm-offset-6 {
+    margin-left: 50%;
+  }
+  .journal .col-sm-offset-5 {
+    margin-left: 41.66666667%;
+  }
+  .journal .col-sm-offset-4 {
+    margin-left: 33.33333333%;
+  }
+  .journal .col-sm-offset-3 {
+    margin-left: 25%;
+  }
+  .journal .col-sm-offset-2 {
+    margin-left: 16.66666667%;
+  }
+  .journal .col-sm-offset-1 {
+    margin-left: 8.33333333%;
+  }
+  .journal .col-sm-offset-0 {
+    margin-left: 0%;
+  }
+}
+@media (min-width: 992px) {
+  .journal .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+    float: left;
+  }
+  .journal .col-md-12 {
+    width: 100%;
+  }
+  .journal .col-md-11 {
+    width: 91.66666667%;
+  }
+  .journal .col-md-10 {
+    width: 83.33333333%;
+  }
+  .journal .col-md-9 {
+    width: 75%;
+  }
+  .journal .col-md-8 {
+    width: 66.66666667%;
+  }
+  .journal .col-md-7 {
+    width: 58.33333333%;
+  }
+  .journal .col-md-6 {
+    width: 50%;
+  }
+  .journal .col-md-5 {
+    width: 41.66666667%;
+  }
+  .journal .col-md-4 {
+    width: 33.33333333%;
+  }
+  .journal .col-md-3 {
+    width: 25%;
+  }
+  .journal .col-md-2 {
+    width: 16.66666667%;
+  }
+  .journal .col-md-1 {
+    width: 8.33333333%;
+  }
+  .journal .col-md-pull-12 {
+    right: 100%;
+  }
+  .journal .col-md-pull-11 {
+    right: 91.66666667%;
+  }
+  .journal .col-md-pull-10 {
+    right: 83.33333333%;
+  }
+  .journal .col-md-pull-9 {
+    right: 75%;
+  }
+  .journal .col-md-pull-8 {
+    right: 66.66666667%;
+  }
+  .journal .col-md-pull-7 {
+    right: 58.33333333%;
+  }
+  .journal .col-md-pull-6 {
+    right: 50%;
+  }
+  .journal .col-md-pull-5 {
+    right: 41.66666667%;
+  }
+  .journal .col-md-pull-4 {
+    right: 33.33333333%;
+  }
+  .journal .col-md-pull-3 {
+    right: 25%;
+  }
+  .journal .col-md-pull-2 {
+    right: 16.66666667%;
+  }
+  .journal .col-md-pull-1 {
+    right: 8.33333333%;
+  }
+  .journal .col-md-pull-0 {
+    right: auto;
+  }
+  .journal .col-md-push-12 {
+    left: 100%;
+  }
+  .journal .col-md-push-11 {
+    left: 91.66666667%;
+  }
+  .journal .col-md-push-10 {
+    left: 83.33333333%;
+  }
+  .journal .col-md-push-9 {
+    left: 75%;
+  }
+  .journal .col-md-push-8 {
+    left: 66.66666667%;
+  }
+  .journal .col-md-push-7 {
+    left: 58.33333333%;
+  }
+  .journal .col-md-push-6 {
+    left: 50%;
+  }
+  .journal .col-md-push-5 {
+    left: 41.66666667%;
+  }
+  .journal .col-md-push-4 {
+    left: 33.33333333%;
+  }
+  .journal .col-md-push-3 {
+    left: 25%;
+  }
+  .journal .col-md-push-2 {
+    left: 16.66666667%;
+  }
+  .journal .col-md-push-1 {
+    left: 8.33333333%;
+  }
+  .journal .col-md-push-0 {
+    left: auto;
+  }
+  .journal .col-md-offset-12 {
+    margin-left: 100%;
+  }
+  .journal .col-md-offset-11 {
+    margin-left: 91.66666667%;
+  }
+  .journal .col-md-offset-10 {
+    margin-left: 83.33333333%;
+  }
+  .journal .col-md-offset-9 {
+    margin-left: 75%;
+  }
+  .journal .col-md-offset-8 {
+    margin-left: 66.66666667%;
+  }
+  .journal .col-md-offset-7 {
+    margin-left: 58.33333333%;
+  }
+  .journal .col-md-offset-6 {
+    margin-left: 50%;
+  }
+  .journal .col-md-offset-5 {
+    margin-left: 41.66666667%;
+  }
+  .journal .col-md-offset-4 {
+    margin-left: 33.33333333%;
+  }
+  .journal .col-md-offset-3 {
+    margin-left: 25%;
+  }
+  .journal .col-md-offset-2 {
+    margin-left: 16.66666667%;
+  }
+  .journal .col-md-offset-1 {
+    margin-left: 8.33333333%;
+  }
+  .journal .col-md-offset-0 {
+    margin-left: 0%;
+  }
+}
+@media (min-width: 1200px) {
+  .journal .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+    float: left;
+  }
+  .journal .col-lg-12 {
+    width: 100%;
+  }
+  .journal .col-lg-11 {
+    width: 91.66666667%;
+  }
+  .journal .col-lg-10 {
+    width: 83.33333333%;
+  }
+  .journal .col-lg-9 {
+    width: 75%;
+  }
+  .journal .col-lg-8 {
+    width: 66.66666667%;
+  }
+  .journal .col-lg-7 {
+    width: 58.33333333%;
+  }
+  .journal .col-lg-6 {
+    width: 50%;
+  }
+  .journal .col-lg-5 {
+    width: 41.66666667%;
+  }
+  .journal .col-lg-4 {
+    width: 33.33333333%;
+  }
+  .journal .col-lg-3 {
+    width: 25%;
+  }
+  .journal .col-lg-2 {
+    width: 16.66666667%;
+  }
+  .journal .col-lg-1 {
+    width: 8.33333333%;
+  }
+  .journal .col-lg-pull-12 {
+    right: 100%;
+  }
+  .journal .col-lg-pull-11 {
+    right: 91.66666667%;
+  }
+  .journal .col-lg-pull-10 {
+    right: 83.33333333%;
+  }
+  .journal .col-lg-pull-9 {
+    right: 75%;
+  }
+  .journal .col-lg-pull-8 {
+    right: 66.66666667%;
+  }
+  .journal .col-lg-pull-7 {
+    right: 58.33333333%;
+  }
+  .journal .col-lg-pull-6 {
+    right: 50%;
+  }
+  .journal .col-lg-pull-5 {
+    right: 41.66666667%;
+  }
+  .journal .col-lg-pull-4 {
+    right: 33.33333333%;
+  }
+  .journal .col-lg-pull-3 {
+    right: 25%;
+  }
+  .journal .col-lg-pull-2 {
+    right: 16.66666667%;
+  }
+  .journal .col-lg-pull-1 {
+    right: 8.33333333%;
+  }
+  .journal .col-lg-pull-0 {
+    right: auto;
+  }
+  .journal .col-lg-push-12 {
+    left: 100%;
+  }
+  .journal .col-lg-push-11 {
+    left: 91.66666667%;
+  }
+  .journal .col-lg-push-10 {
+    left: 83.33333333%;
+  }
+  .journal .col-lg-push-9 {
+    left: 75%;
+  }
+  .journal .col-lg-push-8 {
+    left: 66.66666667%;
+  }
+  .journal .col-lg-push-7 {
+    left: 58.33333333%;
+  }
+  .journal .col-lg-push-6 {
+    left: 50%;
+  }
+  .journal .col-lg-push-5 {
+    left: 41.66666667%;
+  }
+  .journal .col-lg-push-4 {
+    left: 33.33333333%;
+  }
+  .journal .col-lg-push-3 {
+    left: 25%;
+  }
+  .journal .col-lg-push-2 {
+    left: 16.66666667%;
+  }
+  .journal .col-lg-push-1 {
+    left: 8.33333333%;
+  }
+  .journal .col-lg-push-0 {
+    left: auto;
+  }
+  .journal .col-lg-offset-12 {
+    margin-left: 100%;
+  }
+  .journal .col-lg-offset-11 {
+    margin-left: 91.66666667%;
+  }
+  .journal .col-lg-offset-10 {
+    margin-left: 83.33333333%;
+  }
+  .journal .col-lg-offset-9 {
+    margin-left: 75%;
+  }
+  .journal .col-lg-offset-8 {
+    margin-left: 66.66666667%;
+  }
+  .journal .col-lg-offset-7 {
+    margin-left: 58.33333333%;
+  }
+  .journal .col-lg-offset-6 {
+    margin-left: 50%;
+  }
+  .journal .col-lg-offset-5 {
+    margin-left: 41.66666667%;
+  }
+  .journal .col-lg-offset-4 {
+    margin-left: 33.33333333%;
+  }
+  .journal .col-lg-offset-3 {
+    margin-left: 25%;
+  }
+  .journal .col-lg-offset-2 {
+    margin-left: 16.66666667%;
+  }
+  .journal .col-lg-offset-1 {
+    margin-left: 8.33333333%;
+  }
+  .journal .col-lg-offset-0 {
+    margin-left: 0%;
+  }
+}
+.journal table {
+  background-color: transparent;
+}
+.journal th {
+  text-align: left;
+}
+.journal .table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 21px;
+}
+.journal .table > thead > tr > th,
+.journal .table > tbody > tr > th,
+.journal .table > tfoot > tr > th,
+.journal .table > thead > tr > td,
+.journal .table > tbody > tr > td,
+.journal .table > tfoot > tr > td {
+  padding: 8px;
+  line-height: 1.42857143;
+  vertical-align: top;
+  border-top: 1px solid #dddddd;
+}
+.journal .table > thead > tr > th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #dddddd;
+}
+.journal .table > caption + thead > tr:first-child > th,
+.journal .table > colgroup + thead > tr:first-child > th,
+.journal .table > thead:first-child > tr:first-child > th,
+.journal .table > caption + thead > tr:first-child > td,
+.journal .table > colgroup + thead > tr:first-child > td,
+.journal .table > thead:first-child > tr:first-child > td {
+  border-top: 0;
+}
+.journal .table > tbody + tbody {
+  border-top: 2px solid #dddddd;
+}
+.journal .table .table {
+  background-color: #ffffff;
+}
+.journal .table-condensed > thead > tr > th,
+.journal .table-condensed > tbody > tr > th,
+.journal .table-condensed > tfoot > tr > th,
+.journal .table-condensed > thead > tr > td,
+.journal .table-condensed > tbody > tr > td,
+.journal .table-condensed > tfoot > tr > td {
+  padding: 5px;
+}
+.journal .table-bordered {
+  border: 1px solid #dddddd;
+}
+.journal .table-bordered > thead > tr > th,
+.journal .table-bordered > tbody > tr > th,
+.journal .table-bordered > tfoot > tr > th,
+.journal .table-bordered > thead > tr > td,
+.journal .table-bordered > tbody > tr > td,
+.journal .table-bordered > tfoot > tr > td {
+  border: 1px solid #dddddd;
+}
+.journal .table-bordered > thead > tr > th,
+.journal .table-bordered > thead > tr > td {
+  border-bottom-width: 2px;
+}
+.journal .table-striped > tbody > tr:nth-child(odd) > td,
+.journal .table-striped > tbody > tr:nth-child(odd) > th {
+  background-color: #f9f9f9;
+}
+.journal .table-hover > tbody > tr:hover > td,
+.journal .table-hover > tbody > tr:hover > th {
+  background-color: #f5f5f5;
+}
+.journal table col[class*="col-"] {
+  position: static;
+  float: none;
+  display: table-column;
+}
+.journal table td[class*="col-"],
+.journal table th[class*="col-"] {
+  position: static;
+  float: none;
+  display: table-cell;
+}
+.journal .table > thead > tr > td.active,
+.journal .table > tbody > tr > td.active,
+.journal .table > tfoot > tr > td.active,
+.journal .table > thead > tr > th.active,
+.journal .table > tbody > tr > th.active,
+.journal .table > tfoot > tr > th.active,
+.journal .table > thead > tr.active > td,
+.journal .table > tbody > tr.active > td,
+.journal .table > tfoot > tr.active > td,
+.journal .table > thead > tr.active > th,
+.journal .table > tbody > tr.active > th,
+.journal .table > tfoot > tr.active > th {
+  background-color: #f5f5f5;
+}
+.journal .table-hover > tbody > tr > td.active:hover,
+.journal .table-hover > tbody > tr > th.active:hover,
+.journal .table-hover > tbody > tr.active:hover > td,
+.journal .table-hover > tbody > tr:hover > .active,
+.journal .table-hover > tbody > tr.active:hover > th {
+  background-color: #e8e8e8;
+}
+.journal .table > thead > tr > td.success,
+.journal .table > tbody > tr > td.success,
+.journal .table > tfoot > tr > td.success,
+.journal .table > thead > tr > th.success,
+.journal .table > tbody > tr > th.success,
+.journal .table > tfoot > tr > th.success,
+.journal .table > thead > tr.success > td,
+.journal .table > tbody > tr.success > td,
+.journal .table > tfoot > tr.success > td,
+.journal .table > thead > tr.success > th,
+.journal .table > tbody > tr.success > th,
+.journal .table > tfoot > tr.success > th {
+  background-color: #dff0d8;
+}
+.journal .table-hover > tbody > tr > td.success:hover,
+.journal .table-hover > tbody > tr > th.success:hover,
+.journal .table-hover > tbody > tr.success:hover > td,
+.journal .table-hover > tbody > tr:hover > .success,
+.journal .table-hover > tbody > tr.success:hover > th {
+  background-color: #d0e9c6;
+}
+.journal .table > thead > tr > td.info,
+.journal .table > tbody > tr > td.info,
+.journal .table > tfoot > tr > td.info,
+.journal .table > thead > tr > th.info,
+.journal .table > tbody > tr > th.info,
+.journal .table > tfoot > tr > th.info,
+.journal .table > thead > tr.info > td,
+.journal .table > tbody > tr.info > td,
+.journal .table > tfoot > tr.info > td,
+.journal .table > thead > tr.info > th,
+.journal .table > tbody > tr.info > th,
+.journal .table > tfoot > tr.info > th {
+  background-color: #d9edf7;
+}
+.journal .table-hover > tbody > tr > td.info:hover,
+.journal .table-hover > tbody > tr > th.info:hover,
+.journal .table-hover > tbody > tr.info:hover > td,
+.journal .table-hover > tbody > tr:hover > .info,
+.journal .table-hover > tbody > tr.info:hover > th {
+  background-color: #c4e3f3;
+}
+.journal .table > thead > tr > td.warning,
+.journal .table > tbody > tr > td.warning,
+.journal .table > tfoot > tr > td.warning,
+.journal .table > thead > tr > th.warning,
+.journal .table > tbody > tr > th.warning,
+.journal .table > tfoot > tr > th.warning,
+.journal .table > thead > tr.warning > td,
+.journal .table > tbody > tr.warning > td,
+.journal .table > tfoot > tr.warning > td,
+.journal .table > thead > tr.warning > th,
+.journal .table > tbody > tr.warning > th,
+.journal .table > tfoot > tr.warning > th {
+  background-color: #fcf8e3;
+}
+.journal .table-hover > tbody > tr > td.warning:hover,
+.journal .table-hover > tbody > tr > th.warning:hover,
+.journal .table-hover > tbody > tr.warning:hover > td,
+.journal .table-hover > tbody > tr:hover > .warning,
+.journal .table-hover > tbody > tr.warning:hover > th {
+  background-color: #faf2cc;
+}
+.journal .table > thead > tr > td.danger,
+.journal .table > tbody > tr > td.danger,
+.journal .table > tfoot > tr > td.danger,
+.journal .table > thead > tr > th.danger,
+.journal .table > tbody > tr > th.danger,
+.journal .table > tfoot > tr > th.danger,
+.journal .table > thead > tr.danger > td,
+.journal .table > tbody > tr.danger > td,
+.journal .table > tfoot > tr.danger > td,
+.journal .table > thead > tr.danger > th,
+.journal .table > tbody > tr.danger > th,
+.journal .table > tfoot > tr.danger > th {
+  background-color: #f2dede;
+}
+.journal .table-hover > tbody > tr > td.danger:hover,
+.journal .table-hover > tbody > tr > th.danger:hover,
+.journal .table-hover > tbody > tr.danger:hover > td,
+.journal .table-hover > tbody > tr:hover > .danger,
+.journal .table-hover > tbody > tr.danger:hover > th {
+  background-color: #ebcccc;
+}
+@media screen and (max-width: 767px) {
+  .journal .table-responsive {
+    width: 100%;
+    margin-bottom: 15.75px;
+    overflow-y: hidden;
+    overflow-x: auto;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    border: 1px solid #dddddd;
+    -webkit-overflow-scrolling: touch;
+  }
+  .journal .table-responsive > .table {
+    margin-bottom: 0;
+  }
+  .journal .table-responsive > .table > thead > tr > th,
+  .journal .table-responsive > .table > tbody > tr > th,
+  .journal .table-responsive > .table > tfoot > tr > th,
+  .journal .table-responsive > .table > thead > tr > td,
+  .journal .table-responsive > .table > tbody > tr > td,
+  .journal .table-responsive > .table > tfoot > tr > td {
+    white-space: nowrap;
+  }
+  .journal .table-responsive > .table-bordered {
+    border: 0;
+  }
+  .journal .table-responsive > .table-bordered > thead > tr > th:first-child,
+  .journal .table-responsive > .table-bordered > tbody > tr > th:first-child,
+  .journal .table-responsive > .table-bordered > tfoot > tr > th:first-child,
+  .journal .table-responsive > .table-bordered > thead > tr > td:first-child,
+  .journal .table-responsive > .table-bordered > tbody > tr > td:first-child,
+  .journal .table-responsive > .table-bordered > tfoot > tr > td:first-child {
+    border-left: 0;
+  }
+  .journal .table-responsive > .table-bordered > thead > tr > th:last-child,
+  .journal .table-responsive > .table-bordered > tbody > tr > th:last-child,
+  .journal .table-responsive > .table-bordered > tfoot > tr > th:last-child,
+  .journal .table-responsive > .table-bordered > thead > tr > td:last-child,
+  .journal .table-responsive > .table-bordered > tbody > tr > td:last-child,
+  .journal .table-responsive > .table-bordered > tfoot > tr > td:last-child {
+    border-right: 0;
+  }
+  .journal .table-responsive > .table-bordered > tbody > tr:last-child > th,
+  .journal .table-responsive > .table-bordered > tfoot > tr:last-child > th,
+  .journal .table-responsive > .table-bordered > tbody > tr:last-child > td,
+  .journal .table-responsive > .table-bordered > tfoot > tr:last-child > td {
+    border-bottom: 0;
+  }
+}
+.journal fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  min-width: 0;
+}
+.journal legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 21px;
+  font-size: 22.5px;
+  line-height: inherit;
+  color: #777777;
+  border: 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+.journal label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.journal input[type="search"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.journal input[type="radio"],
+.journal input[type="checkbox"] {
+  margin: 4px 0 0;
+  margin-top: 1px \9;
+  line-height: normal;
+}
+.journal input[type="file"] {
+  display: block;
+}
+.journal input[type="range"] {
+  display: block;
+  width: 100%;
+}
+.journal select[multiple],
+.journal select[size] {
+  height: auto;
+}
+.journal input[type="file"]:focus,
+.journal input[type="radio"]:focus,
+.journal input[type="checkbox"]:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.journal output {
+  display: block;
+  padding-top: 9px;
+  font-size: 15px;
+  line-height: 1.42857143;
+  color: #777777;
+}
+.journal .form-control {
+  display: block;
+  width: 100%;
+  height: 39px;
+  padding: 8px 12px;
+  font-size: 15px;
+  line-height: 1.42857143;
+  color: #777777;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.journal .form-control:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+.journal .form-control::-moz-placeholder {
+  color: #999999;
+  opacity: 1;
+}
+.journal .form-control:-ms-input-placeholder {
+  color: #999999;
+}
+.journal .form-control::-webkit-input-placeholder {
+  color: #999999;
+}
+.journal .form-control[disabled],
+.journal .form-control[readonly],
+fieldset[disabled] .journal .form-control {
+  cursor: not-allowed;
+  background-color: #eeeeee;
+  opacity: 1;
+}
+textarea.journal .form-control {
+  height: auto;
+}
+.journal input[type="search"] {
+  -webkit-appearance: none;
+}
+.journal input[type="date"],
+.journal input[type="time"],
+.journal input[type="datetime-local"],
+.journal input[type="month"] {
+  line-height: 39px;
+  line-height: 1.42857143 \0;
+}
+.journal input[type="date"].input-sm,
+.journal input[type="time"].input-sm,
+.journal input[type="datetime-local"].input-sm,
+.journal input[type="month"].input-sm {
+  line-height: 31px;
+}
+.journal input[type="date"].input-lg,
+.journal input[type="time"].input-lg,
+.journal input[type="datetime-local"].input-lg,
+.journal input[type="month"].input-lg {
+  line-height: 56px;
+}
+.journal .form-group {
+  margin-bottom: 15px;
+}
+.journal .radio,
+.journal .checkbox {
+  position: relative;
+  display: block;
+  min-height: 21px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.journal .radio label,
+.journal .checkbox label {
+  padding-left: 20px;
+  margin-bottom: 0;
+  font-weight: normal;
+  cursor: pointer;
+}
+.journal .radio input[type="radio"],
+.journal .radio-inline input[type="radio"],
+.journal .checkbox input[type="checkbox"],
+.journal .checkbox-inline input[type="checkbox"] {
+  position: absolute;
+  margin-left: -20px;
+  margin-top: 4px \9;
+}
+.journal .radio + .radio,
+.journal .checkbox + .checkbox {
+  margin-top: -5px;
+}
+.journal .radio-inline,
+.journal .checkbox-inline {
+  display: inline-block;
+  padding-left: 20px;
+  margin-bottom: 0;
+  vertical-align: middle;
+  font-weight: normal;
+  cursor: pointer;
+}
+.journal .radio-inline + .radio-inline,
+.journal .checkbox-inline + .checkbox-inline {
+  margin-top: 0;
+  margin-left: 10px;
+}
+.journal input[type="radio"][disabled],
+.journal input[type="checkbox"][disabled],
+.journal input[type="radio"].disabled,
+.journal input[type="checkbox"].disabled,
+fieldset[disabled] .journal input[type="radio"],
+fieldset[disabled] .journal input[type="checkbox"] {
+  cursor: not-allowed;
+}
+.journal .radio-inline.disabled,
+.journal .checkbox-inline.disabled,
+fieldset[disabled] .journal .radio-inline,
+fieldset[disabled] .journal .checkbox-inline {
+  cursor: not-allowed;
+}
+.journal .radio.disabled label,
+.journal .checkbox.disabled label,
+fieldset[disabled] .journal .radio label,
+fieldset[disabled] .journal .checkbox label {
+  cursor: not-allowed;
+}
+.journal .form-control-static {
+  padding-top: 9px;
+  padding-bottom: 9px;
+  margin-bottom: 0;
+}
+.journal .form-control-static.input-lg,
+.journal .form-control-static.input-sm {
+  padding-left: 0;
+  padding-right: 0;
+}
+.journal .input-sm {
+  height: 31px;
+  padding: 5px 10px;
+  font-size: 13px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+select.journal .input-sm {
+  height: 31px;
+  line-height: 31px;
+}
+textarea.journal .input-sm,
+select[multiple].journal .input-sm {
+  height: auto;
+}
+.journal .input-lg {
+  height: 56px;
+  padding: 14px 16px;
+  font-size: 19px;
+  line-height: 1.3333333;
+  border-radius: 6px;
+}
+select.journal .input-lg {
+  height: 56px;
+  line-height: 56px;
+}
+textarea.journal .input-lg,
+select[multiple].journal .input-lg {
+  height: auto;
+}
+.journal .has-feedback {
+  position: relative;
+}
+.journal .has-feedback .form-control {
+  padding-right: 48.75px;
+}
+.journal .form-control-feedback {
+  position: absolute;
+  top: 26px;
+  right: 0;
+  z-index: 2;
+  display: block;
+  width: 39px;
+  height: 39px;
+  line-height: 39px;
+  text-align: center;
+}
+.journal .input-lg + .form-control-feedback {
+  width: 56px;
+  height: 56px;
+  line-height: 56px;
+}
+.journal .input-sm + .form-control-feedback {
+  width: 31px;
+  height: 31px;
+  line-height: 31px;
+}
+.journal .has-success .help-block,
+.journal .has-success .control-label,
+.journal .has-success .radio,
+.journal .has-success .checkbox,
+.journal .has-success .radio-inline,
+.journal .has-success .checkbox-inline {
+  color: #468847;
+}
+.journal .has-success .form-control {
+  border-color: #468847;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+.journal .has-success .form-control:focus {
+  border-color: #356635;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #7aba7b;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #7aba7b;
+}
+.journal .has-success .input-group-addon {
+  color: #468847;
+  border-color: #468847;
+  background-color: #dff0d8;
+}
+.journal .has-success .form-control-feedback {
+  color: #468847;
+}
+.journal .has-warning .help-block,
+.journal .has-warning .control-label,
+.journal .has-warning .radio,
+.journal .has-warning .checkbox,
+.journal .has-warning .radio-inline,
+.journal .has-warning .checkbox-inline {
+  color: #c09853;
+}
+.journal .has-warning .form-control {
+  border-color: #c09853;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+.journal .has-warning .form-control:focus {
+  border-color: #a47e3c;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #dbc59e;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #dbc59e;
+}
+.journal .has-warning .input-group-addon {
+  color: #c09853;
+  border-color: #c09853;
+  background-color: #fcf8e3;
+}
+.journal .has-warning .form-control-feedback {
+  color: #c09853;
+}
+.journal .has-error .help-block,
+.journal .has-error .control-label,
+.journal .has-error .radio,
+.journal .has-error .checkbox,
+.journal .has-error .radio-inline,
+.journal .has-error .checkbox-inline {
+  color: #b94a48;
+}
+.journal .has-error .form-control {
+  border-color: #b94a48;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+.journal .has-error .form-control:focus {
+  border-color: #953b39;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #d59392;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #d59392;
+}
+.journal .has-error .input-group-addon {
+  color: #b94a48;
+  border-color: #b94a48;
+  background-color: #f2dede;
+}
+.journal .has-error .form-control-feedback {
+  color: #b94a48;
+}
+.journal .has-feedback label.sr-only ~ .form-control-feedback {
+  top: 0;
+}
+.journal .help-block {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  color: #b7b7b7;
+}
+@media (min-width: 768px) {
+  .journal .form-inline .form-group {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+  .journal .form-inline .form-control {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+  }
+  .journal .form-inline .input-group {
+    display: inline-table;
+    vertical-align: middle;
+  }
+  .journal .form-inline .input-group .input-group-addon,
+  .journal .form-inline .input-group .input-group-btn,
+  .journal .form-inline .input-group .form-control {
+    width: auto;
+  }
+  .journal .form-inline .input-group > .form-control {
+    width: 100%;
+  }
+  .journal .form-inline .control-label {
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+  .journal .form-inline .radio,
+  .journal .form-inline .checkbox {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+  .journal .form-inline .radio label,
+  .journal .form-inline .checkbox label {
+    padding-left: 0;
+  }
+  .journal .form-inline .radio input[type="radio"],
+  .journal .form-inline .checkbox input[type="checkbox"] {
+    position: relative;
+    margin-left: 0;
+  }
+  .journal .form-inline .has-feedback .form-control-feedback {
+    top: 0;
+  }
+}
+.journal .form-horizontal .radio,
+.journal .form-horizontal .checkbox,
+.journal .form-horizontal .radio-inline,
+.journal .form-horizontal .checkbox-inline {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 9px;
+}
+.journal .form-horizontal .radio,
+.journal .form-horizontal .checkbox {
+  min-height: 30px;
+}
+.journal .form-horizontal .form-group {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+@media (min-width: 768px) {
+  .journal .form-horizontal .control-label {
+    text-align: right;
+    margin-bottom: 0;
+    padding-top: 9px;
+  }
+}
+.journal .form-horizontal .has-feedback .form-control-feedback {
+  top: 0;
+  right: 15px;
+}
+@media (min-width: 768px) {
+  .journal .form-horizontal .form-group-lg .control-label {
+    padding-top: 19.6666662px;
+  }
+}
+@media (min-width: 768px) {
+  .journal .form-horizontal .form-group-sm .control-label {
+    padding-top: 6px;
+  }
+}
+.journal .btn {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 8px 12px;
+  font-size: 15px;
+  line-height: 1.42857143;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.journal .btn:focus,
+.journal .btn:active:focus,
+.journal .btn.active:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.journal .btn:hover,
+.journal .btn:focus {
+  color: #ffffff;
+  text-decoration: none;
+}
+.journal .btn:active,
+.journal .btn.active {
+  outline: 0;
+  background-image: none;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.journal .btn.disabled,
+.journal .btn[disabled],
+fieldset[disabled] .journal .btn {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.journal .btn-default {
+  color: #ffffff;
+  background-color: #999999;
+  border-color: #999999;
+}
+.journal .btn-default:hover,
+.journal .btn-default:focus,
+.journal .btn-default:active,
+.journal .btn-default.active,
+.open > .dropdown-toggle.journal .btn-default {
+  color: #ffffff;
+  background-color: #808080;
+  border-color: #7a7a7a;
+}
+.journal .btn-default:active,
+.journal .btn-default.active,
+.open > .dropdown-toggle.journal .btn-default {
+  background-image: none;
+}
+.journal .btn-default.disabled,
+.journal .btn-default[disabled],
+fieldset[disabled] .journal .btn-default,
+.journal .btn-default.disabled:hover,
+.journal .btn-default[disabled]:hover,
+fieldset[disabled] .journal .btn-default:hover,
+.journal .btn-default.disabled:focus,
+.journal .btn-default[disabled]:focus,
+fieldset[disabled] .journal .btn-default:focus,
+.journal .btn-default.disabled:active,
+.journal .btn-default[disabled]:active,
+fieldset[disabled] .journal .btn-default:active,
+.journal .btn-default.disabled.active,
+.journal .btn-default[disabled].active,
+fieldset[disabled] .journal .btn-default.active {
+  background-color: #999999;
+  border-color: #999999;
+}
+.journal .btn-default .badge {
+  color: #999999;
+  background-color: #ffffff;
+}
+.journal .btn-primary {
+  color: #ffffff;
+  background-color: #eb6864;
+  border-color: #eb6864;
+}
+.journal .btn-primary:hover,
+.journal .btn-primary:focus,
+.journal .btn-primary:active,
+.journal .btn-primary.active,
+.open > .dropdown-toggle.journal .btn-primary {
+  color: #ffffff;
+  background-color: #e53c37;
+  border-color: #e4332e;
+}
+.journal .btn-primary:active,
+.journal .btn-primary.active,
+.open > .dropdown-toggle.journal .btn-primary {
+  background-image: none;
+}
+.journal .btn-primary.disabled,
+.journal .btn-primary[disabled],
+fieldset[disabled] .journal .btn-primary,
+.journal .btn-primary.disabled:hover,
+.journal .btn-primary[disabled]:hover,
+fieldset[disabled] .journal .btn-primary:hover,
+.journal .btn-primary.disabled:focus,
+.journal .btn-primary[disabled]:focus,
+fieldset[disabled] .journal .btn-primary:focus,
+.journal .btn-primary.disabled:active,
+.journal .btn-primary[disabled]:active,
+fieldset[disabled] .journal .btn-primary:active,
+.journal .btn-primary.disabled.active,
+.journal .btn-primary[disabled].active,
+fieldset[disabled] .journal .btn-primary.active {
+  background-color: #eb6864;
+  border-color: #eb6864;
+}
+.journal .btn-primary .badge {
+  color: #eb6864;
+  background-color: #ffffff;
+}
+.journal .btn-success {
+  color: #ffffff;
+  background-color: #22b24c;
+  border-color: #22b24c;
+}
+.journal .btn-success:hover,
+.journal .btn-success:focus,
+.journal .btn-success:active,
+.journal .btn-success.active,
+.open > .dropdown-toggle.journal .btn-success {
+  color: #ffffff;
+  background-color: #1a873a;
+  border-color: #187f36;
+}
+.journal .btn-success:active,
+.journal .btn-success.active,
+.open > .dropdown-toggle.journal .btn-success {
+  background-image: none;
+}
+.journal .btn-success.disabled,
+.journal .btn-success[disabled],
+fieldset[disabled] .journal .btn-success,
+.journal .btn-success.disabled:hover,
+.journal .btn-success[disabled]:hover,
+fieldset[disabled] .journal .btn-success:hover,
+.journal .btn-success.disabled:focus,
+.journal .btn-success[disabled]:focus,
+fieldset[disabled] .journal .btn-success:focus,
+.journal .btn-success.disabled:active,
+.journal .btn-success[disabled]:active,
+fieldset[disabled] .journal .btn-success:active,
+.journal .btn-success.disabled.active,
+.journal .btn-success[disabled].active,
+fieldset[disabled] .journal .btn-success.active {
+  background-color: #22b24c;
+  border-color: #22b24c;
+}
+.journal .btn-success .badge {
+  color: #22b24c;
+  background-color: #ffffff;
+}
+.journal .btn-info {
+  color: #ffffff;
+  background-color: #336699;
+  border-color: #336699;
+}
+.journal .btn-info:hover,
+.journal .btn-info:focus,
+.journal .btn-info:active,
+.journal .btn-info.active,
+.open > .dropdown-toggle.journal .btn-info {
+  color: #ffffff;
+  background-color: #264c73;
+  border-color: #24476b;
+}
+.journal .btn-info:active,
+.journal .btn-info.active,
+.open > .dropdown-toggle.journal .btn-info {
+  background-image: none;
+}
+.journal .btn-info.disabled,
+.journal .btn-info[disabled],
+fieldset[disabled] .journal .btn-info,
+.journal .btn-info.disabled:hover,
+.journal .btn-info[disabled]:hover,
+fieldset[disabled] .journal .btn-info:hover,
+.journal .btn-info.disabled:focus,
+.journal .btn-info[disabled]:focus,
+fieldset[disabled] .journal .btn-info:focus,
+.journal .btn-info.disabled:active,
+.journal .btn-info[disabled]:active,
+fieldset[disabled] .journal .btn-info:active,
+.journal .btn-info.disabled.active,
+.journal .btn-info[disabled].active,
+fieldset[disabled] .journal .btn-info.active {
+  background-color: #336699;
+  border-color: #336699;
+}
+.journal .btn-info .badge {
+  color: #336699;
+  background-color: #ffffff;
+}
+.journal .btn-warning {
+  color: #ffffff;
+  background-color: #f5e625;
+  border-color: #f5e625;
+}
+.journal .btn-warning:hover,
+.journal .btn-warning:focus,
+.journal .btn-warning:active,
+.journal .btn-warning.active,
+.open > .dropdown-toggle.journal .btn-warning {
+  color: #ffffff;
+  background-color: #ddce0a;
+  border-color: #d3c50a;
+}
+.journal .btn-warning:active,
+.journal .btn-warning.active,
+.open > .dropdown-toggle.journal .btn-warning {
+  background-image: none;
+}
+.journal .btn-warning.disabled,
+.journal .btn-warning[disabled],
+fieldset[disabled] .journal .btn-warning,
+.journal .btn-warning.disabled:hover,
+.journal .btn-warning[disabled]:hover,
+fieldset[disabled] .journal .btn-warning:hover,
+.journal .btn-warning.disabled:focus,
+.journal .btn-warning[disabled]:focus,
+fieldset[disabled] .journal .btn-warning:focus,
+.journal .btn-warning.disabled:active,
+.journal .btn-warning[disabled]:active,
+fieldset[disabled] .journal .btn-warning:active,
+.journal .btn-warning.disabled.active,
+.journal .btn-warning[disabled].active,
+fieldset[disabled] .journal .btn-warning.active {
+  background-color: #f5e625;
+  border-color: #f5e625;
+}
+.journal .btn-warning .badge {
+  color: #f5e625;
+  background-color: #ffffff;
+}
+.journal .btn-danger {
+  color: #ffffff;
+  background-color: #f57a00;
+  border-color: #f57a00;
+}
+.journal .btn-danger:hover,
+.journal .btn-danger:focus,
+.journal .btn-danger:active,
+.journal .btn-danger.active,
+.open > .dropdown-toggle.journal .btn-danger {
+  color: #ffffff;
+  background-color: #c26100;
+  border-color: #b85c00;
+}
+.journal .btn-danger:active,
+.journal .btn-danger.active,
+.open > .dropdown-toggle.journal .btn-danger {
+  background-image: none;
+}
+.journal .btn-danger.disabled,
+.journal .btn-danger[disabled],
+fieldset[disabled] .journal .btn-danger,
+.journal .btn-danger.disabled:hover,
+.journal .btn-danger[disabled]:hover,
+fieldset[disabled] .journal .btn-danger:hover,
+.journal .btn-danger.disabled:focus,
+.journal .btn-danger[disabled]:focus,
+fieldset[disabled] .journal .btn-danger:focus,
+.journal .btn-danger.disabled:active,
+.journal .btn-danger[disabled]:active,
+fieldset[disabled] .journal .btn-danger:active,
+.journal .btn-danger.disabled.active,
+.journal .btn-danger[disabled].active,
+fieldset[disabled] .journal .btn-danger.active {
+  background-color: #f57a00;
+  border-color: #f57a00;
+}
+.journal .btn-danger .badge {
+  color: #f57a00;
+  background-color: #ffffff;
+}
+.journal .btn-link {
+  color: #eb6864;
+  font-weight: normal;
+  cursor: pointer;
+  border-radius: 0;
+}
+.journal .btn-link,
+.journal .btn-link:active,
+.journal .btn-link[disabled],
+fieldset[disabled] .journal .btn-link {
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.journal .btn-link,
+.journal .btn-link:hover,
+.journal .btn-link:focus,
+.journal .btn-link:active {
+  border-color: transparent;
+}
+.journal .btn-link:hover,
+.journal .btn-link:focus {
+  color: #e22620;
+  text-decoration: underline;
+  background-color: transparent;
+}
+.journal .btn-link[disabled]:hover,
+fieldset[disabled] .journal .btn-link:hover,
+.journal .btn-link[disabled]:focus,
+fieldset[disabled] .journal .btn-link:focus {
+  color: #999999;
+  text-decoration: none;
+}
+.journal .btn-lg {
+  padding: 14px 16px;
+  font-size: 19px;
+  line-height: 1.3333333;
+  border-radius: 6px;
+}
+.journal .btn-sm {
+  padding: 5px 10px;
+  font-size: 13px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+.journal .btn-xs {
+  padding: 1px 5px;
+  font-size: 13px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+.journal .btn-block {
+  display: block;
+  width: 100%;
+}
+.journal .btn-block + .btn-block {
+  margin-top: 5px;
+}
+.journal input[type="submit"].btn-block,
+.journal input[type="reset"].btn-block,
+.journal input[type="button"].btn-block {
+  width: 100%;
+}
+.journal .fade {
+  opacity: 0;
+  -webkit-transition: opacity 0.15s linear;
+  -o-transition: opacity 0.15s linear;
+  transition: opacity 0.15s linear;
+}
+.journal .fade.in {
+  opacity: 1;
+}
+.journal .collapse {
+  display: none;
+}
+.journal .collapse.in {
+  display: block;
+}
+tr.journal .collapse.in {
+  display: table-row;
+}
+tbody.journal .collapse.in {
+  display: table-row-group;
+}
+.journal .collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height 0.35s ease;
+  -o-transition: height 0.35s ease;
+  transition: height 0.35s ease;
+}
+.journal .caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top: 4px solid;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+.journal .dropdown {
+  position: relative;
+}
+.journal .dropdown-toggle:focus {
+  outline: 0;
+}
+.journal .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  list-style: none;
+  font-size: 15px;
+  text-align: left;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  background-clip: padding-box;
+}
+.journal .dropdown-menu.pull-right {
+  right: 0;
+  left: auto;
+}
+.journal .dropdown-menu .divider {
+  height: 1px;
+  margin: 9.5px 0;
+  overflow: hidden;
+  background-color: #e5e5e5;
+}
+.journal .dropdown-menu > li > a {
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: normal;
+  line-height: 1.42857143;
+  color: #333333;
+  white-space: nowrap;
+}
+.journal .dropdown-menu > li > a:hover,
+.journal .dropdown-menu > li > a:focus {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #eb6864;
+}
+.journal .dropdown-menu > .active > a,
+.journal .dropdown-menu > .active > a:hover,
+.journal .dropdown-menu > .active > a:focus {
+  color: #ffffff;
+  text-decoration: none;
+  outline: 0;
+  background-color: #eb6864;
+}
+.journal .dropdown-menu > .disabled > a,
+.journal .dropdown-menu > .disabled > a:hover,
+.journal .dropdown-menu > .disabled > a:focus {
+  color: #999999;
+}
+.journal .dropdown-menu > .disabled > a:hover,
+.journal .dropdown-menu > .disabled > a:focus {
+  text-decoration: none;
+  background-color: transparent;
+  background-image: none;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  cursor: not-allowed;
+}
+.journal .open > .dropdown-menu {
+  display: block;
+}
+.journal .open > a {
+  outline: 0;
+}
+.journal .dropdown-menu-right {
+  left: auto;
+  right: 0;
+}
+.journal .dropdown-menu-left {
+  left: 0;
+  right: auto;
+}
+.journal .dropdown-header {
+  display: block;
+  padding: 3px 20px;
+  font-size: 13px;
+  line-height: 1.42857143;
+  color: #999999;
+  white-space: nowrap;
+}
+.journal .dropdown-backdrop {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 990;
+}
+.journal .pull-right > .dropdown-menu {
+  right: 0;
+  left: auto;
+}
+.journal .dropup .caret,
+.journal .navbar-fixed-bottom .dropdown .caret {
+  border-top: 0;
+  border-bottom: 4px solid;
+  content: "";
+}
+.journal .dropup .dropdown-menu,
+.journal .navbar-fixed-bottom .dropdown .dropdown-menu {
+  top: auto;
+  bottom: 100%;
+  margin-bottom: 1px;
+}
+@media (min-width: 768px) {
+  .journal .navbar-right .dropdown-menu {
+    left: auto;
+    right: 0;
+  }
+  .journal .navbar-right .dropdown-menu-left {
+    left: 0;
+    right: auto;
+  }
+}
+.journal .btn-group,
+.journal .btn-group-vertical {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+.journal .btn-group > .btn,
+.journal .btn-group-vertical > .btn {
+  position: relative;
+  float: left;
+}
+.journal .btn-group > .btn:hover,
+.journal .btn-group-vertical > .btn:hover,
+.journal .btn-group > .btn:focus,
+.journal .btn-group-vertical > .btn:focus,
+.journal .btn-group > .btn:active,
+.journal .btn-group-vertical > .btn:active,
+.journal .btn-group > .btn.active,
+.journal .btn-group-vertical > .btn.active {
+  z-index: 2;
+}
+.journal .btn-group > .btn:focus,
+.journal .btn-group-vertical > .btn:focus {
+  outline: 0;
+}
+.journal .btn-group .btn + .btn,
+.journal .btn-group .btn + .btn-group,
+.journal .btn-group .btn-group + .btn,
+.journal .btn-group .btn-group + .btn-group {
+  margin-left: -1px;
+}
+.journal .btn-toolbar {
+  margin-left: -5px;
+}
+.journal .btn-toolbar .btn-group,
+.journal .btn-toolbar .input-group {
+  float: left;
+}
+.journal .btn-toolbar > .btn,
+.journal .btn-toolbar > .btn-group,
+.journal .btn-toolbar > .input-group {
+  margin-left: 5px;
+}
+.journal .btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+  border-radius: 0;
+}
+.journal .btn-group > .btn:first-child {
+  margin-left: 0;
+}
+.journal .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+.journal .btn-group > .btn:last-child:not(:first-child),
+.journal .btn-group > .dropdown-toggle:not(:first-child) {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+.journal .btn-group > .btn-group {
+  float: left;
+}
+.journal .btn-group > .btn-group:not(:first-child):not(:last-child) > .btn {
+  border-radius: 0;
+}
+.journal .btn-group > .btn-group:first-child > .btn:last-child,
+.journal .btn-group > .btn-group:first-child > .dropdown-toggle {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+.journal .btn-group > .btn-group:last-child > .btn:first-child {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+.journal .btn-group .dropdown-toggle:active,
+.journal .btn-group.open .dropdown-toggle {
+  outline: 0;
+}
+.journal .btn-group > .btn + .dropdown-toggle {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.journal .btn-group > .btn-lg + .dropdown-toggle {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.journal .btn-group.open .dropdown-toggle {
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.journal .btn-group.open .dropdown-toggle.btn-link {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.journal .btn .caret {
+  margin-left: 0;
+}
+.journal .btn-lg .caret {
+  border-width: 5px 5px 0;
+  border-bottom-width: 0;
+}
+.journal .dropup .btn-lg .caret {
+  border-width: 0 5px 5px;
+}
+.journal .btn-group-vertical > .btn,
+.journal .btn-group-vertical > .btn-group,
+.journal .btn-group-vertical > .btn-group > .btn {
+  display: block;
+  float: none;
+  width: 100%;
+  max-width: 100%;
+}
+.journal .btn-group-vertical > .btn-group > .btn {
+  float: none;
+}
+.journal .btn-group-vertical > .btn + .btn,
+.journal .btn-group-vertical > .btn + .btn-group,
+.journal .btn-group-vertical > .btn-group + .btn,
+.journal .btn-group-vertical > .btn-group + .btn-group {
+  margin-top: -1px;
+  margin-left: 0;
+}
+.journal .btn-group-vertical > .btn:not(:first-child):not(:last-child) {
+  border-radius: 0;
+}
+.journal .btn-group-vertical > .btn:first-child:not(:last-child) {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.journal .btn-group-vertical > .btn:last-child:not(:first-child) {
+  border-bottom-left-radius: 4px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+.journal .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn {
+  border-radius: 0;
+}
+.journal .btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child,
+.journal .btn-group-vertical > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.journal .btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+.journal .btn-group-justified {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: separate;
+}
+.journal .btn-group-justified > .btn,
+.journal .btn-group-justified > .btn-group {
+  float: none;
+  display: table-cell;
+  width: 1%;
+}
+.journal .btn-group-justified > .btn-group .btn {
+  width: 100%;
+}
+.journal .btn-group-justified > .btn-group .dropdown-menu {
+  left: auto;
+}
+.journal [data-toggle="buttons"] > .btn > input[type="radio"],
+.journal [data-toggle="buttons"] > .btn > input[type="checkbox"] {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.journal .input-group {
+  position: relative;
+  display: table;
+  border-collapse: separate;
+}
+.journal .input-group[class*="col-"] {
+  float: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+.journal .input-group .form-control {
+  position: relative;
+  z-index: 2;
+  float: left;
+  width: 100%;
+  margin-bottom: 0;
+}
+.journal .input-group-lg > .form-control,
+.journal .input-group-lg > .input-group-addon,
+.journal .input-group-lg > .input-group-btn > .btn {
+  height: 56px;
+  padding: 14px 16px;
+  font-size: 19px;
+  line-height: 1.3333333;
+  border-radius: 6px;
+}
+select.journal .input-group-lg > .form-control,
+select.journal .input-group-lg > .input-group-addon,
+select.journal .input-group-lg > .input-group-btn > .btn {
+  height: 56px;
+  line-height: 56px;
+}
+textarea.journal .input-group-lg > .form-control,
+textarea.journal .input-group-lg > .input-group-addon,
+textarea.journal .input-group-lg > .input-group-btn > .btn,
+select[multiple].journal .input-group-lg > .form-control,
+select[multiple].journal .input-group-lg > .input-group-addon,
+select[multiple].journal .input-group-lg > .input-group-btn > .btn {
+  height: auto;
+}
+.journal .input-group-sm > .form-control,
+.journal .input-group-sm > .input-group-addon,
+.journal .input-group-sm > .input-group-btn > .btn {
+  height: 31px;
+  padding: 5px 10px;
+  font-size: 13px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+select.journal .input-group-sm > .form-control,
+select.journal .input-group-sm > .input-group-addon,
+select.journal .input-group-sm > .input-group-btn > .btn {
+  height: 31px;
+  line-height: 31px;
+}
+textarea.journal .input-group-sm > .form-control,
+textarea.journal .input-group-sm > .input-group-addon,
+textarea.journal .input-group-sm > .input-group-btn > .btn,
+select[multiple].journal .input-group-sm > .form-control,
+select[multiple].journal .input-group-sm > .input-group-addon,
+select[multiple].journal .input-group-sm > .input-group-btn > .btn {
+  height: auto;
+}
+.journal .input-group-addon,
+.journal .input-group-btn,
+.journal .input-group .form-control {
+  display: table-cell;
+}
+.journal .input-group-addon:not(:first-child):not(:last-child),
+.journal .input-group-btn:not(:first-child):not(:last-child),
+.journal .input-group .form-control:not(:first-child):not(:last-child) {
+  border-radius: 0;
+}
+.journal .input-group-addon,
+.journal .input-group-btn {
+  width: 1%;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+.journal .input-group-addon {
+  padding: 8px 12px;
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 1;
+  color: #777777;
+  text-align: center;
+  background-color: #eeeeee;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+}
+.journal .input-group-addon.input-sm {
+  padding: 5px 10px;
+  font-size: 13px;
+  border-radius: 3px;
+}
+.journal .input-group-addon.input-lg {
+  padding: 14px 16px;
+  font-size: 19px;
+  border-radius: 6px;
+}
+.journal .input-group-addon input[type="radio"],
+.journal .input-group-addon input[type="checkbox"] {
+  margin-top: 0;
+}
+.journal .input-group .form-control:first-child,
+.journal .input-group-addon:first-child,
+.journal .input-group-btn:first-child > .btn,
+.journal .input-group-btn:first-child > .btn-group > .btn,
+.journal .input-group-btn:first-child > .dropdown-toggle,
+.journal .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle),
+.journal .input-group-btn:last-child > .btn-group:not(:last-child) > .btn {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+.journal .input-group-addon:first-child {
+  border-right: 0;
+}
+.journal .input-group .form-control:last-child,
+.journal .input-group-addon:last-child,
+.journal .input-group-btn:last-child > .btn,
+.journal .input-group-btn:last-child > .btn-group > .btn,
+.journal .input-group-btn:last-child > .dropdown-toggle,
+.journal .input-group-btn:first-child > .btn:not(:first-child),
+.journal .input-group-btn:first-child > .btn-group:not(:first-child) > .btn {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+.journal .input-group-addon:last-child {
+  border-left: 0;
+}
+.journal .input-group-btn {
+  position: relative;
+  font-size: 0;
+  white-space: nowrap;
+}
+.journal .input-group-btn > .btn {
+  position: relative;
+}
+.journal .input-group-btn > .btn + .btn {
+  margin-left: -1px;
+}
+.journal .input-group-btn > .btn:hover,
+.journal .input-group-btn > .btn:focus,
+.journal .input-group-btn > .btn:active {
+  z-index: 2;
+}
+.journal .input-group-btn:first-child > .btn,
+.journal .input-group-btn:first-child > .btn-group {
+  margin-right: -1px;
+}
+.journal .input-group-btn:last-child > .btn,
+.journal .input-group-btn:last-child > .btn-group {
+  margin-left: -1px;
+}
+.journal .label {
+  display: inline;
+  padding: .2em .6em .3em;
+  font-size: 75%;
+  font-weight: bold;
+  line-height: 1;
+  color: #ffffff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+}
+a.journal .label:hover,
+a.journal .label:focus {
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+.journal .label:empty {
+  display: none;
+}
+.btn .journal .label {
+  position: relative;
+  top: -1px;
+}
+.journal .label-default {
+  background-color: #999999;
+}
+.journal .label-default[href]:hover,
+.journal .label-default[href]:focus {
+  background-color: #808080;
+}
+.journal .label-primary {
+  background-color: #eb6864;
+}
+.journal .label-primary[href]:hover,
+.journal .label-primary[href]:focus {
+  background-color: #e53c37;
+}
+.journal .label-success {
+  background-color: #22b24c;
+}
+.journal .label-success[href]:hover,
+.journal .label-success[href]:focus {
+  background-color: #1a873a;
+}
+.journal .label-info {
+  background-color: #336699;
+}
+.journal .label-info[href]:hover,
+.journal .label-info[href]:focus {
+  background-color: #264c73;
+}
+.journal .label-warning {
+  background-color: #f5e625;
+}
+.journal .label-warning[href]:hover,
+.journal .label-warning[href]:focus {
+  background-color: #ddce0a;
+}
+.journal .label-danger {
+  background-color: #f57a00;
+}
+.journal .label-danger[href]:hover,
+.journal .label-danger[href]:focus {
+  background-color: #c26100;
+}
+.journal .media,
+.journal .media-body {
+  overflow: hidden;
+  zoom: 1;
+}
+.journal .media,
+.journal .media .media {
+  margin-top: 15px;
+}
+.journal .media:first-child {
+  margin-top: 0;
+}
+.journal .media-object {
+  display: block;
+}
+.journal .media-heading {
+  margin: 0 0 5px;
+}
+.journal .media > .pull-left {
+  margin-right: 10px;
+}
+.journal .media > .pull-right {
+  margin-left: 10px;
+}
+.journal .media-list {
+  padding-left: 0;
+  list-style: none;
+}
+.journal .list-group {
+  margin-bottom: 20px;
+  padding-left: 0;
+}
+.journal .list-group-item {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  margin-bottom: -1px;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+}
+.journal .list-group-item:first-child {
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+}
+.journal .list-group-item:last-child {
+  margin-bottom: 0;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.journal .list-group-item > .badge {
+  float: right;
+}
+.journal .list-group-item > .badge + .badge {
+  margin-right: 5px;
+}
+.journal a.list-group-item {
+  color: #555555;
+}
+.journal a.list-group-item .list-group-item-heading {
+  color: #333333;
+}
+.journal a.list-group-item:hover,
+.journal a.list-group-item:focus {
+  text-decoration: none;
+  color: #555555;
+  background-color: #f5f5f5;
+}
+.journal .list-group-item.disabled,
+.journal .list-group-item.disabled:hover,
+.journal .list-group-item.disabled:focus {
+  background-color: #eeeeee;
+  color: #999999;
+}
+.journal .list-group-item.disabled .list-group-item-heading,
+.journal .list-group-item.disabled:hover .list-group-item-heading,
+.journal .list-group-item.disabled:focus .list-group-item-heading {
+  color: inherit;
+}
+.journal .list-group-item.disabled .list-group-item-text,
+.journal .list-group-item.disabled:hover .list-group-item-text,
+.journal .list-group-item.disabled:focus .list-group-item-text {
+  color: #999999;
+}
+.journal .list-group-item.active,
+.journal .list-group-item.active:hover,
+.journal .list-group-item.active:focus {
+  z-index: 2;
+  color: #ffffff;
+  background-color: #eb6864;
+  border-color: #eb6864;
+}
+.journal .list-group-item.active .list-group-item-heading,
+.journal .list-group-item.active:hover .list-group-item-heading,
+.journal .list-group-item.active:focus .list-group-item-heading,
+.journal .list-group-item.active .list-group-item-heading > small,
+.journal .list-group-item.active:hover .list-group-item-heading > small,
+.journal .list-group-item.active:focus .list-group-item-heading > small,
+.journal .list-group-item.active .list-group-item-heading > .small,
+.journal .list-group-item.active:hover .list-group-item-heading > .small,
+.journal .list-group-item.active:focus .list-group-item-heading > .small {
+  color: inherit;
+}
+.journal .list-group-item.active .list-group-item-text,
+.journal .list-group-item.active:hover .list-group-item-text,
+.journal .list-group-item.active:focus .list-group-item-text {
+  color: #ffffff;
+}
+.journal .list-group-item-success {
+  color: #468847;
+  background-color: #dff0d8;
+}
+a.journal .list-group-item-success {
+  color: #468847;
+}
+a.journal .list-group-item-success .list-group-item-heading {
+  color: inherit;
+}
+a.journal .list-group-item-success:hover,
+a.journal .list-group-item-success:focus {
+  color: #468847;
+  background-color: #d0e9c6;
+}
+a.journal .list-group-item-success.active,
+a.journal .list-group-item-success.active:hover,
+a.journal .list-group-item-success.active:focus {
+  color: #fff;
+  background-color: #468847;
+  border-color: #468847;
+}
+.journal .list-group-item-info {
+  color: #3a87ad;
+  background-color: #d9edf7;
+}
+a.journal .list-group-item-info {
+  color: #3a87ad;
+}
+a.journal .list-group-item-info .list-group-item-heading {
+  color: inherit;
+}
+a.journal .list-group-item-info:hover,
+a.journal .list-group-item-info:focus {
+  color: #3a87ad;
+  background-color: #c4e3f3;
+}
+a.journal .list-group-item-info.active,
+a.journal .list-group-item-info.active:hover,
+a.journal .list-group-item-info.active:focus {
+  color: #fff;
+  background-color: #3a87ad;
+  border-color: #3a87ad;
+}
+.journal .list-group-item-warning {
+  color: #c09853;
+  background-color: #fcf8e3;
+}
+a.journal .list-group-item-warning {
+  color: #c09853;
+}
+a.journal .list-group-item-warning .list-group-item-heading {
+  color: inherit;
+}
+a.journal .list-group-item-warning:hover,
+a.journal .list-group-item-warning:focus {
+  color: #c09853;
+  background-color: #faf2cc;
+}
+a.journal .list-group-item-warning.active,
+a.journal .list-group-item-warning.active:hover,
+a.journal .list-group-item-warning.active:focus {
+  color: #fff;
+  background-color: #c09853;
+  border-color: #c09853;
+}
+.journal .list-group-item-danger {
+  color: #b94a48;
+  background-color: #f2dede;
+}
+a.journal .list-group-item-danger {
+  color: #b94a48;
+}
+a.journal .list-group-item-danger .list-group-item-heading {
+  color: inherit;
+}
+a.journal .list-group-item-danger:hover,
+a.journal .list-group-item-danger:focus {
+  color: #b94a48;
+  background-color: #ebcccc;
+}
+a.journal .list-group-item-danger.active,
+a.journal .list-group-item-danger.active:hover,
+a.journal .list-group-item-danger.active:focus {
+  color: #fff;
+  background-color: #b94a48;
+  border-color: #b94a48;
+}
+.journal .list-group-item-heading {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.journal .list-group-item-text {
+  margin-bottom: 0;
+  line-height: 1.3;
+}
+.journal .panel {
+  margin-bottom: 21px;
+  background-color: #ffffff;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+.journal .panel-body {
+  padding: 15px;
+}
+.journal .panel-heading {
+  padding: 10px 15px;
+  border-bottom: 1px solid transparent;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+}
+.journal .panel-heading > .dropdown .dropdown-toggle {
+  color: inherit;
+}
+.journal .panel-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 17px;
+  color: inherit;
+}
+.journal .panel-title > a {
+  color: inherit;
+}
+.journal .panel-footer {
+  padding: 10px 15px;
+  background-color: #f5f5f5;
+  border-top: 1px solid #dddddd;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+.journal .panel > .list-group {
+  margin-bottom: 0;
+}
+.journal .panel > .list-group .list-group-item {
+  border-width: 1px 0;
+  border-radius: 0;
+}
+.journal .panel > .list-group:first-child .list-group-item:first-child {
+  border-top: 0;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+}
+.journal .panel > .list-group:last-child .list-group-item:last-child {
+  border-bottom: 0;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+.journal .panel-heading + .list-group .list-group-item:first-child {
+  border-top-width: 0;
+}
+.journal .list-group + .panel-footer {
+  border-top-width: 0;
+}
+.journal .panel > .table,
+.journal .panel > .table-responsive > .table,
+.journal .panel > .panel-collapse > .table {
+  margin-bottom: 0;
+}
+.journal .panel > .table:first-child,
+.journal .panel > .table-responsive:first-child > .table:first-child {
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+}
+.journal .panel > .table:first-child > thead:first-child > tr:first-child td:first-child,
+.journal .panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child td:first-child,
+.journal .panel > .table:first-child > tbody:first-child > tr:first-child td:first-child,
+.journal .panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child td:first-child,
+.journal .panel > .table:first-child > thead:first-child > tr:first-child th:first-child,
+.journal .panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child th:first-child,
+.journal .panel > .table:first-child > tbody:first-child > tr:first-child th:first-child,
+.journal .panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child th:first-child {
+  border-top-left-radius: 3px;
+}
+.journal .panel > .table:first-child > thead:first-child > tr:first-child td:last-child,
+.journal .panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child td:last-child,
+.journal .panel > .table:first-child > tbody:first-child > tr:first-child td:last-child,
+.journal .panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child td:last-child,
+.journal .panel > .table:first-child > thead:first-child > tr:first-child th:last-child,
+.journal .panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child th:last-child,
+.journal .panel > .table:first-child > tbody:first-child > tr:first-child th:last-child,
+.journal .panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child th:last-child {
+  border-top-right-radius: 3px;
+}
+.journal .panel > .table:last-child,
+.journal .panel > .table-responsive:last-child > .table:last-child {
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+.journal .panel > .table:last-child > tbody:last-child > tr:last-child td:first-child,
+.journal .panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child td:first-child,
+.journal .panel > .table:last-child > tfoot:last-child > tr:last-child td:first-child,
+.journal .panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child td:first-child,
+.journal .panel > .table:last-child > tbody:last-child > tr:last-child th:first-child,
+.journal .panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child th:first-child,
+.journal .panel > .table:last-child > tfoot:last-child > tr:last-child th:first-child,
+.journal .panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child th:first-child {
+  border-bottom-left-radius: 3px;
+}
+.journal .panel > .table:last-child > tbody:last-child > tr:last-child td:last-child,
+.journal .panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child td:last-child,
+.journal .panel > .table:last-child > tfoot:last-child > tr:last-child td:last-child,
+.journal .panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child td:last-child,
+.journal .panel > .table:last-child > tbody:last-child > tr:last-child th:last-child,
+.journal .panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child th:last-child,
+.journal .panel > .table:last-child > tfoot:last-child > tr:last-child th:last-child,
+.journal .panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child th:last-child {
+  border-bottom-right-radius: 3px;
+}
+.journal .panel > .panel-body + .table,
+.journal .panel > .panel-body + .table-responsive {
+  border-top: 1px solid #dddddd;
+}
+.journal .panel > .table > tbody:first-child > tr:first-child th,
+.journal .panel > .table > tbody:first-child > tr:first-child td {
+  border-top: 0;
+}
+.journal .panel > .table-bordered,
+.journal .panel > .table-responsive > .table-bordered {
+  border: 0;
+}
+.journal .panel > .table-bordered > thead > tr > th:first-child,
+.journal .panel > .table-responsive > .table-bordered > thead > tr > th:first-child,
+.journal .panel > .table-bordered > tbody > tr > th:first-child,
+.journal .panel > .table-responsive > .table-bordered > tbody > tr > th:first-child,
+.journal .panel > .table-bordered > tfoot > tr > th:first-child,
+.journal .panel > .table-responsive > .table-bordered > tfoot > tr > th:first-child,
+.journal .panel > .table-bordered > thead > tr > td:first-child,
+.journal .panel > .table-responsive > .table-bordered > thead > tr > td:first-child,
+.journal .panel > .table-bordered > tbody > tr > td:first-child,
+.journal .panel > .table-responsive > .table-bordered > tbody > tr > td:first-child,
+.journal .panel > .table-bordered > tfoot > tr > td:first-child,
+.journal .panel > .table-responsive > .table-bordered > tfoot > tr > td:first-child {
+  border-left: 0;
+}
+.journal .panel > .table-bordered > thead > tr > th:last-child,
+.journal .panel > .table-responsive > .table-bordered > thead > tr > th:last-child,
+.journal .panel > .table-bordered > tbody > tr > th:last-child,
+.journal .panel > .table-responsive > .table-bordered > tbody > tr > th:last-child,
+.journal .panel > .table-bordered > tfoot > tr > th:last-child,
+.journal .panel > .table-responsive > .table-bordered > tfoot > tr > th:last-child,
+.journal .panel > .table-bordered > thead > tr > td:last-child,
+.journal .panel > .table-responsive > .table-bordered > thead > tr > td:last-child,
+.journal .panel > .table-bordered > tbody > tr > td:last-child,
+.journal .panel > .table-responsive > .table-bordered > tbody > tr > td:last-child,
+.journal .panel > .table-bordered > tfoot > tr > td:last-child,
+.journal .panel > .table-responsive > .table-bordered > tfoot > tr > td:last-child {
+  border-right: 0;
+}
+.journal .panel > .table-bordered > thead > tr:first-child > td,
+.journal .panel > .table-responsive > .table-bordered > thead > tr:first-child > td,
+.journal .panel > .table-bordered > tbody > tr:first-child > td,
+.journal .panel > .table-responsive > .table-bordered > tbody > tr:first-child > td,
+.journal .panel > .table-bordered > thead > tr:first-child > th,
+.journal .panel > .table-responsive > .table-bordered > thead > tr:first-child > th,
+.journal .panel > .table-bordered > tbody > tr:first-child > th,
+.journal .panel > .table-responsive > .table-bordered > tbody > tr:first-child > th {
+  border-bottom: 0;
+}
+.journal .panel > .table-bordered > tbody > tr:last-child > td,
+.journal .panel > .table-responsive > .table-bordered > tbody > tr:last-child > td,
+.journal .panel > .table-bordered > tfoot > tr:last-child > td,
+.journal .panel > .table-responsive > .table-bordered > tfoot > tr:last-child > td,
+.journal .panel > .table-bordered > tbody > tr:last-child > th,
+.journal .panel > .table-responsive > .table-bordered > tbody > tr:last-child > th,
+.journal .panel > .table-bordered > tfoot > tr:last-child > th,
+.journal .panel > .table-responsive > .table-bordered > tfoot > tr:last-child > th {
+  border-bottom: 0;
+}
+.journal .panel > .table-responsive {
+  border: 0;
+  margin-bottom: 0;
+}
+.journal .panel-group {
+  margin-bottom: 21px;
+}
+.journal .panel-group .panel {
+  margin-bottom: 0;
+  border-radius: 4px;
+}
+.journal .panel-group .panel + .panel {
+  margin-top: 5px;
+}
+.journal .panel-group .panel-heading {
+  border-bottom: 0;
+}
+.journal .panel-group .panel-heading + .panel-collapse > .panel-body {
+  border-top: 1px solid #dddddd;
+}
+.journal .panel-group .panel-footer {
+  border-top: 0;
+}
+.journal .panel-group .panel-footer + .panel-collapse .panel-body {
+  border-bottom: 1px solid #dddddd;
+}
+.journal .panel-default {
+  border-color: #dddddd;
+}
+.journal .panel-default > .panel-heading {
+  color: #777777;
+  background-color: #f5f5f5;
+  border-color: #dddddd;
+}
+.journal .panel-default > .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: #dddddd;
+}
+.journal .panel-default > .panel-heading .badge {
+  color: #f5f5f5;
+  background-color: #777777;
+}
+.journal .panel-default > .panel-footer + .panel-collapse > .panel-body {
+  border-bottom-color: #dddddd;
+}
+.journal .panel-primary {
+  border-color: #eb6864;
+}
+.journal .panel-primary > .panel-heading {
+  color: #ffffff;
+  background-color: #eb6864;
+  border-color: #eb6864;
+}
+.journal .panel-primary > .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: #eb6864;
+}
+.journal .panel-primary > .panel-heading .badge {
+  color: #eb6864;
+  background-color: #ffffff;
+}
+.journal .panel-primary > .panel-footer + .panel-collapse > .panel-body {
+  border-bottom-color: #eb6864;
+}
+.journal .panel-success {
+  border-color: #22b24c;
+}
+.journal .panel-success > .panel-heading {
+  color: #468847;
+  background-color: #22b24c;
+  border-color: #22b24c;
+}
+.journal .panel-success > .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: #22b24c;
+}
+.journal .panel-success > .panel-heading .badge {
+  color: #22b24c;
+  background-color: #468847;
+}
+.journal .panel-success > .panel-footer + .panel-collapse > .panel-body {
+  border-bottom-color: #22b24c;
+}
+.journal .panel-info {
+  border-color: #336699;
+}
+.journal .panel-info > .panel-heading {
+  color: #3a87ad;
+  background-color: #336699;
+  border-color: #336699;
+}
+.journal .panel-info > .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: #336699;
+}
+.journal .panel-info > .panel-heading .badge {
+  color: #336699;
+  background-color: #3a87ad;
+}
+.journal .panel-info > .panel-footer + .panel-collapse > .panel-body {
+  border-bottom-color: #336699;
+}
+.journal .panel-warning {
+  border-color: #f5e625;
+}
+.journal .panel-warning > .panel-heading {
+  color: #c09853;
+  background-color: #f5e625;
+  border-color: #f5e625;
+}
+.journal .panel-warning > .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: #f5e625;
+}
+.journal .panel-warning > .panel-heading .badge {
+  color: #f5e625;
+  background-color: #c09853;
+}
+.journal .panel-warning > .panel-footer + .panel-collapse > .panel-body {
+  border-bottom-color: #f5e625;
+}
+.journal .panel-danger {
+  border-color: #f57a00;
+}
+.journal .panel-danger > .panel-heading {
+  color: #b94a48;
+  background-color: #f57a00;
+  border-color: #f57a00;
+}
+.journal .panel-danger > .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: #f57a00;
+}
+.journal .panel-danger > .panel-heading .badge {
+  color: #f57a00;
+  background-color: #b94a48;
+}
+.journal .panel-danger > .panel-footer + .panel-collapse > .panel-body {
+  border-bottom-color: #f57a00;
+}
+.journal .embed-responsive {
+  position: relative;
+  display: block;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.journal .embed-responsive .embed-responsive-item,
+.journal .embed-responsive iframe,
+.journal .embed-responsive embed,
+.journal .embed-responsive object {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  border: 0;
+}
+.journal .embed-responsive.embed-responsive-16by9 {
+  padding-bottom: 56.25%;
+}
+.journal .embed-responsive.embed-responsive-4by3 {
+  padding-bottom: 75%;
+}
+.journal .well {
+  min-height: 20px;
+  padding: 19px;
+  margin-bottom: 20px;
+  background-color: #f5f5f5;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+.journal .well blockquote {
+  border-color: #ddd;
+  border-color: rgba(0, 0, 0, 0.15);
+}
+.journal .well-lg {
+  padding: 24px;
+  border-radius: 6px;
+}
+.journal .well-sm {
+  padding: 9px;
+  border-radius: 3px;
+}
+.journal .close {
+  float: right;
+  font-size: 22.5px;
+  font-weight: bold;
+  line-height: 1;
+  color: #000000;
+  text-shadow: 0 1px 0 #ffffff;
+  opacity: 0.2;
+  filter: alpha(opacity=20);
+}
+.journal .close:hover,
+.journal .close:focus {
+  color: #000000;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+button.journal .close {
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  -webkit-appearance: none;
+}
+.journal .navbar {
+  font-size: 18px;
+  font-family: "News Cycle", "Arial Narrow Bold", sans-serif;
+  font-weight: 700;
+}
+.journal .navbar-default .badge {
+  background-color: #000;
+  color: #fff;
+}
+.journal .navbar-inverse .badge {
+  background-color: #fff;
+  color: #eb6864;
+}
+.journal .navbar-brand {
+  font-size: inherit;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.journal .has-warning .help-block,
+.journal .has-warning .control-label,
+.journal .has-warning .radio,
+.journal .has-warning .checkbox,
+.journal .has-warning .radio-inline,
+.journal .has-warning .checkbox-inline,
+.journal .has-warning.radio label,
+.journal .has-warning.checkbox label,
+.journal .has-warning.radio-inline label,
+.journal .has-warning.checkbox-inline label,
+.journal .has-warning .form-control-feedback {
+  color: #f57a00;
+}
+.journal .has-warning .form-control,
+.journal .has-warning .form-control:focus {
+  border-color: #f57a00;
+}
+.journal .has-error .help-block,
+.journal .has-error .control-label,
+.journal .has-error .radio,
+.journal .has-error .checkbox,
+.journal .has-error .radio-inline,
+.journal .has-error .checkbox-inline,
+.journal .has-error.radio label,
+.journal .has-error.checkbox label,
+.journal .has-error.radio-inline label,
+.journal .has-error.checkbox-inline label,
+.journal .has-error .form-control-feedback {
+  color: #eb6864;
+}
+.journal .has-error .form-control,
+.journal .has-error .form-control:focus {
+  border-color: #eb6864;
+}
+.journal .has-success .help-block,
+.journal .has-success .control-label,
+.journal .has-success .radio,
+.journal .has-success .checkbox,
+.journal .has-success .radio-inline,
+.journal .has-success .checkbox-inline,
+.journal .has-success.radio label,
+.journal .has-success.checkbox label,
+.journal .has-success.radio-inline label,
+.journal .has-success.checkbox-inline label,
+.journal .has-success .form-control-feedback {
+  color: #22b24c;
+}
+.journal .has-success .form-control,
+.journal .has-success .form-control:focus {
+  border-color: #22b24c;
+}
+.journal .badge {
+  padding-bottom: 4px;
+  vertical-align: 3px;
+  font-size: 10px;
+}
+.journal .jumbotron h1,
+.journal .jumbotron h2,
+.journal .jumbotron h3,
+.journal .jumbotron h4,
+.journal .jumbotron h5,
+.journal .jumbotron h6 {
+  font-family: "News Cycle", "Arial Narrow Bold", sans-serif;
+  font-weight: 700;
+  color: #000;
+}
+.journal .panel-primary .panel-title,
+.journal .panel-success .panel-title,
+.journal .panel-warning .panel-title,
+.journal .panel-danger .panel-title,
+.journal .panel-info .panel-title {
+  color: #fff;
+}
+.journal .clearfix:before,
+.journal .clearfix:after,
+.journal .dl-horizontal dd:before,
+.journal .dl-horizontal dd:after,
+.journal .container:before,
+.journal .container:after,
+.journal .container-fluid:before,
+.journal .container-fluid:after,
+.journal .row:before,
+.journal .row:after,
+.journal .form-horizontal .form-group:before,
+.journal .form-horizontal .form-group:after,
+.journal .btn-toolbar:before,
+.journal .btn-toolbar:after,
+.journal .btn-group-vertical > .btn-group:before,
+.journal .btn-group-vertical > .btn-group:after,
+.journal .panel-body:before,
+.journal .panel-body:after {
+  content: " ";
+  display: table;
+}
+.journal .clearfix:after,
+.journal .dl-horizontal dd:after,
+.journal .container:after,
+.journal .container-fluid:after,
+.journal .row:after,
+.journal .form-horizontal .form-group:after,
+.journal .btn-toolbar:after,
+.journal .btn-group-vertical > .btn-group:after,
+.journal .panel-body:after {
+  clear: both;
+}
+.journal .center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.journal .pull-right {
+  float: right !important;
+}
+.journal .pull-left {
+  float: left !important;
+}
+.journal .hide {
+  display: none !important;
+}
+.journal .show {
+  display: block !important;
+}
+.journal .invisible {
+  visibility: hidden;
+}
+.journal .text-hide {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.journal .hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+.journal .affix {
+  position: fixed;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+@-ms-viewport {
+  width: device-width;
+}
+.journal .visible-xs,
+.journal .visible-sm,
+.journal .visible-md,
+.journal .visible-lg {
+  display: none !important;
+}
+.journal .visible-xs-block,
+.journal .visible-xs-inline,
+.journal .visible-xs-inline-block,
+.journal .visible-sm-block,
+.journal .visible-sm-inline,
+.journal .visible-sm-inline-block,
+.journal .visible-md-block,
+.journal .visible-md-inline,
+.journal .visible-md-inline-block,
+.journal .visible-lg-block,
+.journal .visible-lg-inline,
+.journal .visible-lg-inline-block {
+  display: none !important;
+}
+@media (max-width: 767px) {
+  .journal .visible-xs {
+    display: block !important;
+  }
+  table.journal .visible-xs {
+    display: table;
+  }
+  tr.journal .visible-xs {
+    display: table-row !important;
+  }
+  th.journal .visible-xs,
+  td.journal .visible-xs {
+    display: table-cell !important;
+  }
+}
+@media (max-width: 767px) {
+  .journal .visible-xs-block {
+    display: block !important;
+  }
+}
+@media (max-width: 767px) {
+  .journal .visible-xs-inline {
+    display: inline !important;
+  }
+}
+@media (max-width: 767px) {
+  .journal .visible-xs-inline-block {
+    display: inline-block !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .journal .visible-sm {
+    display: block !important;
+  }
+  table.journal .visible-sm {
+    display: table;
+  }
+  tr.journal .visible-sm {
+    display: table-row !important;
+  }
+  th.journal .visible-sm,
+  td.journal .visible-sm {
+    display: table-cell !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .journal .visible-sm-block {
+    display: block !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .journal .visible-sm-inline {
+    display: inline !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .journal .visible-sm-inline-block {
+    display: inline-block !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .journal .visible-md {
+    display: block !important;
+  }
+  table.journal .visible-md {
+    display: table;
+  }
+  tr.journal .visible-md {
+    display: table-row !important;
+  }
+  th.journal .visible-md,
+  td.journal .visible-md {
+    display: table-cell !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .journal .visible-md-block {
+    display: block !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .journal .visible-md-inline {
+    display: inline !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .journal .visible-md-inline-block {
+    display: inline-block !important;
+  }
+}
+@media (min-width: 1200px) {
+  .journal .visible-lg {
+    display: block !important;
+  }
+  table.journal .visible-lg {
+    display: table;
+  }
+  tr.journal .visible-lg {
+    display: table-row !important;
+  }
+  th.journal .visible-lg,
+  td.journal .visible-lg {
+    display: table-cell !important;
+  }
+}
+@media (min-width: 1200px) {
+  .journal .visible-lg-block {
+    display: block !important;
+  }
+}
+@media (min-width: 1200px) {
+  .journal .visible-lg-inline {
+    display: inline !important;
+  }
+}
+@media (min-width: 1200px) {
+  .journal .visible-lg-inline-block {
+    display: inline-block !important;
+  }
+}
+@media (max-width: 767px) {
+  .journal .hidden-xs {
+    display: none !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .journal .hidden-sm {
+    display: none !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .journal .hidden-md {
+    display: none !important;
+  }
+}
+@media (min-width: 1200px) {
+  .journal .hidden-lg {
+    display: none !important;
+  }
+}
+.journal .visible-print {
+  display: none !important;
+}
+@media print {
+  .journal .visible-print {
+    display: block !important;
+  }
+  table.journal .visible-print {
+    display: table;
+  }
+  tr.journal .visible-print {
+    display: table-row !important;
+  }
+  th.journal .visible-print,
+  td.journal .visible-print {
+    display: table-cell !important;
+  }
+}
+.journal .visible-print-block {
+  display: none !important;
+}
+@media print {
+  .journal .visible-print-block {
+    display: block !important;
+  }
+}
+.journal .visible-print-inline {
+  display: none !important;
+}
+@media print {
+  .journal .visible-print-inline {
+    display: inline !important;
+  }
+}
+.journal .visible-print-inline-block {
+  display: none !important;
+}
+@media print {
+  .journal .visible-print-inline-block {
+    display: inline-block !important;
+  }
+}
+@media print {
+  .journal .hidden-print {
+    display: none !important;
+  }
+}
+
+/*# sourceMappingURL=bootstrap.css.map */

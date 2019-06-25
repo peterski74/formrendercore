@@ -1,0 +1,25 @@
+[
+    {
+        "outputFileName": "wwwroot/css/main.min.css",
+        "inputFiles": [
+            "wwwroot/css/bootstrap.css",
+            "wwwroot/css/site.css",
+            "wwwroot/css/formey.css"
+        ]
+    },
+    {
+        "outputFileName": "wwwroot/js/main.min.js",
+        "inputFiles": [
+            "wwwroot/js/respond.js",
+            "wwwroot/js/parsley.js",
+            "wwwroot/js/garlic.js",
+            "wwwroot/js/formey.js",
+            "wwwroot/js/jasny-bootstrap.js"
+        ],
+        "minify": {
+            "enabled": true,
+            "renameLocals": true
+        },
+        "sourceMap": false
+    }
+]
