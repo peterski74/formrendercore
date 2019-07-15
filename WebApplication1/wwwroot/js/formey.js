@@ -27,7 +27,7 @@ if (isLive) { //only run below on prod/live server
         if (interact == false) {
             interact = true;
             // $('#log').prepend('<p>Form changed</p>')
-            var url = fURL + "/f/Interact";
+            var url = fURL + "f/Interact";
             var formID = $("#Id").val();
             var logID = $("#logid").val();
             $.post(url, { FormId: formID, LogId: logID }, function (data) {

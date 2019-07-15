@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace WebApplication1.Models
+namespace ngFormey.Web.Models
 {
     public partial class frmy01_DevContext : DbContext
     {
@@ -43,6 +43,10 @@ namespace WebApplication1.Models
         public virtual DbSet<Rules> Rules { get; set; }
         public virtual DbSet<SavedFormSubmissions> SavedFormSubmissions { get; set; }
         public virtual DbSet<SavedSubmitValues> SavedSubmitValues { get; set; }
+        public virtual DbSet<SfCredentials> SfCredentials { get; set; }
+        public virtual DbSet<SfElements> SfElements { get; set; }
+        public virtual DbSet<SfFields> SfFields { get; set; }
+        public virtual DbSet<SfObjects> SfObjects { get; set; }
         public virtual DbSet<StripeAccounts> StripeAccounts { get; set; }
         public virtual DbSet<SubmissionNotes> SubmissionNotes { get; set; }
         public virtual DbSet<SubmitProductOrders> SubmitProductOrders { get; set; }
@@ -60,20 +64,17 @@ namespace WebApplication1.Models
         public virtual DbSet<WebpagesRoles> WebpagesRoles { get; set; }
         public virtual DbSet<WebpagesUsersInRoles> WebpagesUsersInRoles { get; set; }
 
-        // Unable to generate entity type for table 'dbo.ReportPermissions'. Please see the warning messages.
-
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Server=.\\SQLEXPRESS;Database=frmy01_Dev2;Trusted_Connection=True;");
+                optionsBuilder.UseSqlServer("Server=CA622216\\SQLEXPRESS;Database=frmy01_Dev2;Trusted_Connection=True;");
             }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.HasAnnotation("ProductVersion", "2.2.4-servicing-10062");
+            modelBuilder.HasAnnotation("ProductVersion", "2.2.0-rtm-35687");
 
             modelBuilder.Entity<BackgroundImages>(entity =>
             {
@@ -244,6 +245,10 @@ namespace WebApplication1.Models
                 entity.Property(e => e.Cols).HasDefaultValueSql("((2))");
 
                 entity.Property(e => e.CrmMapping).HasColumnName("CRM_Mapping");
+
+                entity.Property(e => e.SfMappingField).HasColumnName("SF_MappingField");
+
+                entity.Property(e => e.SfMappingObject).HasColumnName("SF_MappingObject");
 
                 entity.Property(e => e.Title)
                     .IsRequired()
@@ -558,6 +563,108 @@ namespace WebApplication1.Models
                     .HasConstraintName("FK_dbo.SavedSubmitValues_dbo.SavedFormSubmissions_SubmissionId");
             });
 
+            modelBuilder.Entity<SfCredentials>(entity =>
+            {
+                entity.HasKey(e => e.SfcredentialId);
+
+                entity.ToTable("SF_Credentials");
+
+                entity.Property(e => e.SfcredentialId)
+                    .HasColumnName("SFCredentialID")
+                    .HasDefaultValueSql("(newid())");
+
+                entity.Property(e => e.Consumerkey).HasMaxLength(100);
+
+                entity.Property(e => e.Consumersecret).HasMaxLength(100);
+
+                entity.Property(e => e.Password).HasMaxLength(100);
+
+                entity.Property(e => e.UserId).HasColumnName("UserID");
+
+                entity.Property(e => e.Username).HasMaxLength(100);
+            });
+
+            modelBuilder.Entity<SfElements>(entity =>
+            {
+                entity.HasKey(e => e.SfelementId);
+
+                entity.ToTable("SF_Elements");
+
+                entity.Property(e => e.SfelementId)
+                    .HasColumnName("SFElementID")
+                    .ValueGeneratedNever();
+
+                entity.Property(e => e.Defaultvalue).HasMaxLength(255);
+
+                entity.Property(e => e.Label).HasMaxLength(255);
+
+                entity.Property(e => e.SffieldId).HasColumnName("SFFieldID");
+
+                entity.Property(e => e.Value).HasMaxLength(255);
+
+                entity.HasOne(d => d.Sffield)
+                    .WithMany(p => p.SfElements)
+                    .HasForeignKey(d => d.SffieldId)
+                    .HasConstraintName("FK_SF_Elements_SF_Elements");
+            });
+
+            modelBuilder.Entity<SfFields>(entity =>
+            {
+                entity.HasKey(e => e.SffieldId);
+
+                entity.ToTable("SF_Fields");
+
+                entity.Property(e => e.SffieldId)
+                    .HasColumnName("SFFieldID")
+                    .ValueGeneratedNever();
+
+                entity.Property(e => e.DefaultValue).HasMaxLength(255);
+
+                entity.Property(e => e.Label).HasMaxLength(255);
+
+                entity.Property(e => e.LastUpdate).HasColumnType("datetime");
+
+                entity.Property(e => e.Lenght).HasMaxLength(50);
+
+                entity.Property(e => e.Name).HasMaxLength(255);
+
+                entity.Property(e => e.ReferenceTo).HasMaxLength(255);
+
+                entity.Property(e => e.SfobjectId).HasColumnName("SFObjectID");
+
+                entity.Property(e => e.SfobjectName)
+                    .HasColumnName("SFObjectName")
+                    .HasMaxLength(255);
+
+                entity.Property(e => e.Type).HasMaxLength(50);
+
+                entity.HasOne(d => d.Sfobject)
+                    .WithMany(p => p.SfFields)
+                    .HasForeignKey(d => d.SfobjectId)
+                    .HasConstraintName("FK_SF_Fields_SF_Fields");
+            });
+
+            modelBuilder.Entity<SfObjects>(entity =>
+            {
+                entity.HasKey(e => e.SfobjectId);
+
+                entity.ToTable("SF_Objects");
+
+                entity.Property(e => e.SfobjectId)
+                    .HasColumnName("SFObjectID")
+                    .ValueGeneratedNever();
+
+                entity.Property(e => e.Common).HasMaxLength(10);
+
+                entity.Property(e => e.Label).HasMaxLength(255);
+
+                entity.Property(e => e.LastUpdate).HasColumnType("datetime");
+
+                entity.Property(e => e.Name).HasMaxLength(255);
+
+                entity.Property(e => e.UserId).HasColumnName("UserID");
+            });
+
             modelBuilder.Entity<SubmissionNotes>(entity =>
             {
                 entity.HasKey(e => e.SubmissionNoteId)
@@ -776,6 +883,10 @@ namespace WebApplication1.Models
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("fk_UserId");
             });
+
+            OnModelCreatingPartial(modelBuilder);
         }
+
+        partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
     }
 }

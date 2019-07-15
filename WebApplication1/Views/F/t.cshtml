@@ -1,4 +1,4 @@
-﻿@model WebApplication1.Models.FormTemplates
+﻿@model ngFormey.Web.Models.FormTemplates
 
 
 
@@ -169,6 +169,7 @@ else
 <script type="text/javascript">
     var instance = "";
     $(document).ready(function () {
+        alert("MMMMMM");
         instance = $('form').parsley();
         $('form').garlic(); //REINSTATE THIS ON PROD
     });

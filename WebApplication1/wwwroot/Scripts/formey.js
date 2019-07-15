@@ -7,7 +7,7 @@ if (isLive) { //only run below on prod/live server
     var i = 1;
     
     function notify() {
-        var url = fURL + "/f/NotifyTime";
+        var url = fURL + "f/NotifyTime";
         var formID = $("#Id").val();
         var logID = $("#logid").val();
         $.post(url, { FormId: formID, LogId: logID }, function (data) {

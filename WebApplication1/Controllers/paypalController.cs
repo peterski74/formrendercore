@@ -16,7 +16,7 @@ namespace ngFormey.Web.Controllers
 
     public class paypalController : Controller
     {
-        WebApplication1.Models.frmy01_DevContext formsDB = new WebApplication1.Models.frmy01_DevContext();
+        ngFormey.Web.Models.frmy01_DevContext formsDB = new ngFormey.Web.Models.frmy01_DevContext();
 
         public ActionResult Confirmed(Guid id, string token, string payerId)
         {

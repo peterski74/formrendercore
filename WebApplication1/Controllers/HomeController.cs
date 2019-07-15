@@ -9,7 +9,7 @@ namespace ngFormey.Web.Controllers
     public class HomeController : Microsoft.AspNetCore.Mvc.Controller
     {
 
-        WebApplication1.Models.frmy01_DevContext formsDB = new WebApplication1.Models.frmy01_DevContext();
+        ngFormey.Web.Models.frmy01_DevContext formsDB = new ngFormey.Web.Models.frmy01_DevContext();
 
         public ActionResult Index()
         {

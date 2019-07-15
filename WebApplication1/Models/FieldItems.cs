@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace WebApplication1.Models
+namespace ngFormey.Web.Models
 {
     public partial class FieldItems
     {
@@ -29,6 +29,8 @@ namespace WebApplication1.Models
         public int Cols { get; set; }
         public Guid FormListId { get; set; }
         public string CrmMapping { get; set; }
+        public string SfMappingObject { get; set; }
+        public string SfMappingField { get; set; }
 
         public virtual FormLists FormList { get; set; }
         public virtual ICollection<FieldItemElements> FieldItemElements { get; set; }

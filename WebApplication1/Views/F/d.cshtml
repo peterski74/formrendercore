@@ -1,4 +1,4 @@
-﻿@model WebApplication1.Models.FormLists
+﻿@model ngFormey.Web.Models.FormLists
 
 
 @if (@ViewBag.Status == "ARCHIVED")
@@ -185,8 +185,8 @@ if (Model.IsTransparent == "True")
                     <div class="well bs-component formWidth">
 
                         @using (Html.BeginForm(null, null, FormMethod.Post,
-                            new { enctype = "multipart/form-data", role = "form", @class = @ViewBag.LabelAlign, id = "formId", @action = @ViewBag.submitURL }
-                            ))
+                        new { enctype = "multipart/form-data", role = "form", @class = @ViewBag.LabelAlign, id = "formId", @action = @ViewBag.submitURL }
+                        ))
                         {
                             @:<fieldset>
  <!-- @Html.AntiForgeryToken()-->
@@ -233,6 +233,66 @@ if (Model.IsTransparent == "True")
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                         }
                     </div>
                 </div>
@@ -252,10 +312,10 @@ if (Model.IsTransparent == "True")
                 else
                 {
                     <!-- <script src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js' type='text/javascript'></script>
-         <script type="text/javascript">
-             // Fallbacks
-             window.jQuery || document.write(unescape("%3Cscript src='/scripts/jquery-1.10.2.min.js' type='text/javascript'%3E%3C/script%3E"));
-         </script>-->
+        <script type="text/javascript">
+            // Fallbacks
+            window.jQuery || document.write(unescape("%3Cscript src='/scripts/jquery-1.10.2.min.js' type='text/javascript'%3E%3C/script%3E"));
+        </script>-->
                     <script src='//cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js' type='text/javascript'></script>
                     <script src='//cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/js/bootstrap-datetimepicker.min.js' type='text/javascript'></script>
                     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/remodal/1.0.3/remodal.min.css">
@@ -277,7 +337,20 @@ if (Model.IsTransparent == "True")
                 </script>
 
 
+                <!--  <script src="/Scripts/formey.js" type="text/javascript"></script>
+      <script src='@ViewBag.formURLscripts/respond.min.js' type='text/javascript'></script>
+      <script src='@ViewBag.formURLscripts/parsley.js' type='text/javascript'></script>
+      <script src='@ViewBag.formURLscripts/garlic.min.js' type='text/javascript'></script>
+      <script src='@ViewBag.formURLscripts/jasny-bootstrap.min.js' type='text/javascript'></script>
+      <script src="@ViewBag.formURLscripts/iframeResizer.contentWindow.min.js"></script> -->
+
                 <script src="/Scripts/formey.js" type="text/javascript"></script>
+                <script src='/js/respond.min.js' type='text/javascript'></script>
+                <script src='/js/parsley.js' type='text/javascript'></script>
+                <script src='/js/garlic.min.js' type='text/javascript'></script>
+                <script src='/js/jasny-bootstrap.min.js' type='text/javascript'></script>
+                <script src="/js/iframeResizer.contentWindow.min.js"></script>
+
 
                 @*<script src="@ViewBag.formURL Scripts/formey.js" type="text/javascript"></script>*@
 
@@ -355,11 +428,17 @@ if (Model.IsTransparent == "True")
                 @if (@System.Configuration.ConfigurationManager.AppSettings["isLiveServer"] == "false")
                 {
                     <!-- DEV LINKS START -->
-                    <script src='@ViewBag.formURL/scripts/respond.min.js' type='text/javascript'></script>
-                    <script src='@ViewBag.formURL/scripts/parsley.js' type='text/javascript'></script>
-                    <script src='@ViewBag.formURL/scripts/garlic.min.js' type='text/javascript'></script>
-                    <script src='@ViewBag.formURL/scripts/jasny-bootstrap.min.js' type='text/javascript'></script>
-                    <script src="@ViewBag.formURL/scripts/iframeResizer.contentWindow.min.js"></script>
+                    <!---<script src='@ViewBag.formURL/scripts/respond.min.js' type='text/javascript'></script>
+        <script src='@ViewBag.formURL/scripts/parsley.js' type='text/javascript'></script>
+        <script src='@ViewBag.formURL/scripts/garlic.min.js' type='text/javascript'></script>
+        <script src='@ViewBag.formURL/scripts/jasny-bootstrap.min.js' type='text/javascript'></script>
+        <script src="@ViewBag.formURL/scripts/iframeResizer.contentWindow.min.js"></script>-->
+
+                    <script src='@ViewBag.formURL/js/respond.min.js' type='text/javascript'></script>
+                    <script src='@ViewBag.formURL/js/parsley.js' type='text/javascript'></script>
+                    <script src='@ViewBag.formURL/js/garlic.min.js' type='text/javascript'></script>
+                    <script src='@ViewBag.formURLscripts/jasny-bootstrap.min.js' type='text/javascript'></script>
+                    <script src="@ViewBag.formURLscripts/iframeResizer.contentWindow.min.js"></script>
                 }
                 else
                 {

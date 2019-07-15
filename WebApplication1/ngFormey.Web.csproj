@@ -6,6 +6,80 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\css\imgs\bg\1.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\10.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\11.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\12.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\13.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\14.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\15.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\16.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\17.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\18.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\19.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\2.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\20.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\21.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\22.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\23.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\24.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\25.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\26.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\27.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\28.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\29.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\3.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\30.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\31.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\32.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\33.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\34.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\36.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\37.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\38.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\4.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\5.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\6.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\7.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\8.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\9.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\autumn_leaves.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\autumn_swan_lake.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\baby_shower.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\beach_sunrise.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\birthday_cake.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\blue_orange.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\boat_harbour.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\camping_mountain.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\dinning_table.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\fish_island.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\foggy_forest.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\foggy_sunrise.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\forest_waterfall.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\green_pink.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\hotel.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\lecture.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\meeting_room.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\mountain_lake_hut.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\mountain_run.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\nature_background.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\nycity_defocused_blur.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\office_desk.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\party_dogs.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\pets.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\pizza.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\road_nighttime.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\sports_arena.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\sports_equipment.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\sunrise_road.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\sunset_beach.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\tropical_islands.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\underwater_fish.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\workday.jpg" />
+    <Content Remove="wwwroot\css\imgs\bg\workout_equipment.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="Content\formey.css" />
     <None Remove="Scripts\formey.js" />
   </ItemGroup>
@@ -19,15 +93,94 @@
     </Content>
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\css\imgs\bg\1.jpg" />
+    <None Include="wwwroot\css\imgs\bg\10.jpg" />
+    <None Include="wwwroot\css\imgs\bg\11.jpg" />
+    <None Include="wwwroot\css\imgs\bg\12.jpg" />
+    <None Include="wwwroot\css\imgs\bg\13.jpg" />
+    <None Include="wwwroot\css\imgs\bg\14.jpg" />
+    <None Include="wwwroot\css\imgs\bg\15.jpg" />
+    <None Include="wwwroot\css\imgs\bg\16.jpg" />
+    <None Include="wwwroot\css\imgs\bg\17.jpg" />
+    <None Include="wwwroot\css\imgs\bg\18.jpg" />
+    <None Include="wwwroot\css\imgs\bg\19.jpg" />
+    <None Include="wwwroot\css\imgs\bg\2.jpg" />
+    <None Include="wwwroot\css\imgs\bg\20.jpg" />
+    <None Include="wwwroot\css\imgs\bg\21.jpg" />
+    <None Include="wwwroot\css\imgs\bg\22.jpg" />
+    <None Include="wwwroot\css\imgs\bg\23.jpg" />
+    <None Include="wwwroot\css\imgs\bg\24.jpg" />
+    <None Include="wwwroot\css\imgs\bg\25.jpg" />
+    <None Include="wwwroot\css\imgs\bg\26.jpg" />
+    <None Include="wwwroot\css\imgs\bg\27.jpg" />
+    <None Include="wwwroot\css\imgs\bg\28.jpg" />
+    <None Include="wwwroot\css\imgs\bg\29.jpg" />
+    <None Include="wwwroot\css\imgs\bg\3.jpg" />
+    <None Include="wwwroot\css\imgs\bg\30.jpg" />
+    <None Include="wwwroot\css\imgs\bg\31.jpg" />
+    <None Include="wwwroot\css\imgs\bg\32.jpg" />
+    <None Include="wwwroot\css\imgs\bg\33.jpg" />
+    <None Include="wwwroot\css\imgs\bg\34.jpg" />
+    <None Include="wwwroot\css\imgs\bg\36.jpg" />
+    <None Include="wwwroot\css\imgs\bg\37.jpg" />
+    <None Include="wwwroot\css\imgs\bg\38.jpg" />
+    <None Include="wwwroot\css\imgs\bg\4.jpg" />
+    <None Include="wwwroot\css\imgs\bg\5.jpg" />
+    <None Include="wwwroot\css\imgs\bg\6.jpg" />
+    <None Include="wwwroot\css\imgs\bg\7.jpg" />
+    <None Include="wwwroot\css\imgs\bg\8.jpg" />
+    <None Include="wwwroot\css\imgs\bg\9.jpg" />
+    <None Include="wwwroot\css\imgs\bg\autumn_leaves.jpg" />
+    <None Include="wwwroot\css\imgs\bg\autumn_swan_lake.jpg" />
+    <None Include="wwwroot\css\imgs\bg\baby_shower.jpg" />
+    <None Include="wwwroot\css\imgs\bg\beach_sunrise.jpg" />
+    <None Include="wwwroot\css\imgs\bg\birthday_cake.jpg" />
+    <None Include="wwwroot\css\imgs\bg\blue_orange.jpg" />
+    <None Include="wwwroot\css\imgs\bg\boat_harbour.jpg" />
+    <None Include="wwwroot\css\imgs\bg\camping_mountain.jpg" />
+    <None Include="wwwroot\css\imgs\bg\dinning_table.jpg" />
+    <None Include="wwwroot\css\imgs\bg\fish_island.jpg" />
+    <None Include="wwwroot\css\imgs\bg\foggy_forest.jpg" />
+    <None Include="wwwroot\css\imgs\bg\foggy_sunrise.jpg" />
+    <None Include="wwwroot\css\imgs\bg\forest_waterfall.jpg" />
+    <None Include="wwwroot\css\imgs\bg\green_pink.jpg" />
+    <None Include="wwwroot\css\imgs\bg\hotel.jpg" />
+    <None Include="wwwroot\css\imgs\bg\lecture.jpg" />
+    <None Include="wwwroot\css\imgs\bg\meeting_room.jpg" />
+    <None Include="wwwroot\css\imgs\bg\mountain_lake_hut.jpg" />
+    <None Include="wwwroot\css\imgs\bg\mountain_run.jpg" />
+    <None Include="wwwroot\css\imgs\bg\nature_background.jpg" />
+    <None Include="wwwroot\css\imgs\bg\nycity_defocused_blur.jpg" />
+    <None Include="wwwroot\css\imgs\bg\office_desk.jpg" />
+    <None Include="wwwroot\css\imgs\bg\party_dogs.jpg" />
+    <None Include="wwwroot\css\imgs\bg\pets.jpg" />
+    <None Include="wwwroot\css\imgs\bg\pizza.jpg" />
+    <None Include="wwwroot\css\imgs\bg\road_nighttime.jpg" />
+    <None Include="wwwroot\css\imgs\bg\sports_arena.jpg" />
+    <None Include="wwwroot\css\imgs\bg\sports_equipment.jpg" />
+    <None Include="wwwroot\css\imgs\bg\sunrise_road.jpg" />
+    <None Include="wwwroot\css\imgs\bg\sunset_beach.jpg" />
+    <None Include="wwwroot\css\imgs\bg\tropical_islands.jpg" />
+    <None Include="wwwroot\css\imgs\bg\underwater_fish.jpg" />
+    <None Include="wwwroot\css\imgs\bg\workday.jpg" />
+    <None Include="wwwroot\css\imgs\bg\workout_equipment.jpg" />
+  </ItemGroup>
+
 
   <ItemGroup>
     <PackageReference Include="AWSSDK.Core" Version="3.3.103.1" />
     <PackageReference Include="AWSSDK.S3" Version="3.3.102.5" />
     <PackageReference Include="BundlerMinifier.Core" Version="2.9.406" />
+    <PackageReference Include="DeveloperForce.Chatter" Version="2.0.7" />
+    <PackageReference Include="DeveloperForce.Common" Version="2.0.2" />
+    <PackageReference Include="DeveloperForce.Force" Version="2.0.2" />
+    <PackageReference Include="DeveloperForce.NetCore.Force" Version="1.0.4" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="Microsoft.AspNetCore.WebUtilities" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.4" />
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.5.0" />
     <PackageReference Include="UAParser" Version="3.1.36" />
     <PackageReference Include="WebApiContrib.Formatting.JavaScriptSerializer" Version="0.9.4" />
@@ -36,6 +189,9 @@
 
   <ItemGroup>
     <Content Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Views\F\d.cshtml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Update="Views\F\_checkbox-partial.cshtml">

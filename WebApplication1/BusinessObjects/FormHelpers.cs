@@ -9,6 +9,7 @@ using System.Globalization;
 using Newtonsoft.Json;
 using WebApplication1.Models;
 using UAParser;
+using ngFormey.Web.Models;
 
 namespace ngFormey.Web.BusinessObjects
 {
@@ -20,7 +21,7 @@ namespace ngFormey.Web.BusinessObjects
         {
 
             //FormList form = (forms)obj;
-            WebApplication1.Models.frmy01_DevContext formsDB = new WebApplication1.Models.frmy01_DevContext();
+            ngFormey.Web.Models.frmy01_DevContext formsDB = new ngFormey.Web.Models.frmy01_DevContext();
 
             StringBuilder buildActionField = new StringBuilder();
 
@@ -258,7 +259,7 @@ namespace ngFormey.Web.BusinessObjects
         //public static string rulesCalc(IEnumerable<dynamic> forms)
         {
             // WebApplication1.Models.FormeyEntityModel formsDB = new WebApplication1.Models.FormeyEntityModel();
-            WebApplication1.Models.frmy01_DevContext formsDB = new WebApplication1.Models.frmy01_DevContext();
+            ngFormey.Web.Models.frmy01_DevContext formsDB = new ngFormey.Web.Models.frmy01_DevContext();
             //FormList form = (forms)obj;
 
             StringBuilder buildActionField = new StringBuilder();
@@ -490,7 +491,7 @@ namespace ngFormey.Web.BusinessObjects
 
         public static Guid addToLogGeneral(Guid formId, ClientInfo c)
         {
-            using(var formsDB = new WebApplication1.Models.frmy01_DevContext())
+            using(var formsDB = new ngFormey.Web.Models.frmy01_DevContext())
             {
                 //Models.FormeyEntityModel ;
                 //add new form load to LogGeneral

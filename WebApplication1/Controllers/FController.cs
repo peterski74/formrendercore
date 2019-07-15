@@ -21,7 +21,12 @@ using System.IO;
 using System.Text.RegularExpressions;
 using System.Web;
 using UAParser;
-
+using ngFormey.Web.Models;
+using Salesforce.Force;
+using Salesforce.Common;
+using Salesforce.Common.Models.Xml;
+//using DeveloperForce.NetCore.Force;
+//using DeveloperForce.NetCore.Common;
 
 namespace ngFormey.Web.Controllers
 {
@@ -52,6 +57,10 @@ namespace ngFormey.Web.Controllers
 
     public class FController : Controller
     {
+        
+        IDictionary<string, SObjectList<SObject>> dict = new Dictionary<string, SObjectList<SObject>>();
+        SObjectList<SObject> dtBatch = new SObjectList<SObject>();
+
         public static int GetMonthsBetween(DateTime from, DateTime to)
         {
             if (from > to) return GetMonthsBetween(to, from);
@@ -68,8 +77,99 @@ namespace ngFormey.Web.Controllers
             }
         }
 
+       
 
-        WebApplication1.Models.frmy01_DevContext formsDB = new WebApplication1.Models.frmy01_DevContext();
+        private void buildSobject(string sfObjName, string sfLabelName, string sfLabelValue)
+        {
+            SObjectList<SObject> sObjlis;
+            bool hasvalue = dict.TryGetValue(sfObjName, out sObjlis);
+            if (hasvalue)
+            {
+                sObjlis.Add(new SObject { { sfLabelName, sfLabelValue } });
+            }
+            else
+            {
+                dtBatch.Add(new SObject { { sfLabelName, sfLabelValue } });
+                dict.Add(sfObjName, dtBatch);
+                
+            }
+        }
+
+        private SfCredential getSFCredentils(string fListId)
+        {
+            var userId = formsDB.FormLists
+               .Where(c => c.FormListId.ToString() == fListId).First();
+
+            if(userId.UserId != null)
+            {
+                var sfCredentials = formsDB.SfCredentials
+                    .Where(c1 => c1.UserId.ToString() == userId.UserId).FirstOrDefault(); ;
+              
+                var sfc = new SfCredential() { userid = sfCredentials.UserId, password = sfCredentials.Password, clientSecrete = sfCredentials.Consumerkey, clientId = sfCredentials.Consumersecret};
+                return sfc;
+            }
+            return null;
+        }
+
+        private class SfCredential
+        {
+            public string userid { get; set; }
+            public string password { get; set; }
+            public string clientSecrete { get; set; }
+            public string clientId { get; set; }
+        }
+
+        private static async Task ConnectSalesforce(IDictionary<string, SObjectList<SObject>> objlist, SfCredential sfObj)
+        {
+            
+
+            //create auth client to retrieve token
+            var auth = new AuthenticationClient();
+
+            //get back URL and token
+            await auth.UsernamePasswordAsync(sfObj.clientSecrete,sfObj.clientId,sfObj.userid,sfObj.password);
+
+           // await auth.UsernamePasswordAsync("3MVG9d8..z.hDcPIso6KgejZc.Vz8r_s4Vn7mg2_cExGl2fciWV3lLsNZk.qbaF9nrmXojHSdl8DpNyUVKm4Y", "2166946594035531821", "prashant.honavar@cunning-raccoon-497862.com", "Test@1230");
+            //await auth.UsernamePasswordAsync("ConsumerId", "Consumersecret", "username", "password" + "security token", "https://login.salesforce.com/services/oauth2/token");
+
+            var forceClient = new ForceClient(auth.InstanceUrl, auth.AccessToken, auth.ApiVersion);
+
+
+            //Console.Write("Connected to Salesforce.");
+
+            //var account = new Account() { Name = "New Account test", Description = "New Account Description" };
+            // var id = await forceClient.CreateAsync("Account", account);
+
+            // Make a dynamic typed Account list
+
+            // SObject obj = new SObject();
+            //obj.Add("Name", "Prashant");
+
+
+
+             foreach (KeyValuePair<string, SObjectList<SObject>> item in objlist)
+             {
+                 Console.WriteLine("Key: {0}, Value: {1}", item.Key, item.Value);
+                 var res = await forceClient.RunJobAndPollAsync(item.Key, BulkConstants.OperationType.Insert, new List<ISObjectList<SObject>>() { item.Value });
+             }
+
+
+          /*  var dtAccountsBatch = new SObjectList<SObject>
+            {
+                new SObject{{"Name", "TestDtAccount5"}},
+                new SObject{{"Name", "TestDtAccount7"}},
+                new SObject{{"Sic", "TestDtAccount3"}}
+            };
+
+            // insert the accounts
+            var res = await forceClient.RunJobAndPollAsync("Account", BulkConstants.OperationType.Insert,
+                    new List<SObjectList<SObject>> { dtAccountsBatch });*/
+
+        }
+
+
+
+        ngFormey.Web.Models.frmy01_DevContext formsDB = new ngFormey.Web.Models.frmy01_DevContext();
 
 
         [ResponseCache(Duration = 20, VaryByQueryKeys = new string[] { "id" })]
@@ -235,7 +335,7 @@ namespace ngFormey.Web.Controllers
 
         [HttpPost]
         //[ValidateAntiForgeryToken]
-        public ActionResult HandleForm(IDictionary<string, string> SubmitFields, WebApplication1.Models.frmy01_DevContext model, IFormCollection formCollection, FormLists FL) //, HttpPostedFileBase uploadFile , IEnumerable<HttpPostedFileBase> files
+        public ActionResult HandleForm(IDictionary<string, string> SubmitFields, ngFormey.Web.Models.frmy01_DevContext model, IFormCollection formCollection, FormLists FL) //, HttpPostedFileBase uploadFile , IEnumerable<HttpPostedFileBase> files
         {
             // REDIRECT TO SAVE IF SAVED USED
             foreach (var _key in formCollection)
@@ -279,8 +379,70 @@ namespace ngFormey.Web.Controllers
             StringBuilder searchField = new StringBuilder();
 
 
+            // Check for Salesforce Fields
+            List<int> list = new List<int>();
+            foreach (var _key in formCollection)
+            {
+                //var _value = formCollection[_key.Value.ToString()];
+                var _value = _key.Value;
+                if (_key.Key.ToString().StartsWith("input"))
+                {
+                    list.Add(int.Parse (_key.Key.ToString().Split("_")[2]));
+                }
+            }
+
+            // Get distinct elements and convert into a list again.
+            List<int> distinct = list.Distinct().ToList();
+
+
+            //Create SF mapping object list
+            List<string> sfMappingList = new List<string>();
+            string formListId =null;
+
+            foreach (var itemId in distinct)
+            {
+                var sfObjectId = formsDB.FieldItems
+                    .Where(t => t.FieldItemId == itemId).FirstOrDefault();
+                if(sfObjectId != null  && sfObjectId.SfMappingObject != null && sfObjectId.SfMappingField != null)
+                {
+                    //Find all the required fields on the object
+                    formListId = sfObjectId.FormListId.ToString();
+                    var requiredFields = formsDB.SfFields
+                    .Where(c => c.SfobjectId.ToString() == sfObjectId.SfMappingObject)
+                    .Where(c => c.Nillable == false)
+                    .Where(c => c.Type.ToString() != "boolean")
+                    .Where(c => c.Type.ToString() != "reference").ToList();
+
+
+                    var dataRow = formsDB.SfFields
+                    .Where(c => c.SfobjectId.ToString() == sfObjectId.SfMappingObject)
+                    .Where(c => c.SffieldId.ToString() == sfObjectId.SfMappingField).First();
+
+                   foreach(var filed in requiredFields)
+                    {
+                        if(filed.Name == dataRow.Name)
+                        {
+                            var filedvaule =
+                              formsDB.SubmitValues
+                              .Where(v => v.FieldId == itemId).First();
+                              buildSobject(dataRow.SfobjectName, dataRow.Name, filedvaule.Value);
+                        }
+                    }
+
+                    
+                }
+                            
+            }
+             
+            SfCredential sfc = getSFCredentils(formListId);
+            if (dict.Count>0 && formListId != null)
+            {
+                  ConnectSalesforce(dict, sfc);
+
+            }
+
             // Get ID and FORM NAME
-            var formListId = "";
+           // var formListId = "";
             foreach (var _key in formCollection)
             {
                 //var _value = formCollection[_key.Value.ToString()];
@@ -472,6 +634,8 @@ namespace ngFormey.Web.Controllers
 
             var formList = formsDB.FormLists.Find(new Guid(formListId));
 
+           // var formList = formsDB.FieldItems.f
+
             Contacts contact = new Contacts();
             bool hasCRMFields = false;
             foreach (var _key in formCollection)
@@ -482,7 +646,7 @@ namespace ngFormey.Web.Controllers
                 { // if more than 4 fields than its a CRM field
                     var _value = formCollection[_key.Key.ToString()];
                     var proprtyName = arr_id[3] + "_" + arr_id[4];
-                    contact.GetType().GetProperty(proprtyName).SetValue(contact, _value, null);
+                    //contact.GetType().GetProperty(proprtyName).SetValue(contact, _value, null);
                     hasCRMFields = true;
                 }
             }
@@ -1122,7 +1286,7 @@ namespace ngFormey.Web.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult SaveForm(IDictionary<string, string> SubmitFields, WebApplication1.Models.frmy01_DevContext model, IFormCollection formCollection, FormLists FL) //, HttpPostedFileBase uploadFile
+        public ActionResult SaveForm(IDictionary<string, string> SubmitFields, ngFormey.Web.Models.frmy01_DevContext model, IFormCollection formCollection, FormLists FL) //, HttpPostedFileBase uploadFile
         {
 
             var formUrl = new Uri(System.Configuration.ConfigurationManager.AppSettings["FORM_URL"]);
@@ -1239,7 +1403,7 @@ namespace ngFormey.Web.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult UpdateForm(IDictionary<string, string> SubmitFields, WebApplication1.Models.frmy01_DevContext model, IFormCollection formCollection, WebApplication1.Models.FormLists FL) //, HttpPostedFileBase uploadFile
+        public ActionResult UpdateForm(IDictionary<string, string> SubmitFields, ngFormey.Web.Models.frmy01_DevContext model, IFormCollection formCollection, ngFormey.Web.Models.FormLists FL) //, HttpPostedFileBase uploadFile
         {
 
             var urlId = Request.Headers["Id"];
