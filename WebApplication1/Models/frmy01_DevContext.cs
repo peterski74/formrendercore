@@ -68,7 +68,8 @@ namespace ngFormey.Web.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Server=CA622216\\SQLEXPRESS;Database=frmy01_Dev2;Trusted_Connection=True;");
+                //optionsBuilder.UseSqlServer("Server=CA622216\\SQLEXPRESS;Database=frmy01_Dev2;Trusted_Connection=True;");
+                optionsBuilder.UseSqlServer("Data Source=DESKTOP-H1V33UP;Initial Catalog=frmy01_Dev2;Integrated Security=True");
             }
         }
 

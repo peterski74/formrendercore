@@ -1,0 +1,5 @@
+{
+  "Values": {
+    "sqldb_connection": "Data Source=DESKTOP-H1V33UP;Initial Catalog=frmy01_Dev2;Integrated Security=True"
+  }
+}

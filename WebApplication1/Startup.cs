@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
@@ -18,11 +19,27 @@ namespace WebApplication1
         {
             Configuration = configuration;
             var builder = new ConfigurationBuilder();
-            builder.AddJsonFile("appsettings.json");
+            builder.AddJsonFile("appsettings.development.json");
             Configuration = builder.Build();
+            //var myconfig = Configuration["AppSettings"];
         }
 
         public IConfiguration Configuration { get; }
+
+
+        static class ConfigurationManager
+        {
+            public static IConfiguration AppSetting { get; }
+            static ConfigurationManager()
+            {
+                AppSetting = new ConfigurationBuilder()
+                        .SetBasePath(Directory.GetCurrentDirectory())
+                        .AddJsonFile("appsettings.development.json")
+                        .Build();
+            }
+        }
+
+
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -36,6 +53,7 @@ namespace WebApplication1
 
             services.AddResponseCaching();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddSingleton<IConfiguration>(Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

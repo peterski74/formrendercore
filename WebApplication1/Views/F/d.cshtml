@@ -5,7 +5,7 @@
 {
     <div class="container-fluid">
         <div class="row">
-            <h2>This form has been archived and is no longer accessible.</h2>   
+            <h2>This form has been archived and is no longer accessible.</h2>
         </div>
     </div>
 
@@ -13,25 +13,27 @@
 else
 {
 
-    if (@System.Configuration.ConfigurationManager.AppSettings["isLiveServer"] == "false")
+    if (@ViewBag.isLiveServer == "false")
     { //local dev
         <script src='@ViewBag.formURL/scripts/jquery-1.10.2.min.js' type='text/javascript'></script>
         <script>var isLive = false;</script>
+
     }
     else
     {
         <script src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js' type='text/javascript'></script>
         <script type="text/javascript">
-        // Fallbacks
-        window.jQuery || document.write(unescape("%3Cscript src='/scripts/jquery-1.10.2.min.js' type='text/javascript'%3E%3C/script%3E"));
-        var isLive = true;
-        </script>
+            // Fallbacks
+            window.jQuery || document.write(unescape("%3Cscript src='/scripts/jquery-1.10.2.min.js' type='text/javascript'%3E%3C/script%3E"));
+            var isLive = true;
+
+/**/</script>
     }
 
     if (@ViewBag.freeTier == true)
     {
         <div style="visibility:visible;" id="ADTop" class="ADTop " onclick="sendSite('top')">
-            <div id="ADTopLabel" class="ADTopLabel" >
+            <div id="ADTopLabel" class="ADTopLabel">
                 <span class="Ads_smallMusa">(Formey-Logo) </span>
                 Create <span class="wixAds_smallLogo">Forms</span> like this, FREE!
             </div>
@@ -45,15 +47,15 @@ else
         </div>
 
         <script>
-            function sendSite(position){
-                document.location.href = "https://www.formey.com/?utm_source=freeaccount&utm_medium=website&utm_campaign=bannerads&utm_content="+position;
+            function sendSite(position) {
+                document.location.href = "https://www.formey.com/?utm_source=freeaccount&utm_medium=website&utm_campaign=bannerads&utm_content=" + position;
             }
         </script>
 
         <div onclick="sendSite('bottom')" style="" id="target" class="AdsdesktopWADBottom hidden-xs">
-            <div class="AdsdesktopWADBottomContent " >
+            <div class="AdsdesktopWADBottomContent ">
                 <div class="adFootBox">
-                    <div class="Ads_siteBanner"  >
+                    <div class="Ads_siteBanner">
                         <div class="Ads_wrapper">
                             <div class="Ads_bigMusa">(Formey Logo)</div>
                             <div class="Ads_txt Ads_shd" style="color:#fff">This form was created using </div>
@@ -72,41 +74,43 @@ else
 
     }
 
-<script type="text/javascript" src="//cloudfront.loggly.com/js/loggly.tracker-2.1.min.js"></script>
-<script>
-  var _LTracker = _LTracker || [];
-  _LTracker.push({
-      'logglyKey': 'f215dd7b-ac62-46c4-8071-e9110a89893e',
-    'sendConsoleErrors' : true,
-    'tag' : 'loggly-jslogger'
-  });
-</script>
-
-       
-
-if (@ViewBag.Theme != "nostyle")
-{
-   // @Styles.Render(@ViewBag.Theme as String ?? "@ViewBag.formURL/Content/bootstrap.min.css")
-    <link rel="stylesheet" href="/css/formey.min.css" />
-}
+    <script type="text/javascript" src="//cloudfront.loggly.com/js/loggly.tracker-2.1.min.js"></script>
+    <script>
+        var _LTracker = _LTracker || [];
+        _LTracker.push({
+            'logglyKey': 'f215dd7b-ac62-46c4-8071-e9110a89893e',
+            'sendConsoleErrors': true,
+            'tag': 'loggly-jslogger'
+        });
+    </script>
 
 
-if (ViewBag.BackgroundImage == "nobg")
-{
-    <!-- nobg -->
-    <style>
-        @@media (min-width: 481px) {
-            .body {
-                background-color: transparent !important;
+
+    if (@ViewBag.Theme != "nostyle")
+    {
+        @*@Styles.Render(@ViewBag.Theme as String ?? "@ViewBag.formURL/Content/bootstrap.min.css")*@
+        
+        <link rel="stylesheet" href="/css/themes/standard/bootstrap.min.css" />
+        <link rel="stylesheet" href="/css/formey.min.css" />
+    }
+
+
+    if (ViewBag.BackgroundImage == "nobg")
+    {
+        <!-- nobg -->
+        <style>
+            @@media (min-width: 481px) {
+                .body {
+                    background-color: transparent !important;
+                }
             }
-        }
-    </style>
-}
+        </style>
+    }
 
-if (ViewBag.BackgroundImage != "nobg" && ViewBag.BackgroundImage != "" && ViewBag.BackgroundImage != null)
-{
-    <!-- image -->
-    <style>
+    if (ViewBag.BackgroundImage != "nobg" && ViewBag.BackgroundImage != "" && ViewBag.BackgroundImage != null)
+    {
+        <!-- image -->
+        <style>
         @@media (min-width: 481px) {
             html{
                 @string.Format("background: url(/imgs/bg/{0}.jpg) no-repeat center center fixed;background-size: cover;", @ViewBag.BackgroundImage);
@@ -116,54 +120,54 @@ if (ViewBag.BackgroundImage != "nobg" && ViewBag.BackgroundImage != "" && ViewBa
             }
 
         }
-    </style>
-}
+        </style>
+    }
 
 
-if (ViewBag.BackgroundImage != null && ViewBag.BackgroundImage != "")
-{
-    <!-- mobile -->
-    <style>
-        @@media (max-width: 480px) {
-            body {
-                background-color: inherit;
+    if (ViewBag.BackgroundImage != null && ViewBag.BackgroundImage != "")
+    {
+        <!-- mobile -->
+        <style>
+            @@media (max-width: 480px) {
+                body {
+                    background-color: inherit;
+                }
             }
-        }
-    </style>
-}
+        </style>
+    }
 
-if (Model.IsTransparent == "True")
-{
-    var wellColor = "245,245,245";
+    if (Model.IsTransparent == "True")
+    {
+        var wellColor = "245,245,245";
 
-    if (Model.Theme == "standard") { wellColor = "245,245,245"; }
-    if (Model.Theme == "amelia") { wellColor = "13,116,124"; }
-    if (Model.Theme == "cerulean") { wellColor = "245,245,245"; }
-    if (Model.Theme == "cosmo") { wellColor = "245,245,245"; }
-    if (Model.Theme == "cyborg") { wellColor = "21,21,21"; }
-    if (Model.Theme == "darkly") { wellColor = "48,48,48"; }
-    if (Model.Theme == "flatly") { wellColor = "236,240,241"; }
-    if (Model.Theme == "journal") { wellColor = "245,245,245"; }
-    if (Model.Theme == "lumen") { wellColor = "250,250,250"; }
-    if (Model.Theme == "paper") { wellColor = "249,249,249"; }
-    if (Model.Theme == "readable") { wellColor = "247,247,247"; }
-    if (Model.Theme == "sandstone") { wellColor = "248,245,240"; }
-    if (Model.Theme == "simplex") { wellColor = "244,244,244"; }
-    if (Model.Theme == "slate") { wellColor = "28,30,34"; }
-    if (Model.Theme == "spacelab") { wellColor = "245,245,245"; }
-    if (Model.Theme == "superhero") { wellColor = "78,93,108"; }
-    if (Model.Theme == "united") { wellColor = "245,245,245"; }
-    if (Model.Theme == "yeti") { wellColor = "250,250,250"; }
+        if (Model.Theme == "standard") { wellColor = "245,245,245"; }
+        if (Model.Theme == "amelia") { wellColor = "13,116,124"; }
+        if (Model.Theme == "cerulean") { wellColor = "245,245,245"; }
+        if (Model.Theme == "cosmo") { wellColor = "245,245,245"; }
+        if (Model.Theme == "cyborg") { wellColor = "21,21,21"; }
+        if (Model.Theme == "darkly") { wellColor = "48,48,48"; }
+        if (Model.Theme == "flatly") { wellColor = "236,240,241"; }
+        if (Model.Theme == "journal") { wellColor = "245,245,245"; }
+        if (Model.Theme == "lumen") { wellColor = "250,250,250"; }
+        if (Model.Theme == "paper") { wellColor = "249,249,249"; }
+        if (Model.Theme == "readable") { wellColor = "247,247,247"; }
+        if (Model.Theme == "sandstone") { wellColor = "248,245,240"; }
+        if (Model.Theme == "simplex") { wellColor = "244,244,244"; }
+        if (Model.Theme == "slate") { wellColor = "28,30,34"; }
+        if (Model.Theme == "spacelab") { wellColor = "245,245,245"; }
+        if (Model.Theme == "superhero") { wellColor = "78,93,108"; }
+        if (Model.Theme == "united") { wellColor = "245,245,245"; }
+        if (Model.Theme == "yeti") { wellColor = "250,250,250"; }
 
 
-    decimal tranVal = Convert.ToDecimal(Model.TransparentValue) / 10;
-    <style>
+        decimal tranVal = Convert.ToDecimal(Model.TransparentValue) / 10;
+        <style>
         .well{
             @string.Format("background-color:rgba({1}, {0})!important;", tranVal, wellColor);
         }
-    </style>
+        </style>
 
-}
+    }
 
     @*else {
             <style>body { background-color:#fff;}</style>
@@ -185,13 +189,14 @@ if (Model.IsTransparent == "True")
                     <div class="well bs-component formWidth">
 
                         @using (Html.BeginForm(null, null, FormMethod.Post,
-                        new { enctype = "multipart/form-data", role = "form", @class = @ViewBag.LabelAlign, id = "formId", @action = @ViewBag.submitURL }
-                        ))
+                     new { enctype = "multipart/form-data", role = "form", @class = @ViewBag.LabelAlign, id = "formId", @action = @ViewBag.submitURL }
+                     ))
                         {
                             @:<fieldset>
  <!-- @Html.AntiForgeryToken()-->
                                 @Html.HiddenFor(m => m.FormListId)
-                                @Html.ValidationSummary()if (ViewBag.quotaExceeded)
+                                @Html.ValidationSummary()
+                                if (ViewBag.quotaExceeded)
                                 {
                                     // @MvcHtmlString.Create(ViewBag.outHtml);
                                 }
@@ -213,7 +218,8 @@ if (Model.IsTransparent == "True")
                                         else
                                         {
 
-                                            @Html.Partial(string.Format("_{0}-partial", field.ElementType), field);
+                                            await Html.RenderPartialAsync(string.Format("_{0}-partial", field.ElementType), field);
+
                                         }
                                     }
                                 }
@@ -229,84 +235,18 @@ if (Model.IsTransparent == "True")
                                 <input id="City" name="City" type="hidden" />
                                 <input id="IPAddress" name="IPAddress" type="hidden" />
                             @: </fieldset>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                         }
                     </div>
                 </div>
 
 
-
-
-                @if (@System.Configuration.ConfigurationManager.AppSettings["isLiveServer"] == "false")
+                @if (@ViewBag.isLiveServer == "false")
                 {
                     <!-- <script src='@ViewBag.formURL/scripts/jquery-1.10.2.min.js' type='text/javascript'></script>-->
                     <script src='@ViewBag.formURL/Scripts/moment.min.js' type='text/javascript'></script>
                     <script src="@ViewBag.formURL/Scripts/bootstrap-datetimepicker.min.js"></script>
-                    <link rel="stylesheet" href="@ViewBag.formURL/content/css/remodal.css">
-                    <link rel="stylesheet" href="@ViewBag.formURL/content/css/remodal-default-theme.css">
+                    <link rel="stylesheet" href="@ViewBag.formURL/css/remodal.css">
+                    <link rel="stylesheet" href="@ViewBag.formURL/css/remodal-default-theme.css">
                     <script src="@ViewBag.formURL/Scripts/remodal.js"></script>
                 }
                 else
@@ -338,18 +278,17 @@ if (Model.IsTransparent == "True")
 
 
                 <!--  <script src="/Scripts/formey.js" type="text/javascript"></script>
-      <script src='@ViewBag.formURLscripts/respond.min.js' type='text/javascript'></script>
-      <script src='@ViewBag.formURLscripts/parsley.js' type='text/javascript'></script>
-      <script src='@ViewBag.formURLscripts/garlic.min.js' type='text/javascript'></script>
-      <script src='@ViewBag.formURLscripts/jasny-bootstrap.min.js' type='text/javascript'></script>
-      <script src="@ViewBag.formURLscripts/iframeResizer.contentWindow.min.js"></script> -->
-
-                <script src="/Scripts/formey.js" type="text/javascript"></script>
-                <script src='/js/respond.min.js' type='text/javascript'></script>
-                <script src='/js/parsley.js' type='text/javascript'></script>
-                <script src='/js/garlic.min.js' type='text/javascript'></script>
-                <script src='/js/jasny-bootstrap.min.js' type='text/javascript'></script>
-                <script src="/js/iframeResizer.contentWindow.min.js"></script>
+    <script src='@ViewBag.formURLscripts/respond.min.js' type='text/javascript'></script>
+    <script src='@ViewBag.formURLscripts/parsley.js' type='text/javascript'></script>
+    <script src='@ViewBag.formURLscripts/garlic.min.js' type='text/javascript'></script>
+    <script src='@ViewBag.formURLscripts/jasny-bootstrap.min.js' type='text/javascript'></script>
+    <script src="@ViewBag.formURLscripts/iframeResizer.contentWindow.min.js"></script> -->
+                @*<script src="/Scripts/formey.js" type="text/javascript"></script>
+        <script src='/Scripts/respond.min.js' type='text/javascript'></script>
+        <script src='/Scripts/parsley.js' type='text/javascript'></script>
+        <script src='/Scripts/garlic.min.js' type='text/javascript'></script>
+        <script src='/Scripts/jasny-bootstrap.min.js' type='text/javascript'></script>
+        <script src="/Scripts/iframeResizer.contentWindow.min.js"></script>*@
 
 
                 @*<script src="@ViewBag.formURL Scripts/formey.js" type="text/javascript"></script>*@
@@ -358,7 +297,7 @@ if (Model.IsTransparent == "True")
                     var instance = "";
                     $(document).ready(function () {
                         instance = $('form').parsley();
-                        $('form').garlic(); //REINSTATE THIS ON PROD
+                        //$('form').garlic(); //REINSTATE THIS ON PROD
                     });
 
                     //get country name
@@ -408,7 +347,7 @@ if (Model.IsTransparent == "True")
 
                 </script>
 
-                @if (@System.Configuration.ConfigurationManager.AppSettings["isLiveServer"] == "false")
+                @if (@ViewBag.isLiveServer == "false")
                 {
                     <!-- DEV LINKS START -->
                     <script src='@ViewBag.formURL/scripts/modernizr-2.6.2.js' type='text/javascript'></script>
@@ -425,20 +364,20 @@ if (Model.IsTransparent == "True")
 
 
 
-                @if (@System.Configuration.ConfigurationManager.AppSettings["isLiveServer"] == "false")
+                @if (@ViewBag.isLiveServer == "false")
                 {
                     <!-- DEV LINKS START -->
                     <!---<script src='@ViewBag.formURL/scripts/respond.min.js' type='text/javascript'></script>
-        <script src='@ViewBag.formURL/scripts/parsley.js' type='text/javascript'></script>
-        <script src='@ViewBag.formURL/scripts/garlic.min.js' type='text/javascript'></script>
-        <script src='@ViewBag.formURL/scripts/jasny-bootstrap.min.js' type='text/javascript'></script>
-        <script src="@ViewBag.formURL/scripts/iframeResizer.contentWindow.min.js"></script>-->
+                    <script src='@ViewBag.formURL/scripts/parsley.js' type='text/javascript'></script>
+                    <script src='@ViewBag.formURL/scripts/garlic.min.js' type='text/javascript'></script>
+                    <script src='@ViewBag.formURL/scripts/jasny-bootstrap.min.js' type='text/javascript'></script>
+                    <script src="@ViewBag.formURL/scripts/iframeResizer.contentWindow.min.js"></script>-->
 
-                    <script src='@ViewBag.formURL/js/respond.min.js' type='text/javascript'></script>
-                    <script src='@ViewBag.formURL/js/parsley.js' type='text/javascript'></script>
-                    <script src='@ViewBag.formURL/js/garlic.min.js' type='text/javascript'></script>
-                    <script src='@ViewBag.formURLscripts/jasny-bootstrap.min.js' type='text/javascript'></script>
-                    <script src="@ViewBag.formURLscripts/iframeResizer.contentWindow.min.js"></script>
+                    <script src='@ViewBag.formURL/Scripts/respond.min.js' type='text/javascript'></script>
+                    <script src='@ViewBag.formURL/scripts/parsley.js' type='text/javascript'></script>
+                    <script src='@ViewBag.formURL/Scripts/garlic.min.js' type='text/javascript'></script>
+                    <script src='@ViewBag.formURLscripts/Scripts/jasny-bootstrap.min.js' type='text/javascript'></script>
+                    <script src="@ViewBag.formURLscripts/Scripts/iframeResizer.contentWindow.min.js"></script>
                 }
                 else
                 {

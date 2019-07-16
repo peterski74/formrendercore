@@ -27,6 +27,9 @@ using Salesforce.Common;
 using Salesforce.Common.Models.Xml;
 //using DeveloperForce.NetCore.Force;
 //using DeveloperForce.NetCore.Common;
+using Microsoft.Extensions.Configuration;
+using Myconfig;
+
 
 namespace ngFormey.Web.Controllers
 {
@@ -57,7 +60,11 @@ namespace ngFormey.Web.Controllers
 
     public class FController : Controller
     {
+
+        IConfiguration _configuration;
+
         
+
         IDictionary<string, SObjectList<SObject>> dict = new Dictionary<string, SObjectList<SObject>>();
         SObjectList<SObject> dtBatch = new SObjectList<SObject>();
 
@@ -178,7 +185,9 @@ namespace ngFormey.Web.Controllers
         {
             // var formUrl = new Uri(System.Configuration.ConfigurationManager.AppSettings["http://localhost:26715"]);
 
-            
+
+            ViewBag.isLiveServer = ConfigurationManager.AppSetting["AppSettings:isLiveServer"];
+
             var formUrl = new Uri("https://localhost:44384");  //26715
             ViewBag.submitURL = formUrl + "f/HandleForm";
             ViewBag.formURL = formUrl;
