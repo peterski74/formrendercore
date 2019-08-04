@@ -99,8 +99,11 @@ namespace ngFormey.Web.Controllers
         //}
 
 //        IDictionary<string, SObjectList<SObject>> dict = new Dictionary<string, SObjectList<SObject>>();
-        SObjectList<SObject> dtBatch = new SObjectList<SObject>();
 
+
+        //~~~~~~~~~~~~~~~~~~~~~~~~~~~Salesforce Start~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+        SObjectList<SObject> dtBatch = new SObjectList<SObject>();
 
         IDictionary<string, SObjectList<SObject>> dict = new Dictionary<string, SObjectList<SObject>>();
 
@@ -109,37 +112,16 @@ namespace ngFormey.Web.Controllers
             SObjectList<SObject> sObjlis;
 
             bool hasvalue = dict.TryGetValue(sfObjName, out sObjlis);
-            if (hasvalue)
+            if (hasvalue) //add to existing object
             {
-
-                //SObject so = new SObject();  //INCORRECT
-                //SObject so = sObjlis.ToList();
-
-                //while (SObject so in sObjlis)
-                //{
-                //SObject so = sObjlis;
-                  //so.Add(sfLabelName, sfLabelValue);
-                //    dtBatch.Add(so);
-                //}
-
-                //dict[sfObjName][0].Add(so);
-
                 dict[sfObjName][0].Add(sfLabelName, sfLabelValue); //only need to keep on addding to the ONE object as only one would be added to the form
-                //x.Add(so);
-
-        //dict[sfObjName] = dtBatch;
-
-
-    }
-            else
+            }
+            else // new object
             {
-
                 SObject so = new SObject();
                 so.Add(sfLabelName, sfLabelValue);
                 dtBatch.Add(so);
                 dict.Add(sfObjName, dtBatch);
-
-
             }
         }
 
@@ -167,76 +149,34 @@ namespace ngFormey.Web.Controllers
             public string consumerKey { get; set; }
         }
 
-        public class Account
-        {
-            public string Id { get; set; }
-            public string Name { get; set; }
-            public string Description { get; set; }
-            public string AccountNumber { get; set; }
-        }
-
         private static async Task ConnectSalesforce(IDictionary<string, SObjectList<SObject>> objlist, SfCredential sfObj)
         {
-            
 
             //create auth client to retrieve token
             var auth = new AuthenticationClient();
 
             //get back URL and token
-            //await auth.UsernamePasswordAsync(sfObj.consumerKey,sfObj.consumerSecrete,sfObj.userid,sfObj.password);
             await auth.UsernamePasswordAsync(sfObj.consumerKey, sfObj.consumerSecrete, sfObj.userid, sfObj.password);
-
 
             var instanceUrl = auth.InstanceUrl;
             var accessToken = auth.AccessToken;
             var apiVersion = auth.ApiVersion;
 
-            //await auth.UsernamePasswordAsync("3MVG9d8..z.hDcPIso6KgejZc.Vz8r_s4Vn7mg2_cExGl2fciWV3lLsNZk.qbaF9nrmXojHSdl8DpNyUVKm4Y", "2166946594035531821", "prashant.honavar@cunning-raccoon-497862.com", "Test@1230");
-
-
             var forceClient = new ForceClient(instanceUrl, accessToken, apiVersion);
-            //var bulkClient = new BulkForceClient(instanceUrl, accessToken, apiVersion);
-            //var bulkClient = new BulkForceClient(instanceUrl, accessToken, apiVersion);
-
-            //Console.Write("Connected to Salesforce.");
-
-            //var account = new Account() { Name = "New Account test", Description = "New Account Description" };
-            // var id = await forceClient.CreateAsync("Account", account);
-
-            // Make a dynamic typed Account list
-
-            // SObject obj = new SObject();
-            //obj.Add("Name", "Prashant");
-            //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
 
             dynamic res = "";
+
+            // SEND EACH OBJET TO SALESFORCE
+            // NEED TO DETERMINE ORDER TO CREATE RELATIONSHIPS HERE
             foreach (KeyValuePair<string, SObjectList<SObject>> item in objlist)
             {
-                //Console.WriteLine("Key: {0}, Value: {1}", item.Key, item.Value);
-
                 var sfBatch = new List<SObjectList<SObject>> { item.Value };
 
                 res = await forceClient.RunJobAndPollAsync(
                     item.Key,
                     BulkConstants.OperationType.Insert,
                     sfBatch);
-                Console.Write(res);
             }
-
-
-            /*  var dtAccountsBatch = new SObjectList<SObject>
-              {
-                  new SObject{{"Name", "TestDtAccount5"}},
-                  new SObject{{"Name", "TestDtAccount7"}},
-                  new SObject{{"Sic", "TestDtAccount3"}}
-              };
-
-              // insert the accounts
-              var res = await forceClient.RunJobAndPollAsync("Account", BulkConstants.OperationType.Insert,
-                      new List<SObjectList<SObject>> { dtAccountsBatch });*/
-
         }
 
 
@@ -453,7 +393,7 @@ namespace ngFormey.Web.Controllers
             StringBuilder searchField = new StringBuilder();
 
 
-            // Check for Salesforce Fields
+            // Check for Salesforce Fields and add to list/dictionary
             List<int> list = new List<int>();
             Dictionary<int, string> dmap = new Dictionary<int, string>();
             foreach (var _key in formCollection)
@@ -485,40 +425,22 @@ namespace ngFormey.Web.Controllers
                 {
                     //Find all the required fields on the object
                     formListId = sfObjectId.FormListId.ToString();
-                    //var requiredFields = formsDB.SfFields
-                    //.Where(c => c.SfobjectId.ToString() == sfObjectId.SfMappingObject)
-                    ////.Where(c => c.Nillable == false)
-                    //.Where(c => c.Type.ToString() != "boolean")
-                    //.Where(c => c.Type.ToString() != "reference").ToList();
-
-
+                   
                     var dataRow = formsDB.SfFields
                     .Where(c => c.SfobjectId.ToString() == sfObjectId.SfMappingObject)
                     .Where(c => c.SffieldId.ToString() == sfObjectId.SfMappingField).First();
 
-                   //foreach(var filed in requiredFields)
-                    //{
-                      //  if(filed.Name == dataRow.Name)
-                        //{
-                            /*var filedvaule =
-                              formsDB.SubmitValues
-                              .Where(v => v.FieldId == itemId).First();*/
-                              if(dmap.ContainsKey(itemId))
-                            {
-                                var val = dmap[itemId];
-                                buildSobject(dataRow.SfobjectName, dataRow.Name, val);
-                            }
-                        //}
-                              
-                    //}
-
-                    
+                    if(dmap.ContainsKey(itemId))
+                    {
+                        var val = dmap[itemId];
+                        buildSobject(dataRow.SfobjectName, dataRow.Name, val);
+                    }
                 }
                             
             }
              
             SfCredential sfc = getSFCredentils(formListId);
-            if (dict.Count>0 && formListId != null)
+            if (dict.Count > 0 && formListId != null)
             {
                 //ConnectSalesforce(dict, sfc);
                 Task.Run(() => ConnectSalesforce(dict, sfc)).Wait();
@@ -556,9 +478,6 @@ namespace ngFormey.Web.Controllers
                 {
                     SavedSubmissionId = _value; // ADD FORMID TO FORM SUBMISSIONS
                 }
-
-
-
                 
                 if (_key.Key.ToString() == "Country")
                 {
@@ -576,8 +495,6 @@ namespace ngFormey.Web.Controllers
                 }
 
             }
-
-           
 
             //get total upload size of all files in BYTES
             var totalFileSize = 0;
